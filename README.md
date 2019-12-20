@@ -1,4 +1,4 @@
-# open7-node-red
+# nodered-heroku
 A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https://www.heroku.com).
 
 # Deploying Node-RED into Heroku
