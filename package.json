@@ -8,6 +8,6 @@
         "feedparser":"~0.19.2",
         "node-red-dashboard":"2.16.2",
         "redis":"~0.10.1",
-        "node-red": "0.20.7"
+        "node-red": "1.0.3"
     }
 }
