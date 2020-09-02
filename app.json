@@ -15,6 +15,5 @@
       "description": "Replace this to set nodered Editor's Password.",
       "value": ""
     }
-  },
-  "addons": [ "mongolab" ]
+  }
 }
