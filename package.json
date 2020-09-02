@@ -2,13 +2,14 @@
     "name"         : "nodered-heroku",
     "version"      : "1.0.0",
     "dependencies": {
-        "when": "~3.x",
-        "nano": "~5.11.0",
-        "feedparser":"~0.19.2",
-        "node-red-dashboard":"^2.21.0",
-        "redis":"~0.10.1",
-        "node-red": "1.0.3",
-        "node-red-node-tail": "0.1.1",
-        "node-red-contrib-aedes": "^0.3.5"
+        "when": "latest",
+        "nano": "latest",
+        "feedparser":"latest",
+        "node-red-dashboard":"latest",
+        "redis":"latest",
+        "node-red": "latest",
+        "node-red-node-tail": "latest",
+        "node-red-contrib-aedes": "latest",
+        "node-red-contrib-blynk-ws": "latest"
     }
 }
