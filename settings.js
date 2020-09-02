@@ -35,6 +35,9 @@ var settings = module.exports = {
 
     // Move the admin UI
     httpAdminRoot: '/red',
+    
+    // Move the dashboard UI
+    ui: { path: "/" },
 
     // You can protect the user interface with a userid and password by using the following property
     // the password must be an md5 hash  eg.. 5f4dcc3b5aa765d61d8327deb882cf99 ('password')
