@@ -5,10 +5,10 @@
         "when": "~3.x",
         "nano": "~5.11.0",
         "feedparser":"~0.19.2",
-        "node-red-dashboard":"2.21.0",
+        "node-red-dashboard":"^2.21.0",
         "redis":"~0.10.1",
         "node-red": "1.0.3",
         "node-red-node-tail": "0.1.1",
-        "node-red-contrib-aedes": "0.3.5"
+        "node-red-contrib-aedes": "^0.3.5"
     }
 }
