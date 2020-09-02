@@ -45,8 +45,6 @@ var settings = module.exports = {
 
     functionGlobalContext: { },
 
-    storageModule: require("./mongostorage"),
-
     httpNodeCors: {
         origin: "*",
         methods: "GET,PUT,POST,DELETE"
@@ -77,5 +75,3 @@ if (process.env.NODE_RED_USERNAME && process.env.NODE_RED_PASSWORD) {
     }
 }
 
-settings.mongoAppname = 'nodered';
-settings.mongoUrl = process.env.MONGODB_URI;
