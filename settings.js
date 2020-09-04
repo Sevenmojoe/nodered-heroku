@@ -34,7 +34,7 @@ var settings = module.exports = {
     autoInstallModules: true,
 
     // Move the admin UI
-    httpAdminRoot: '/red',
+    httpAdminRoot: '/editor',
     
     // Move the dashboard UI
     ui: { path: "/" },
