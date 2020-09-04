@@ -79,4 +79,10 @@ if (process.env.NODE_RED_a_USERNAME && process.env.NODE_RED_b_PASSWORD) {
             }
         }
     }
+},
+    editorTheme: {
+        projects: {
+            enabled: true
+        }
+    }
 }
