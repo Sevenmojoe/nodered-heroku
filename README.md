@@ -11,5 +11,12 @@ Set the following user-defined variables.
 * NODE_RED_PASSWORD - replace this with Password for Flow Editor
 
 # How to login
-* Flow Editor => [change-with-your-heroku-app-name.herokuapp.com/editor](https://change-with-your-heroku-app-name.herokuapp.com/editor)
-* Dashboard UI => [change-with-your-heroku-app-name.herokuapp.com](https://change-with-your-heroku-app-name.herokuapp.com)
+* Flow Editor - [change-with-your-heroku-app-name.herokuapp.com/editor](https://change-with-your-heroku-app-name.herokuapp.com/editor)
+* Dashboard UI - [change-with-your-heroku-app-name.herokuapp.com](https://change-with-your-heroku-app-name.herokuapp.com)
+
+# Some included nodes
+* Dashboard UI - node-red-dashboard
+* MQTT - node-red-contrib-aedes
+* Blynk Cloud - node-red-contrib-blynk-ws
+* Email - node-red-node-email
+* Chatbot (Telegram, Slack, Facebook Messenger) - node-red-contrib-chatbot
