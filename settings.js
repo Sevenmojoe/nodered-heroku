@@ -57,7 +57,13 @@ var settings = module.exports = {
     },
     
     // Disbled Credential Secret
-    credentialSecret: false
+    credentialSecret: false,
+    
+    editorTheme: {
+        projects: {
+            enabled: true
+        }
+    }
 }
 
 if (process.env.NODE_RED_a_USERNAME && process.env.NODE_RED_b_PASSWORD) {
@@ -77,12 +83,6 @@ if (process.env.NODE_RED_a_USERNAME && process.env.NODE_RED_b_PASSWORD) {
             } else {
                 return when.resolve(null);
             }
-        }
-    }
-},
-    editorTheme: {
-        projects: {
-            enabled: true
         }
     }
 }
