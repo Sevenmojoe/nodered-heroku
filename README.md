@@ -7,5 +7,9 @@ A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https:/
 # Protect the Flow Editor with Password
 Set the following user-defined variables.
 
-* NODE_RED_USERNAME - replace this with Username for Editor
-* NODE_RED_PASSWORD - replace this with Password for Editor
+* NODE_RED_USERNAME - replace this with Username for Flow Editor
+* NODE_RED_PASSWORD - replace this with Password for Flow Editor
+
+# How to login
+* Flow Editor => [change-with-your-heroku-app-name.herokuapp.com/editor](https://change-with-your-heroku-app-name.herokuapp.com/editor)
+* Dashboard UI => [change-with-your-heroku-app-name.herokuapp.com](https://change-with-your-heroku-app-name.herokuapp.com)
