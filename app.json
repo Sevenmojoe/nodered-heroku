@@ -14,6 +14,10 @@
     "NODE_RED_b_PASSWORD": {
       "description": "Set Password for Flow Editor.",
       "value": ""
+    },
+    "MONGODB_URI": {
+      "description": "Set Mongodb connect.",
+      "value": "mongodb+srv://<user>:<password>@<host>/<dbname>?retryWrites=true&w=majority"
     }
   }
 }
