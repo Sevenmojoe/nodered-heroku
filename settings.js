@@ -60,6 +60,12 @@ var settings = module.exports = {
     
     // Disbled Credential Secret
     credentialSecret: false
+    
+    editorTheme: {
+       projects: {
+           enabled: true
+       }
+   },
 }
 
 if (process.env.NODE_RED_a_USERNAME && process.env.NODE_RED_b_PASSWORD) {
