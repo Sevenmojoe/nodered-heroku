@@ -19,4 +19,4 @@ Set the following user-defined variables.
 * MQTT - node-red-contrib-aedes
 * Blynk Cloud - node-red-contrib-blynk-ws
 * Email - node-red-node-email
-* Chatbot (Telegram, Slack, Facebook Messenger) - node-red-contrib-chatbot
+* Telegram - node-red-contrib-telegrambot
