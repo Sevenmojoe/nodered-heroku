@@ -1,5 +1,8 @@
 # nodered-heroku
 A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https://www.heroku.com).
+* DEMO: Flow Editor - [https://nodered-heroku.herokuapp.com/editor](https://nodered-heroku.herokuapp.com/editor)
+* DEMO: Dashboard UI - [https://nodered-heroku.herokuapp.com](https://nodered-heroku.herokuapp.com)
+
 
 # Warning: You will lost all saved flows every time heroku restart!
 * SOLUTION: To overcome this, on Editor, after finish with your design and deployed, you need to Export 'all flows' as "flows.json" file, and push your "flows.json" to your github, linked to your heroku. Detail on step 4 and 5.
