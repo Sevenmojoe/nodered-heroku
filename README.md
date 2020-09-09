@@ -1,6 +1,9 @@
 # nodered-heroku
 A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https://www.heroku.com).
 
+# Warning: You will lost all saved flows and settings every time your [free] heroku restart!
+* To overcome this, you need to export your flow as "flows.json" file, and push your "flows.json" to your github, linked to your heroku.
+
 # 1. Deploying Node-RED into Heroku  [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/Sevenmojoe/nodered-heroku)
 
 # 2. Set Username and Password for your Flow Editor
