@@ -14,6 +14,13 @@ A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https:/
 * Flow Editor - [change-with-your-heroku-app-name.herokuapp.com/editor](https://change-with-your-heroku-app-name.herokuapp.com/editor)
 * Dashboard UI - [change-with-your-heroku-app-name.herokuapp.com](https://change-with-your-heroku-app-name.herokuapp.com)
 
+# 4. Export all flows as "flows.json" file AFTER you create your flow and deploy it
+* In Editor, click hamburger icon (top right), click Export, choose tab "all flows", then Download.
+
+# 5. Fork this repo, Set your github as deploy source on Heroku setting, and enable Automatic Deployment
+* Every time "flows.json" pushed to your repo, Heroku will rebuild node-red with updated "flows.json".
+* So your node-red will always have last pushed "flows.json" when your Heroku dynos restarted.
+
 # *Some included nodes
 * Dashboard UI - node-red-dashboard
 * MQTT - node-red-contrib-aedes
