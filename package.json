@@ -27,7 +27,7 @@
         "node-red-contrib-opcua": "latest",
         "node-red-contrib-qrcode-generator": "latest",
         "node-red-contrib-string": "latest",
-        "node-red-contrib-telegrambot-home": "latest",
+        "node-red-contrib-telegrambot": "latest",
         "node-red-contrib-web-worldmap": "latest",
         "node-red-contrib-ngrok": "latest",
         "node-red-contrib-ezviz": "latest"
