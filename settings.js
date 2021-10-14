@@ -34,10 +34,10 @@ var settings = module.exports = {
     autoInstallModules: true,
 
     // Move the admin UI
-    httpAdminRoot: '/editor',
+    httpAdminRoot: '/red',
     
     // Move the dashboard UI
-    ui: { path: "/" },
+    ui: { path: "/red/ui" },
     
     // Never change flow's file
     flowFile: 'flows.json',
