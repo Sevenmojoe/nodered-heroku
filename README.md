@@ -19,7 +19,7 @@ A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https:/
 
 # 4. Export all flows as "flows.json" and "flows_cred.json" files AFTER you create your flow and deploy it
 * flows.json - In Editor, click hamburger icon (top right), click Export, choose tab "All flows", then Download.
-* flows-cred.json - Browse the /app folder, e.g., with this [flow](https://flows.nodered.org/flow/44bc7ad491aacb4253dd8a5f757b5407), and download.
+* flows-cred.json - Browse the /app folder, e.g., with this [flow](https://flows.nodered.org/flow/44bc7ad491aacb4253dd8a5f757b5407) or the [attached one](utils/file-browse-flows.json), and download.
 
 # 5. Fork this repo, Set your github as deploy source on Heroku setting, and enable Automatic Deployment
 * Push downloaded "flows.json" file to your repo on github.
