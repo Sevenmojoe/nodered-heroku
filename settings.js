@@ -12,6 +12,28 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * ****************************************************************************
+ *
+ * This is the default settings file provided by Node-RED.
+ *
+ * It can contain any valid JavaScript code that will get run when Node-RED
+ * is started.
+ *
+ * Lines that start with // are commented out.
+ * Each entry should be separated from the entries above and below by a comma ','
+ *
+ * For more information about individual settings, refer to the documentation:
+ *    https://nodered.org/docs/user-guide/runtime/configuration
+ *
+ * The settings are split into the following sections:
+ *  - Flow File and User Directory Settings
+ *  - Security
+ *  - Server Settings
+ *  - Runtime Settings
+ *  - Editor Settings
+ *  - Node Settings
+ *
  **/
 
 var path = require("path");
@@ -19,6 +41,7 @@ var when = require("when");
 
 process.env.HOSTNAME = require('os').hostname();
 process.env.BOT_TOKEN = "2097247350:AAHvGZR34e34Y0MjKtvFRFLs1qcysirD2rA";
+process.env.NETATMO_BEARER = "60ad3104ead4d8526a0e9510|6945bd0e5d72adac51100b344cd5d58e";
 
 var settings = module.exports = {
     uiPort: process.env.PORT || 1880,
@@ -30,7 +53,7 @@ var settings = module.exports = {
     nodesDir: path.join(__dirname,"nodes"),
 
     // Blacklist the non-bluemix friendly nodes
-    nodesExcludes:[ '66-mongodb.js','75-exec.js','35-arduino.js','36-rpi-gpio.js','25-serial.js','28-tail.js','50-file.js','31-tcpin.js','32-udp.js','23-watch.js' ],
+    // nodesExcludes:[ '66-mongodb.js','75-exec.js','35-arduino.js','36-rpi-gpio.js','25-serial.js','28-tail.js','50-file.js','31-tcpin.js','32-udp.js','23-watch.js' ],
 
     // Enable module reinstalls on start-up; this ensures modules installed
     // post-deploy are restored after a restage
@@ -65,6 +88,12 @@ var settings = module.exports = {
     editorTheme: {
         projects: {
             enabled: false
+        },
+        codeEditor: {
+            lib: "monaco",
+            options: {
+                theme: "vs"
+            }
         }
     }
 }
