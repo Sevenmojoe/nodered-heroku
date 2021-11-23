@@ -31,4 +31,5 @@ A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https:/
 * MQTT - node-red-contrib-aedes
 * Blynk Cloud - node-red-contrib-blynk-ws
 * Email - node-red-node-email
-* Telegram - node-red-contrib-telegrambot
+* Telegram - node-red-contrib-telegrambot-home
+* InfluxDB, MongoDB, Modbus, OPC UA, etc. 
