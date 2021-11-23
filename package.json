@@ -24,6 +24,8 @@
         "node-red-contrib-fs": "latest",
         "node-red-contrib-influxdb": "latest",
         "node-red-contrib-modbus": "latest",
+        "node-red-contrib-netatmo": "latest",
+        "node-red-contrib-netatmo-dashboard": "latest",
         "node-red-contrib-opcua": "latest",
         "node-red-contrib-qrcode-generator": "latest",
         "node-red-contrib-string": "latest",
