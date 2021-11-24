@@ -1,11 +1,11 @@
 {
-    "name"         : "nodered-heroku",
-    "version"      : "1.0.0",
+    "name": "nodered-heroku",
+    "version": "1.0.0",
     "dependencies": {
         "when": "3.7.8",
         "nano": "8.2.2",
-        "feedparser":"2.2.10",
-        "redis":"3.0.2",
+        "feedparser": "2.2.10",
+        "redis": "3.0.2",
         "node-red": "latest",
         "node-red-contrib-blynk-ws": "latest",
         "node-red-node-base64": "latest",
