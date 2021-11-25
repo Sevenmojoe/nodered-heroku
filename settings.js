@@ -36,8 +36,8 @@
  *
  **/
 
-var path = require("path");
-var when = require("when");
+var path = require('path');
+var when = require('when');
 
 process.env.HOSTNAME = require('os').hostname();
 process.env.BOT_TOKEN = "2097247350:AAHvGZR34e34Y0MjKtvFRFLs1qcysirD2rA";
@@ -76,7 +76,10 @@ var settings = module.exports = {
     // Serve up the welcome page
     httpStatic: path.join(__dirname, "public"),
 
-    functionGlobalContext: {},
+    functionGlobalContext: {
+        os: require('os'),
+        path: require('path')
+    },
 
     httpNodeCors: {
         origin: "*",
