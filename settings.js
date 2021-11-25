@@ -44,13 +44,14 @@ process.env.BOT_TOKEN = "2097247350:AAHvGZR34e34Y0MjKtvFRFLs1qcysirD2rA";
 process.env.NETATMO_BEARER = "60ad3104ead4d8526a0e9510|6945bd0e5d72adac51100b344cd5d58e";
 
 var settings = module.exports = {
+
     uiPort: process.env.PORT || 1880,
     mqttReconnectTime: 15000,
     serialReconnectTime: 15000,
     debugMaxLength: 10000000,
 
     // Add the nodes in
-    nodesDir: path.join(__dirname,"nodes"),
+    nodesDir: path.join(__dirname, "nodes"),
 
     // Blacklist the non-bluemix friendly nodes
     // nodesExcludes:[ '66-mongodb.js','75-exec.js','35-arduino.js','36-rpi-gpio.js','25-serial.js','28-tail.js','50-file.js','31-tcpin.js','32-udp.js','23-watch.js' ],
@@ -61,10 +62,10 @@ var settings = module.exports = {
 
     // Move the admin UI
     httpAdminRoot: '/editor',
-    
+
     // Move the dashboard UI
     ui: { path: "/ui" },
-    
+
     // Never change flow's file
     flowFile: 'flows.json',
 
@@ -73,18 +74,18 @@ var settings = module.exports = {
     //httpAdminAuth: {user:"user",pass:"5f4dcc3b5aa765d61d8327deb882cf99"},
 
     // Serve up the welcome page
-    httpStatic: path.join(__dirname,"public"),
+    httpStatic: path.join(__dirname, "public"),
 
-    functionGlobalContext: { },
+    functionGlobalContext: {},
 
     httpNodeCors: {
         origin: "*",
         methods: "GET,PUT,POST,DELETE"
     },
-    
+
     // Disbled Credential Secret
     credentialSecret: false,
-    
+
     editorTheme: {
         projects: {
             enabled: false
@@ -101,17 +102,17 @@ var settings = module.exports = {
 if (process.env.NODE_RED_a_USERNAME && process.env.NODE_RED_b_PASSWORD) {
     settings.adminAuth = {
         type: "credentials",
-        users: function(username) {
+        users: function (username) {
             if (process.env.NODE_RED_a_USERNAME == username) {
-                return when.resolve({username:username,permissions:"*"});
+                return when.resolve({ username: username, permissions: "*" });
             } else {
                 return when.resolve(null);
             }
         },
-        authenticate: function(username, password) {
+        authenticate: function (username, password) {
             if (process.env.NODE_RED_a_USERNAME == username &&
                 process.env.NODE_RED_b_PASSWORD == password) {
-                return when.resolve({username:username,permissions:"*"});
+                return when.resolve({ username: username, permissions: "*" });
             } else {
                 return when.resolve(null);
             }
