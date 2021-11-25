@@ -18,11 +18,11 @@
   "success_url": "/editor",
   "env": {
     "NODE_RED_a_USERNAME": {
-      "description": "Set Username for Flow Editor.",
+      "description": "Set Username for Node-RED UI editor.",
       "value": ""
     },
     "NODE_RED_b_PASSWORD": {
-      "description": "Set Password for Flow Editor.",
+      "description": "Set Password for Node-RED UI editor.",
       "value": ""
     }
   }
