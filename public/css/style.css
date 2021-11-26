@@ -24,6 +24,17 @@ a.button {
 a.button:hover {
     background: #7F4545;
 }
+b.button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 30px 40px;
+    border-radius: 5px;
+    background: #67aaaa;
+    color: #eee;
+}
+b.button:hover {
+    background: #457F7F;
+}
 .row3, .row4, .row5 {
     background: #fff;
 }
