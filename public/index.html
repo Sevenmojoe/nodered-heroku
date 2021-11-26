@@ -89,10 +89,14 @@
                             <pre>"node-red-node-package-name":"x.x.x"</pre>
                             Where <code>x.x.x</code> is the desired version number.
                         </li>
-                        <li><b>Update:</b> Use the <code>SAVE</code> Inject node in the first Flow to push
-                            <code>flows.json</code>, <code>flows_cred.json</code> and <code>package.json</code> 
-                            in GitHub, after installing new nodes in Palette.
+                        <li><b>Update:</b> Install new nodes in Palette in the classic way, and use the
+                            <code>SAVE</code> Inject node in the first Flow to push <code>package.json</code> to GitHub.
                         </li>
+                    </ol>
+                    <h4>Saving deployed flows to prevent their cacellation after Heroku restart</h4>
+                    <ol>
+                        <li>Use the <code>SAVE</code> Inject node in the first Flow to push <code>flows.json</code> and
+                            <code>flows_cred.json</code> to GitHub, after new flows are created and deployed.
                     </ol>
                     <h4>Upgrading the version of Node-RED</h4>
                     <ol>
