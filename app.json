@@ -17,11 +17,11 @@
   "logo": "http://nodered.org/node-red.png",
   "success_url": "/editor",
   "env": {
-    "NODE_RED_a_USERNAME": {
+    "NODE_RED_USERNAME": {
       "description": "Set Username for Node-RED UI editor.",
       "value": ""
     },
-    "NODE_RED_b_PASSWORD": {
+    "NODE_RED_PASSWORD": {
       "description": "Set Password for Node-RED UI editor.",
       "value": ""
     }
