@@ -17,7 +17,7 @@
 <body>
     <div class="header">
         <div class="header-content">
-            <a href="/"><img class="logo" src="images/node-red.png" /> Node-RED in Heroku</a>
+            <a href="/"><img class="logo" src="images/node-red.png" />Node-RED in Heroku</a>
         </div>
     </div>
     <!-- Grid 1 -->
@@ -86,16 +86,16 @@
                         <li>Edit the file <code>package.json</code> and add the required node package to the
                             <code>dependencies</code>
                             section. The format is:
-                            <pre>"node-red-node-package-name":"x.x.x"</pre>
-                            Where <code>x.x.x</code> is the desired version number.
+                            <pre>"node-red-<package-name>":"x.y.x"</pre>
+                            Where <code>x.y.z</code> is the desired version number.
                         </li>
-                        <li><b>Update:</b> Install new nodes in Palette in the classic way, and use the
+                        <li><strong>Update:</strong> Install new nodes in Palette in the classic way, and use the
                             <code>SAVE</code> Inject node in the first Flow to push <code>package.json</code> to GitHub.
                         </li>
                     </ol>
                     <h4>Saving deployed flows to prevent their cacellation after Heroku restart</h4>
                     <ol>
-                        <li>Use the <code>SAVE</code> Inject node in the first Flow to push <code>flows.json</code> and
+                        <li>Use the <code>SAVE</code> Inject node <img src="images/save-button.png" /> in the first Flow to push <code>flows.json</code> and
                             <code>flows_cred.json</code> to GitHub, after new flows are created and deployed.
                     </ol>
                     <h4>Upgrading the version of Node-RED</h4>
