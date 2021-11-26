@@ -4,7 +4,7 @@ A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https:/
 * DEMO: Dashboard UI - [https://nodered-heroku.herokuapp.com](https://nodered-heroku.herokuapp.com)
 
 
-# Warning: You will lost all saved flows every time heroku restart!
+# Warning: You will lost all saved flows, credentials and installed nodes every time heroku restart!
 * SOLUTION: To overcome this, on Editor, after finish with your design and deployed, you need to Export 'all flows' as "flows.json" file, and push your "flows.json" to your github, linked to your heroku. The same applies to the credentials and nodes installed in Palette which have to be exported as "flows_cred.json" and "package.json" and pushed to github. Detail on step 4 and 5.
 
 # 1. Deploying Node-RED into Heroku  [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/hybuild-project/nodered-heroku)
