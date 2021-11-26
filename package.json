@@ -45,6 +45,7 @@
         "node-red-contrib-string": "latest",
         "node-red-contrib-telegrambot-home": "latest",
         "node-red-contrib-web-worldmap": "latest",
-        "node-red-contrib-ezviz": "latest"
+        "node-red-contrib-ezviz": "latest",
+        "pg": "latest"
     }
 }
