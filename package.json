@@ -4,6 +4,7 @@
     "author": {
         "name": "Alerox"
     },
+    "description": "Node-RED on cloud, deployed in Heroku",
     "engines": {
         "node": "14.x"
     },
