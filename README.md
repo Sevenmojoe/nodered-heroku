@@ -10,8 +10,8 @@ A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https:/
 # 1. Deploying Node-RED into Heroku  [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/Sevenmojoe/nodered-heroku)
 
 # 2. Set Username and Password for your Flow Editor
-* NODE_RED_a_USERNAME - replace this with Username for Flow Editor
-* NODE_RED_b_PASSWORD - replace this with Password for Flow Editor
+* NODE_RED_USERNAME - replace this with Username for Flow Editor
+* NODE_RED_PASSWORD - replace this with Password for Flow Editor
 
 # 3. Access your Node-Red
 * Flow Editor - [nodered-on-cloud.herokuapp.com/editor](https://nodered-on-cloud.herokuapp.com/editor)
