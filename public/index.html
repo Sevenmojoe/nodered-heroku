@@ -62,7 +62,7 @@
         <div class="grid">
             <div class="col-1-1">
                 <div class="content blurb">
-                    <h3 id="custom">Customising the Node-RED instance</h3>
+                    <h2 id="custom">Customising the Node-RED instance</h2>
                     <p>This template instance of Node-RED is enough to get you started creating flows.
                     <p>
                     <p>You may want to customise it for your needs,
@@ -70,7 +70,7 @@
                         flow editor or adding new nodes to
                         the palette.</p>
                     <p style="clear:both"></p>
-                    <h4 id="password-protecting">Password protect the flow editor</h4>
+                    <h3 id="password-protecting">Password protect the flow editor</h3>
                     <p>By default, the editor is open for anyone to access and modify flows. To password-protect the
                         editor:</p>
                     <p>Add the following user-defined variables.</p>
@@ -78,7 +78,7 @@
                         <li><code>NODE_RED_USERNAME</code> - the username to secure the editor with</li>
                         <li><code>NODE_RED_PASSWORD</code> - the password to secure the editor with</li>
                     </ul>
-                    <h4>Adding new nodes to the palette</h4>
+                    <h3>Adding new nodes to the palette</h3>
                     <ul>
                         <li>There is a growing collection of additional nodes that can be added to the Node-RED editor.
                             You can search for available nodes in the <a target="_blank"
@@ -93,23 +93,23 @@
                             <code>SAVE</code> Inject node in the first Flow to push <code>package.json</code> to GitHub.
                         </li>
                     </ul>
-                    <h4>Saving deployed flows to prevent their cancellation after Heroku restart</h4>
+                    <h3>Saving deployed flows to prevent their cancellation after Heroku restart</h3>
                     <ul>
                         <li>Use the <code>SAVE</code> Inject node in the first Flow to push <code>flows.json</code> and
                             <code>flows_cred.json</code> to GitHub, after new flows are created and deployed.<img
                                 src="images/save-button.png" />
                     </ul>
-                    <h4>Upgrading the version of Node-RED</h4>
+                    <h3>Upgrading the version of Node-RED</h3>
                     <ul>
                         <li>This boilerplate is configured to grab the latest stable release of Node-RED whenever the
                             application is pushed into Heroku.</li>
                     </ul>
-                    <h4>Changing the static web content</h4>
+                    <h3>Changing the static web content</h3>
                     <ul>
                         <li>The page you are reading now is served as static content from the application. This can be
                             replaced with whatever content you want in the <code>public</code> directory.</li>
                     </ul>
-                    <h4>Remove static web content and serve the flow editor from the root path</h4>
+                    <h3>Remove static web content and serve the flow editor from the root path</h3>
                     <ul>
                         <li>In the file <code>settings.js</code>, delete the <code>httpStatic</code> and
                             <code>httpAdminRoot</code> entries.
