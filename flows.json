@@ -2,7 +2,7 @@
     {
         "id": "3c1975f87cd0cabf",
         "type": "tab",
-        "label": "SAVE!!!",
+        "label": "Save all changes",
         "disabled": false,
         "info": "",
         "env": []
@@ -38,9 +38,10 @@
     {
         "id": "1f0274a4dfdeb367",
         "type": "tab",
-        "label": "FS",
+        "label": "File explorer",
         "disabled": false,
-        "info": ""
+        "info": "",
+        "env": []
     },
     {
         "id": "2924702c.b33a7",
@@ -217,7 +218,8 @@
         "z": "3827b8c0.6c5468",
         "name": "Home page",
         "style": {
-            "label": true
+            "label": true,
+            "fill": "#bfdbef"
         },
         "nodes": [
             "a4e9bb20.765b58",
@@ -226,8 +228,11 @@
             "ea3f9c00f1b931d6",
             "e3d1253d21cb8d14"
         ],
-        "x": 854,
-        "y": 19
+        "env": [],
+        "x": 14,
+        "y": 399,
+        "w": 392,
+        "h": 162
     },
     {
         "id": "8ae85c804dc630f2",
@@ -255,17 +260,21 @@
         "z": "3827b8c0.6c5468",
         "name": "Keep alive",
         "style": {
-            "label": true
+            "label": true,
+            "fill": "#ffefbf"
         },
         "nodes": [
             "a8d2d040.73334",
             "a5b1fd05.62fc",
-            "10e7b89b156bbfd9",
-            "195a9f843d858880",
-            "f29a6e04e2959922"
+            "f29a6e04e2959922",
+            "35e33f2c9202fe92",
+            "79211ed51f80c95c"
         ],
-        "x": 604,
-        "y": 319
+        "env": [],
+        "x": 434,
+        "y": 399,
+        "w": 192,
+        "h": 162
     },
     {
         "id": "930933373b4d5491",
@@ -706,8 +715,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 850,
-        "y": 160,
+        "x": 590,
+        "y": 280,
         "wires": [
             [
                 "b481381501d2b414"
@@ -740,8 +749,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 710,
-        "y": 160,
+        "x": 870,
+        "y": 220,
         "wires": [
             [
                 "9c09e087.a48e7"
@@ -762,8 +771,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 690,
-        "y": 40,
+        "x": 590,
+        "y": 100,
         "wires": [
             [
                 "c153c93bfd0eede3",
@@ -797,7 +806,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
+        "x": 620,
         "y": 40,
         "wires": [
             [
@@ -811,8 +820,8 @@
         "z": "3c1975f87cd0cabf",
         "name": "GitHub Token",
         "info": "Set GITHUB_TOKEN in [Heroku Config Vars](https://dashboard.heroku.com/apps/nodered-on-cloud/settings).\nSee [Personal access tokens](https://github.com/settings/tokens) page (repo).",
-        "x": 90,
-        "y": 360,
+        "x": 110,
+        "y": 280,
         "wires": []
     },
     {
@@ -828,7 +837,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 870,
-        "y": 220,
+        "y": 280,
         "wires": []
     },
     {
@@ -842,8 +851,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 860,
-        "y": 100,
+        "x": 880,
+        "y": 160,
         "wires": [
             [
                 "6a2bc486f2838313"
@@ -863,7 +872,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 870,
-        "y": 40,
+        "y": 100,
         "wires": []
     },
     {
@@ -876,7 +885,7 @@
                 "t": "move",
                 "p": "payload.sha",
                 "pt": "msg",
-                "to": "sha",
+                "to": "temp",
                 "tot": "msg"
             }
         ],
@@ -885,8 +894,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 570,
-        "y": 100,
+        "x": 650,
+        "y": 160,
         "wires": [
             [
                 "f4f0342516f4afea"
@@ -907,10 +916,10 @@
                 "tot": "jsonata"
             },
             {
-                "t": "move",
-                "p": "sha",
+                "t": "set",
+                "p": "payload.sha",
                 "pt": "msg",
-                "to": "payload.sha",
+                "to": "temp",
                 "tot": "msg"
             },
             {
@@ -919,6 +928,11 @@
                 "pt": "msg",
                 "to": "Commit from nodered-on-cloud",
                 "tot": "str"
+            },
+            {
+                "t": "delete",
+                "p": "temp",
+                "pt": "msg"
             }
         ],
         "action": "",
@@ -926,8 +940,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
-        "y": 160,
+        "x": 620,
+        "y": 220,
         "wires": [
             [
                 "1dc8605f.7ac4e"
@@ -955,29 +969,13 @@
         "topic": "",
         "payload": "${GITHUB_TOKEN}",
         "payloadType": "str",
-        "x": 310,
-        "y": 360,
+        "x": 850,
+        "y": 40,
         "wires": [
             [
-                "4442a31db50d823b"
+                "c153c93bfd0eede3"
             ]
         ]
-    },
-    {
-        "id": "4442a31db50d823b",
-        "type": "debug",
-        "z": "3c1975f87cd0cabf",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 360,
-        "wires": []
     },
     {
         "id": "f92e1e8dffe158f7",
@@ -998,7 +996,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 280,
+        "x": 320,
         "y": 40,
         "wires": [
             [
@@ -1025,8 +1023,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 300,
-        "y": 120,
+        "x": 340,
+        "y": 140,
         "wires": [
             [
                 "ae8ddf10.868fd"
@@ -1044,7 +1042,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 90,
+        "x": 110,
         "y": 40,
         "wires": [
             [
@@ -1058,14 +1056,14 @@
         "id": "354462253c0f942f",
         "type": "inject",
         "z": "3c1975f87cd0cabf",
-        "name": "commit",
+        "name": "push to GitHub",
         "props": [],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 270,
+        "x": 340,
         "y": 80,
         "wires": [
             [
@@ -1077,15 +1075,15 @@
         "id": "a549d342fd99909d",
         "type": "inject",
         "z": "3c1975f87cd0cabf",
-        "name": "commit",
+        "name": "push to GitHub",
         "props": [],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 270,
-        "y": 160,
+        "x": 340,
+        "y": 180,
         "wires": [
             [
                 "98b5b9035834b822"
@@ -1096,15 +1094,15 @@
         "id": "2d16cee553d899ee",
         "type": "inject",
         "z": "3c1975f87cd0cabf",
-        "name": "commit",
+        "name": "push to GitHub",
         "props": [],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 270,
-        "y": 240,
+        "x": 340,
+        "y": 280,
         "wires": [
             [
                 "71c40b7254660299"
@@ -1130,8 +1128,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 290,
-        "y": 200,
+        "x": 330,
+        "y": 240,
         "wires": [
             [
                 "ae8ddf10.868fd"
@@ -1144,8 +1142,8 @@
         "z": "3827b8c0.6c5468",
         "name": "Github",
         "info": "[https://github.com/hybuild-project/nodered-heroku](https://github.com/hybuild-project/nodered-heroku)",
-        "x": 930,
-        "y": 500,
+        "x": 710,
+        "y": 440,
         "wires": []
     },
     {
@@ -1154,8 +1152,8 @@
         "z": "3827b8c0.6c5468",
         "name": "Telegram",
         "info": "Heroku bot token:\n2097247350:AAHvGZR34e34Y0MjKtvFRFLs1qcysirD2rA\nChat ID:\n1269409529",
-        "x": 940,
-        "y": 580,
+        "x": 720,
+        "y": 520,
         "wires": []
     },
     {
@@ -1164,8 +1162,8 @@
         "z": "3827b8c0.6c5468",
         "name": "Heroku",
         "info": "[https://dashboard.heroku.com/apps/nodered-on-cloud](https://dashboard.heroku.com/apps/nodered-on-cloud)",
-        "x": 930,
-        "y": 540,
+        "x": 710,
+        "y": 480,
         "wires": []
     },
     {
@@ -1238,7 +1236,7 @@
         "id": "d99f126f2c62a2e8",
         "type": "change",
         "z": "3827b8c0.6c5468",
-        "name": "404?",
+        "name": "response",
         "rules": [
             {
                 "t": "set",
@@ -1246,6 +1244,13 @@
                 "pt": "msg",
                 "to": "$not($trim(payload)=\"404\")",
                 "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "LAN",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -1253,13 +1258,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 490,
+        "x": 520,
         "y": 40,
         "wires": [
             [
                 "aec4c230034b309b",
-                "00b91a72df0bc9ea",
-                "2c666f9b3df88895"
+                "68c36310a478dc90"
             ]
         ]
     },
@@ -1267,7 +1271,7 @@
         "id": "3df8bba9edbd252c",
         "type": "change",
         "z": "3827b8c0.6c5468",
-        "name": "404?",
+        "name": "response",
         "rules": [
             {
                 "t": "set",
@@ -1275,6 +1279,13 @@
                 "pt": "msg",
                 "to": "$not($trim(payload)=\"404\")",
                 "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ALM",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -1282,13 +1293,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 490,
+        "x": 520,
         "y": 140,
         "wires": [
             [
-                "b59102e37b56945e",
                 "c60b9f529a443dca",
-                "ac5adab3eb227ae8"
+                "68c36310a478dc90"
             ]
         ]
     },
@@ -1296,7 +1306,7 @@
         "id": "2c3992ec7766904e",
         "type": "change",
         "z": "3827b8c0.6c5468",
-        "name": "404?",
+        "name": "response",
         "rules": [
             {
                 "t": "set",
@@ -1304,6 +1314,13 @@
                 "pt": "msg",
                 "to": "$not($trim(payload)=\"404\")",
                 "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ALM",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -1311,46 +1328,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 490,
+        "x": 520,
         "y": 240,
         "wires": [
             [
-                "63df6662e9466a9c",
                 "b41de97eeba5728a",
-                "0ca212370ccb8458"
+                "68c36310a478dc90"
             ]
-        ]
-    },
-    {
-        "id": "00b91a72df0bc9ea",
-        "type": "ui_switch",
-        "z": "3827b8c0.6c5468",
-        "d": true,
-        "name": "",
-        "label": "LAN",
-        "tooltip": "",
-        "group": "7e6baf98.69239",
-        "order": 7,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "fa-circle",
-        "oncolor": "green",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "fa-circle",
-        "offcolor": "red",
-        "animate": false,
-        "x": 670,
-        "y": 40,
-        "wires": [
-            []
         ]
     },
     {
@@ -1368,7 +1352,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 500,
+        "x": 520,
         "y": 80,
         "wires": [
             []
@@ -1389,7 +1373,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 500,
+        "x": 520,
         "y": 180,
         "wires": [
             []
@@ -1410,72 +1394,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 500,
+        "x": 520,
         "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b59102e37b56945e",
-        "type": "ui_switch",
-        "z": "3827b8c0.6c5468",
-        "d": true,
-        "name": "",
-        "label": "ALM",
-        "tooltip": "",
-        "group": "7e6baf98.69239",
-        "order": 6,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "fa-circle",
-        "oncolor": "green",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "fa-circle",
-        "offcolor": "red",
-        "animate": false,
-        "x": 670,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "63df6662e9466a9c",
-        "type": "ui_switch",
-        "z": "3827b8c0.6c5468",
-        "d": true,
-        "name": "",
-        "label": "AGL",
-        "tooltip": "",
-        "group": "7e6baf98.69239",
-        "order": 5,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "fa-circle",
-        "oncolor": "green",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "fa-circle",
-        "offcolor": "red",
-        "animate": false,
-        "x": 670,
-        "y": 240,
         "wires": [
             []
         ]
@@ -1491,8 +1411,8 @@
         "syntax": "mustache",
         "template": "Dashboard: https://nodered-on-cloud.herokuapp.com/ui\nNode-RED: https://nodered-on-cloud.herokuapp.com/editor",
         "output": "str",
-        "x": 300,
-        "y": 400,
+        "x": 900,
+        "y": 340,
         "wires": [
             [
                 "ce0ddacc1bb56088"
@@ -1543,8 +1463,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 930,
-        "y": 120,
+        "x": 90,
+        "y": 480,
         "wires": [
             []
         ]
@@ -1564,8 +1484,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "global",
-        "x": 930,
-        "y": 60,
+        "x": 90,
+        "y": 440,
         "wires": [
             []
         ]
@@ -1585,8 +1505,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 930,
-        "y": 260,
+        "x": 330,
+        "y": 520,
         "wires": [
             []
         ]
@@ -1629,7 +1549,7 @@
         "z": "3827b8c0.6c5468",
         "name": "Response",
         "events": "all",
-        "x": 500,
+        "x": 520,
         "y": 340,
         "wires": [
             []
@@ -1712,13 +1632,14 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "https://nodered-on-cloud.herokuapp.com/ping",
+        "url": "https://nodered-on-cloud.herokuapp.com",
         "tls": "",
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 740,
-        "y": 420,
+        "senderr": false,
+        "x": 540,
+        "y": 520,
         "wires": [
             []
         ]
@@ -1736,8 +1657,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 710,
-        "y": 360,
+        "payloadType": "str",
+        "x": 530,
+        "y": 440,
         "wires": [
             [
                 "a8d2d040.73334"
@@ -1759,8 +1681,9 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 930,
-        "y": 160,
+        "className": "",
+        "x": 90,
+        "y": 520,
         "wires": [
             []
         ]
@@ -1780,43 +1703,11 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 930,
-        "y": 200,
+        "x": 210,
+        "y": 520,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "10e7b89b156bbfd9",
-        "type": "http in",
-        "z": "3827b8c0.6c5468",
-        "d": true,
-        "g": "179da511.9a22fb",
-        "name": "",
-        "url": "/ping",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 900,
-        "y": 360,
-        "wires": [
-            [
-                "195a9f843d858880"
-            ]
-        ]
-    },
-    {
-        "id": "195a9f843d858880",
-        "type": "http response",
-        "z": "3827b8c0.6c5468",
-        "d": true,
-        "g": "179da511.9a22fb",
-        "name": "",
-        "statusCode": "200",
-        "headers": {},
-        "x": 920,
-        "y": 420,
-        "wires": []
     },
     {
         "id": "b41de97eeba5728a",
@@ -1845,7 +1736,7 @@
         "shape": "circle",
         "showGlow": true,
         "name": "AGL",
-        "x": 670,
+        "x": 710,
         "y": 280,
         "wires": []
     },
@@ -1876,7 +1767,7 @@
         "shape": "circle",
         "showGlow": true,
         "name": "ALM",
-        "x": 670,
+        "x": 710,
         "y": 180,
         "wires": []
     },
@@ -1907,7 +1798,7 @@
         "shape": "circle",
         "showGlow": true,
         "name": "LAN",
-        "x": 670,
+        "x": 710,
         "y": 80,
         "wires": []
     },
@@ -1926,8 +1817,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 490,
-        "y": 400,
+        "x": 90,
+        "y": 240,
         "wires": [
             []
         ]
@@ -1971,8 +1862,8 @@
         "command": "/start",
         "commandType": "str",
         "commandCase": false,
-        "x": 90,
-        "y": 400,
+        "x": 710,
+        "y": 340,
         "wires": [
             [
                 "b0cb0d7a.a8c67"
@@ -1988,8 +1879,8 @@
         "chatId": "",
         "message": "",
         "parseMode": "",
-        "x": 520,
-        "y": 460,
+        "x": 880,
+        "y": 400,
         "wires": []
     },
     {
@@ -2001,8 +1892,8 @@
         "chatId": "1269409529",
         "message": "",
         "parseMode": "",
-        "x": 520,
-        "y": 520,
+        "x": 880,
+        "y": 280,
         "wires": []
     },
     {
@@ -2020,8 +1911,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 130,
-        "y": 460,
+        "x": 910,
+        "y": 40,
         "wires": [
             [
                 "49c414bc9b276172"
@@ -2033,148 +1924,11 @@
         "type": "comment",
         "z": "3827b8c0.6c5468",
         "g": "179da511.9a22fb",
-        "name": "Kaffeine",
-        "info": " - Ping set in [Kaffeine](https://kaffeine.herokuapp.com/)\n - Every 30 minutes from 6.00 to 23.59\n - Heroku free dyno limit: 550 hours/mounth",
-        "x": 820,
-        "y": 380,
+        "name": "Cron-job",
+        "info": " - Log in to [Cron-job](https://console.cron-job.org/)\n - Create custom cron-based job\n - Headers and HTTP methods selectable",
+        "x": 520,
+        "y": 480,
         "wires": []
-    },
-    {
-        "id": "2c666f9b3df88895",
-        "type": "change",
-        "z": "3827b8c0.6c5468",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "LAN offline",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 690,
-        "y": 40,
-        "wires": [
-            [
-                "0154d373cb9df347"
-            ]
-        ]
-    },
-    {
-        "id": "ac5adab3eb227ae8",
-        "type": "change",
-        "z": "3827b8c0.6c5468",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "ALM offline",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 690,
-        "y": 140,
-        "wires": [
-            [
-                "0154d373cb9df347"
-            ]
-        ]
-    },
-    {
-        "id": "0ca212370ccb8458",
-        "type": "change",
-        "z": "3827b8c0.6c5468",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "AGL offline",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 690,
-        "y": 240,
-        "wires": [
-            [
-                "0154d373cb9df347"
-            ]
-        ]
-    },
-    {
-        "id": "0de0433dce05945f",
-        "type": "link in",
-        "z": "3827b8c0.6c5468",
-        "name": "",
-        "links": [
-            "0154d373cb9df347"
-        ],
-        "x": 55,
-        "y": 460,
-        "wires": [
-            [
-                "68c36310a478dc90"
-            ]
-        ]
-    },
-    {
-        "id": "0154d373cb9df347",
-        "type": "link out",
-        "z": "3827b8c0.6c5468",
-        "name": "",
-        "mode": "link",
-        "links": [
-            "0de0433dce05945f"
-        ],
-        "x": 835,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "9bd0e09248bcb6f8",
-        "type": "change",
-        "z": "3827b8c0.6c5468",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "topic",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 300,
-        "y": 520,
-        "wires": [
-            [
-                "fb011e12fcbb8a4a"
-            ]
-        ]
     },
     {
         "id": "49c414bc9b276172",
@@ -2185,7 +1939,7 @@
         "timeout": "5",
         "timeoutUnits": "seconds",
         "rate": "1",
-        "nbRateUnits": "8",
+        "nbRateUnits": "3",
         "rateUnits": "hour",
         "randomFirst": "1",
         "randomLast": "5",
@@ -2193,11 +1947,52 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 290,
-        "y": 460,
+        "x": 870,
+        "y": 140,
         "wires": [
             [
-                "9bd0e09248bcb6f8"
+                "1774cf9a5883ca96"
+            ]
+        ]
+    },
+    {
+        "id": "35e33f2c9202fe92",
+        "type": "comment",
+        "z": "3827b8c0.6c5468",
+        "g": "179da511.9a22fb",
+        "name": "App Scripts",
+        "info": " - Script can be set in [Google App Scripts](https://script.google.com/home/)\n - Custom code in Javascript\n - Run every 15 min, time check in code",
+        "x": 530,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "79211ed51f80c95c",
+        "type": "comment",
+        "z": "3827b8c0.6c5468",
+        "g": "179da511.9a22fb",
+        "name": "Kaffeine",
+        "info": " - Ping set in [Kaffeine](https://kaffeine.herokuapp.com/)\n - Every 30 minutes from 6.00 to 23.59\n - Heroku free dyno limit: 550 hours/mounth",
+        "x": 520,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "1774cf9a5883ca96",
+        "type": "template",
+        "z": "3827b8c0.6c5468",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{topic}} demo site is offline",
+        "output": "str",
+        "x": 900,
+        "y": 220,
+        "wires": [
+            [
+                "fb011e12fcbb8a4a"
             ]
         ]
     },
