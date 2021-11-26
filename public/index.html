@@ -46,9 +46,9 @@
             </div>
             <div class="col-1-2">
                 <div class="content blurb">
-                    <p style="text-align: center"><a style="width:300px;" class="button" href="editor/">Go to your
-                            Node-RED flow editor</a></p>
-                    <p style="text-align: center"><a style="width:300px;" class="button" href="ui/">Go to your Node-RED
+                    <p style="text-align: center"><a style="width:300px;" class="button" href="editor/">Node-RED flow
+                            editor</a></p>
+                    <p style="text-align: center"><a style="width:300px;" class="button" href="ui/">Node-RED
                             dashboard</a></p>
                     <p class="insecure hide" style="text-align: center"><a href="#password-protecting">How to
                             password-protect your instance</a></p>
@@ -62,7 +62,7 @@
         <div class="grid">
             <div class="col-1-1">
                 <div class="content blurb">
-                    <h3 id="custom">Customising your instance of Node-RED</h3>
+                    <h3 id="custom">Customising the Node-RED instance</h3>
                     <p>This template instance of Node-RED is enough to get you started creating flows.
                     <p>
                     <p>You may want to customise it for your needs,
@@ -79,7 +79,7 @@
                         <li><code>NODE_RED_PASSWORD</code> - the password to secure the editor with</li>
                     </ul>
                     <h4>Adding new nodes to the palette</h4>
-                    <ol>
+                    <ul>
                         <li>There is a growing collection of additional nodes that can be added to the Node-RED editor.
                             You can search for available nodes in the <a target="_blank"
                                 href="http://flows.nodered.org">Node-RED library</a>.</li>
@@ -92,30 +92,29 @@
                         <li><strong>Update:</strong> Install new nodes in Palette in the classic way, and use the
                             <code>SAVE</code> Inject node in the first Flow to push <code>package.json</code> to GitHub.
                         </li>
-                    </ol>
-                    <h4>Saving deployed flows to prevent their cacellation after Heroku restart</h4>
-                    <ol>
-                        <li>Use the <code>SAVE</code> Inject node <img src="images/save-button.png" /> in the first Flow
-                            to push <code>flows.json</code> and
-                            <code>flows_cred.json</code> to GitHub, after new flows are created and deployed.
-                    </ol>
+                    </ul>
+                    <h4>Saving deployed flows to prevent their cancellation after Heroku restart</h4>
+                    <ul>
+                        <li>Use the <code>SAVE</code> Inject node in the first Flow to push <code>flows.json</code> and
+                            <code>flows_cred.json</code> to GitHub, after new flows are created and deployed.<img
+                                src="images/save-button.png" />
+                    </ul>
                     <h4>Upgrading the version of Node-RED</h4>
-                    <ol>
+                    <ul>
                         <li>This boilerplate is configured to grab the latest stable release of Node-RED whenever the
                             application is pushed into Heroku.</li>
-                    </ol>
+                    </ul>
                     <h4>Changing the static web content</h4>
-                    <ol>
+                    <ul>
                         <li>The page you are reading now is served as static content from the application. This can be
-                            replaced
-                            with whatever content you want in the <code>public</code> directory.</li>
-                    </ol>
+                            replaced with whatever content you want in the <code>public</code> directory.</li>
+                    </ul>
                     <h4>Remove static web content and serve the flow editor from the root path</h4>
-                    <ol>
+                    <ul>
                         <li>In the file <code>settings.js</code>, delete the <code>httpStatic</code> and
                             <code>httpAdminRoot</code> entries.
                         </li>
-                    </ol>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -135,7 +134,7 @@
             $(".insecure").hide();
             $.ajax({
                 dataType: "json",
-                url: "/red/settings",
+                url: "/editor/settings",
                 success: function () {
                     $(".insecure").show();
                 },
