@@ -17,17 +17,17 @@ A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https:/
 * Flow Editor - [nodered-on-cloud.herokuapp.com/editor](https://nodered-on-cloud.herokuapp.com/editor)
 * Dashboard UI - [nodered-on-cloud.herokuapp.com](https://nodered-on-cloud.herokuapp.com)
 
-# 4. Export all flows, credentials and installed nodes as "flows.json", "flows_cred.json", "package.json" AFTER you create your flows and deploy them
+# 4. Export all flows, credentials and installed nodes
 * Manual mode (only for "flows.json") - In Editor, click hamburger icon (top right), click Export, choose tab "All flows", then Download.
 * Alternative mode (for all files) - Browse the <i>/app</i> folder, e.g., with this [flow](https://flows.nodered.org/flow/44bc7ad491aacb4253dd8a5f757b5407) or the [modified version](utils/file-explorer-flow.json), and download all files.
-* Embedded mode <b>(best way)</b> - Use the <code>SAVE</code> Inject node in the first Flow to directly push all files to GitHub.
+* Embedded mode <b>(best way)</b> - Use the <code>SAVE</code> Inject node in the [first flow](utils/save-all-changes-flow.json) to directly push all files to GitHub.
 
 # 5. Fork this repo, Set your github as deploy source on Heroku setting, and enable Automatic Deployment
 * Push downloaded "flows.json", "flows_cred.json", "package.json" file to your repo on github.
 * Every time any file is pushed to your repo, Heroku will rebuild node-red with updated files.
 * So your node-red will always have latest pushed "flows.json", "flows_cred.json", "package.json" when Heroku dynos restarted.
 
-# *Some included nodes
+# Some included nodes
 * Dashboard UI - node-red-dashboard
 * MQTT - node-red-contrib-aedes
 * Blynk Cloud - node-red-contrib-blynk-ws
