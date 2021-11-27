@@ -89,15 +89,20 @@
                             version number.
                         </li>
                         <li>
-                            <strong>Update: see next section to save the added nodes.</strong>
+                            <strong>See next section to save the added nodes.</strong>
                         </li>
                     </ul>
                     <h3>Saving deployed flows and installed nodes</h3>
                     <ul>
-                        <li>Heroku.</li>
-                        <li>Use the <code>SAVE</code> Inject node in the first Flow to push <code>flows.json</code> and
-                            <code>flows_cred.json</code> to GitHub, after new flows are created and deployed.
-                        </li><img src="images/save-button.png" />
+                        <li>Heroku doesn't automatically save flows, credentials and installed nodes. To overcome this,
+                            push <strong>flows.json</strong>, <strong>flows_cred.json</strong> and
+                            <strong>package.json</strong> to the GitHub repo linked to Heroku.
+                        </li>
+                        <li>To do this, use the <code>SAVE</code> Inject node in the first Flow to push
+                            <code>flows.json</code> and <code>flows_cred.json</code> to GitHub, after new flows are
+                            created and deployed.
+                        </li>
+                        <img src="images/save-button.png" />
                     </ul>
                     <h3>Upgrading the version of Node-RED</h3>
                     <ul>
