@@ -94,13 +94,12 @@
                     </ul>
                     <h3>Saving deployed flows and installed nodes</h3>
                     <ul>
-                        <li>Heroku doesn't automatically save flows, credentials and installed nodes. To overcome this,
-                            push <strong>flows.json</strong>, <strong>flows_cred.json</strong> and
-                            <strong>package.json</strong> to the GitHub repo linked to Heroku.
-                        </li>
+                        <li>Heroku doesn't automatically save flows, credentials and installed nodes, so they may be
+                            lost when dynos are restarted. To overcome this, changes must be pushed to GitHub so as
+                            Node-RED is rebuilt correctly with the changed files when Heroku restarts.</li>
                         <li>To do this, use the <code>SAVE</code> Inject node in the first Flow to push
-                            <code>flows.json</code> and <code>flows_cred.json</code> to GitHub, after new flows are
-                            created and deployed.
+                            <code>flows.json</code>, <code>flows_cred.json</code> and <code>package.json</code> to
+                            GitHub, after new flows are deployed and/or new nodes installed into the Palette.
                         </li>
                         <img src="images/save-button.png" />
                     </ul>
