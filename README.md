@@ -7,8 +7,6 @@ A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https:/
 ## Warning: Heroku doesn't automatically save flows, credentials and installed nodes
 ```
 [TL,DR] Use the SAVE Inject node in the first flow (see step 5).
-
-![SAVE](public/images/save-button.png)
 ```
 To overcome this, after having deployed the new flows by the Editor, export All flows as "flows.json" file, and push it to the GitHub repo linked to Heroku. Do the same with "flows_cred.json" and "package.json" for credentials and nodes installed in Palette. Detail on step 5.
 
@@ -32,11 +30,11 @@ Set Username and Password for Node-RED Flow Editor:
 
 ## 5. Export all flows, credentials and installed nodes
 ### Manual mode (original)
-* In Editor, to export "flows.json", click hamburger icon <code>☰</code> (top right), click Export, choose tab "All flows", then Download.
+* In Editor, to export "flows.json", click hamburger icon `☰` (top right), click Export, choose tab "All flows", then Download.
 * To export all the other files, browse the <i>/app</i> folder, e.g., with this [flow](https://flows.nodered.org/flow/44bc7ad491aacb4253dd8a5f757b5407) or the [modified version](utils/file-explorer-flow.json), and download all files.
 * Push "flows.json", "flows_cred.json", "package.json" to GitHub, so that Node-RED is rebuilt with the latest files at Heroku restart.
 ### Alternative mode (recommended)
-* Use the <code>SAVE</code> Inject node in the [first flow](utils/save-all-changes-flow.json) to directly push all files to GitHub.
+* Use the `SAVE` Inject node in the [first flow](utils/save-all-changes-flow.json) to directly push all files to ``GitHub``.
 
 ![SAVE](public/images/save-button.png)
 
