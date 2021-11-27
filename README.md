@@ -15,17 +15,17 @@ To overcome this, after having deployed the new flows by the Editor, export All 
 * Set GitHub as deploy source on Heroku setting. 
 * Enable Automatic Deployment, so that every time any file is pushed to GitHub repo, Heroku will rebuild Node-RED with updated files.
 
-# 3. Password protect the flow editor
+## 3. Password protect the flow editor
 Set Username and Password for Node-RED Flow Editor:
 * NODE_RED_USERNAME - replace this with Username for Flow Editor
 * NODE_RED_PASSWORD - replace this with Password for Flow Editor
 
-# 4. Access Node-Red
+## 4. Access Node-Red on Cloud
 * Flow Editor - [nodered-on-cloud.herokuapp.com/editor](https://nodered-on-cloud.herokuapp.com/editor)
 * Dashboard UI - [nodered-on-cloud.herokuapp.com/ui](https://nodered-on-cloud.herokuapp.com/ui)
 * Home page - [nodered-on-cloud.herokuapp.com](https://nodered-on-cloud.herokuapp.com)
 
-# 5. Export all flows, credentials and installed nodes
+## 5. Export all flows, credentials and installed nodes
 ### Manual mode (original)
 * In Editor, to export "flows.json", click hamburger icon <code>☰</code> (top right), click Export, choose tab "All flows", then Download.
 * To export all the other files, browse the <i>/app</i> folder, e.g., with this [flow](https://flows.nodered.org/flow/44bc7ad491aacb4253dd8a5f757b5407) or the [modified version](utils/file-explorer-flow.json), and download all files.
@@ -33,7 +33,7 @@ Set Username and Password for Node-RED Flow Editor:
 ### Alternative mode (recommended)
 * Use the <code>SAVE</code> Inject node in the [first flow](utils/save-all-changes-flow.json) to directly push all files to GitHub.
 
-# Some included nodes
+## Some included nodes
 * Dashboard UI - node-red-dashboard
 * MQTT - node-red-contrib-aedes
 * Blynk Cloud - node-red-contrib-blynk-ws
