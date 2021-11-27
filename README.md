@@ -23,11 +23,11 @@ Every time any file is pushed to GitHub repo, Heroku will rebuild node-red with 
 * Home page - [nodered-on-cloud.herokuapp.com](https://nodered-on-cloud.herokuapp.com)
 
 # 5. Export all flows, credentials and installed nodes
-### Original manual mode (old way)
+### Manual mode (original)
 * In Editor, to export "flows.json", click hamburger icon <code>☰</code> (top right), click Export, choose tab "All flows", then Download.
 * To export all the other files, browse the <i>/app</i> folder, e.g., with this [flow](https://flows.nodered.org/flow/44bc7ad491aacb4253dd8a5f757b5407) or the [modified version](utils/file-explorer-flow.json), and download all files.
 * Push downloaded "flows.json", "flows_cred.json", "package.json" file to the repo on GitHub. In this way, Node-RED will always have latest pushed "flows.json", "flows_cred.json", "package.json" when Heroku dynos are restarted.
-### Updated one-shot mode (best way)
+### Alternative mode (recommended)
 * Use the <code>SAVE</code> Inject node in the [first flow](utils/save-all-changes-flow.json) to directly push all files to GitHub.
 
 # Some included nodes
