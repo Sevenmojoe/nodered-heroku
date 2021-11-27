@@ -83,21 +83,21 @@
                         <li>There is a growing collection of additional nodes that can be added to the Node-RED editor.
                             You can search for available nodes in the <a target="_blank"
                                 href="http://flows.nodered.org">Node-RED library</a>.</li>
-                        <li>Edit the file <code>package.json</code> and add the required node package to the
-                            <code>dependencies</code>
-                            section. The format is:
-                            <pre>"node-red-<package-name>":"x.y.x"</pre>
-                            Where <code>x.y.z</code> is the desired version number.
+                        <li>The required node package are added in the file <code>package.json</code> to the
+                            <code>dependencies</code> section. The format is:
+                            <pre>"node-red-<i>package-name</i>":"x.y.x"</pre> where <code>x.y.z</code> is the desired
+                            version number.
                         </li>
-                        <li><strong>Update:</strong> Install new nodes in Palette in the classic way, and use the
-                            <code>SAVE</code> Inject node in the first Flow to push <code>package.json</code> to GitHub.
+                        <li>
+                            <strong>Update: see next section to save the added nodes.</strong>
                         </li>
                     </ul>
-                    <h3>Saving deployed flows to prevent their cancellation after Heroku restart</h3>
+                    <h3>Saving deployed flows and installed nodes</h3>
                     <ul>
+                        <li>Heroku.</li>
                         <li>Use the <code>SAVE</code> Inject node in the first Flow to push <code>flows.json</code> and
-                            <code>flows_cred.json</code> to GitHub, after new flows are created and deployed.<img
-                                src="images/save-button.png" />
+                            <code>flows_cred.json</code> to GitHub, after new flows are created and deployed.
+                        </li><img src="images/save-button.png" />
                     </ul>
                     <h3>Upgrading the version of Node-RED</h3>
                     <ul>
