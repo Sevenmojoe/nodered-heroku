@@ -25,7 +25,7 @@ A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https:/
 * In Editor, to export "flows.json", click hamburger icon <code>☰</code> (top right), click Export, choose tab "All flows", then Download.
 * To export all the other files, browse the <i>/app</i> folder, e.g., with this [flow](https://flows.nodered.org/flow/44bc7ad491aacb4253dd8a5f757b5407) or the [modified version](utils/file-explorer-flow.json), and download all files.
 * Push downloaded "flows.json", "flows_cred.json", "package.json" file to the repo on GitHub. In this way, Node-RED will always have latest pushed "flows.json", "flows_cred.json", "package.json" when Heroku dynos are restarted.
-* <strong>Update (best way):</strong> Use the <code>SAVE</code> Inject node in the [first flow](utils/save-all-changes-flow.json) to directly push all files to GitHub.
+* <strong>Updated one-shot mode (best way)</strong> Use the <code>SAVE</code> Inject node in the [first flow](utils/save-all-changes-flow.json) to directly push all files to GitHub.
 
 # Some included nodes
 * Dashboard UI - node-red-dashboard
