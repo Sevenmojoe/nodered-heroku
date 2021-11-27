@@ -18,7 +18,8 @@ A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https:/
 
 # 4. Access Node-Red
 * Flow Editor - [nodered-on-cloud.herokuapp.com/editor](https://nodered-on-cloud.herokuapp.com/editor)
-* Dashboard UI - [nodered-on-cloud.herokuapp.com/ui](https://nodered-on-cloud.herokuapp.com)
+* Dashboard UI - [nodered-on-cloud.herokuapp.com/ui](https://nodered-on-cloud.herokuapp.com/ui)
+* Home page - [nodered-on-cloud.herokuapp.com](https://nodered-on-cloud.herokuapp.com)
 
 # 5. Export all flows, credentials and installed nodes
 * In Editor, to export "flows.json", click hamburger icon <code>☰</code> (top right), click Export, choose tab "All flows", then Download.
