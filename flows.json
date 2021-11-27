@@ -271,9 +271,9 @@
             "79211ed51f80c95c"
         ],
         "env": [],
-        "x": 434,
+        "x": 424,
         "y": 399,
-        "w": 192,
+        "w": 202,
         "h": 162
     },
     {
@@ -1409,7 +1409,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "Dashboard: https://nodered-on-cloud.herokuapp.com/ui\nNode-RED: https://nodered-on-cloud.herokuapp.com/editor",
+        "template": "Dashboard: https://nodered-on-cloud.herokuapp.com/ui\nHeroku: https://dashboard.heroku.com/apps/nodered-on-cloud\nNode-RED: https://nodered-on-cloud.herokuapp.com/editor",
         "output": "str",
         "x": 900,
         "y": 340,
