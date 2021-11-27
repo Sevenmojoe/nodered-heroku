@@ -8,7 +8,7 @@ A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https:/
 ```
 [TL,DR] Use the SAVE Inject node in the first flow (see step 5).
 ```
-To overcome this, after having deployed the new flows by the Editor, export All flows as "flows.json" file, and push it to the GitHub repo linked to Heroku. Do the same with "flows_cred.json" and "package.json" for credentials and nodes installed in Palette. Detail on step 5.
+To overcome this, after having deployed the new flows, export All flows as *flows.json* file, and push it to the GitHub repo linked to Heroku. Do the same with *flows_cred.json* and *package.json* for credentials and nodes installed in Palette. Detail on step 5.
 
 ## 1. Deploying Node-RED to Heroku 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/hybuild-project/nodered-heroku)
@@ -19,9 +19,9 @@ To overcome this, after having deployed the new flows by the Editor, export All 
 * Enable Automatic Deployment, so that every time any file is pushed to GitHub repo, Heroku will rebuild Node-RED with updated files.
 
 ## 3. Password protect the flow editor
-Set Username and Password for Node-RED Flow Editor:
-* NODE_RED_USERNAME - replace this with Username for Flow Editor
-* NODE_RED_PASSWORD - replace this with Password for Flow Editor
+Set username and password for Node-RED Flow Editor:
+* **NODE_RED_USERNAME** - the username to secure the Flow Editor with
+* **NODE_RED_PASSWORD** - the password to secure the Flow Editor with
 
 ## 4. Access Node-Red on Cloud
 * Flow Editor - [nodered-on-cloud.herokuapp.com/editor](https://nodered-on-cloud.herokuapp.com/editor)
@@ -30,11 +30,11 @@ Set Username and Password for Node-RED Flow Editor:
 
 ## 5. Export all flows, credentials and installed nodes
 ### Manual mode (original)
-* In Editor, to export "flows.json", click hamburger icon `☰` (top right), click Export, choose tab "All flows", then Download.
+* In Editor, to export *flows.json*, click hamburger icon `☰` (top right), click Export, choose tab "All flows", then Download.
 * To export all the other files, browse the <i>/app</i> folder, e.g., with this [flow](https://flows.nodered.org/flow/44bc7ad491aacb4253dd8a5f757b5407) or the [modified version](utils/file-explorer-flow.json), and download all files.
-* Push "flows.json", "flows_cred.json", "package.json" to GitHub, so that Node-RED is rebuilt with the latest files at Heroku restart.
+* Push *flows.json*, *flows_cred.json*, *package.json* to GitHub, so that Node-RED is rebuilt with the latest files at Heroku restart.
 ### Alternative mode (recommended)
-* Use the `SAVE` Inject node in the [first flow](utils/save-all-changes-flow.json) to directly push all files to ``GitHub``.
+* Use the `SAVE` Inject node in the [first flow](utils/save-all-changes-flow.json) to directly push all files to GitHub.
 
 ![SAVE](public/images/save-button.png)
 
