@@ -4,7 +4,7 @@ A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https:/
 * DEMO: Dashboard UI - [https://nodered-heroku.herokuapp.com](https://nodered-heroku.herokuapp.com)
 
 
-# Warning: Heroku doesn't automatically save flows, credentials and installed nodes, so they can be lost at every restart.
+# Warning: Heroku doesn't automatically save flows, credentials and installed nodes, use the SAVE Inject node in the first flow (step 5).
 To overcome this, after having deployed the new flows by the Editor, export All flows as "flows.json" file, and push it to the GitHub repo linked to Heroku. Do the same with "flows_cred.json" and "package.json" for credentials and nodes installed in Palette. Detail on step 5.
 
 ## 1. Deploying Node-RED to Heroku 
