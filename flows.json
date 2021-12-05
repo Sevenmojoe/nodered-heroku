@@ -259,9 +259,7 @@
             "144cbd9489eb0a3a"
         ],
         "x": 54,
-        "y": 339,
-        "w": 412,
-        "h": 242
+        "y": 339
     },
     {
         "id": "179da511.9a22fb",
@@ -298,9 +296,7 @@
             "0c979bf8879c11e2"
         ],
         "x": 54,
-        "y": 379,
-        "w": 572,
-        "h": 82
+        "y": 379
     },
     {
         "id": "7e6baf98.69239",
@@ -701,6 +697,32 @@
         "debug": false,
         "backendUrl": "https://kfd5m4a21f.execute-api.eu-west-1.amazonaws.com/dev",
         "lwaClientId": "amzn1.application-oa2-client.3f1bb07133854b078261ad43f2484c18"
+    },
+    {
+        "id": "5e864bdfaa089210",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "ws://${HOST}/ws/mqtt",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
     },
     {
         "id": "5eb0bd6b.74b794",
@@ -5130,8 +5152,8 @@
         "z": "410304f236fca528",
         "name": "BLINDS",
         "info": "",
-        "x": 90,
-        "y": 120,
+        "x": 70,
+        "y": 40,
         "wires": []
     },
     {
@@ -5140,8 +5162,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, lower the living room blinds.",
         "info": "",
-        "x": 220,
-        "y": 160,
+        "x": 200,
+        "y": 80,
         "wires": []
     },
     {
@@ -5150,8 +5172,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, raise the living room blinds.",
         "info": "",
-        "x": 220,
-        "y": 200,
+        "x": 200,
+        "y": 120,
         "wires": []
     },
     {
@@ -5160,8 +5182,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, set the living room blinds to fifty percent.",
         "info": "",
-        "x": 260,
-        "y": 240,
+        "x": 240,
+        "y": 160,
         "wires": []
     },
     {
@@ -5182,7 +5204,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 130,
-        "y": 320,
+        "y": 220,
         "wires": [
             [
                 "c1e70414.f5a688"
@@ -5207,7 +5229,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 130,
-        "y": 400,
+        "y": 300,
         "wires": [
             [
                 "c1e70414.f5a688"
@@ -5232,7 +5254,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 130,
-        "y": 360,
+        "y": 260,
         "wires": [
             [
                 "c1e70414.f5a688"
@@ -5257,7 +5279,7 @@
         "payload": "{\"powerState\":\"ON\"}",
         "payloadType": "json",
         "x": 130,
-        "y": 920,
+        "y": 800,
         "wires": [
             [
                 "97e1b7a3.fcc548"
@@ -5282,7 +5304,7 @@
         "payload": "{\"powerState\":\"OFF\"}",
         "payloadType": "json",
         "x": 130,
-        "y": 960,
+        "y": 840,
         "wires": [
             [
                 "97e1b7a3.fcc548"
@@ -5295,8 +5317,8 @@
         "z": "410304f236fca528",
         "name": "COLOR CHANGING LIGHT BULB",
         "info": "",
-        "x": 180,
-        "y": 480,
+        "x": 160,
+        "y": 380,
         "wires": []
     },
     {
@@ -5317,7 +5339,7 @@
         "payload": "{\"powerState\":\"ON\",\"brightness\":60}",
         "payloadType": "json",
         "x": 130,
-        "y": 1000,
+        "y": 880,
         "wires": [
             [
                 "97e1b7a3.fcc548"
@@ -5342,7 +5364,7 @@
         "payload": "{\"colorTemperatureInKelvin\":2200,\"lightMode\":\"temp\"}",
         "payloadType": "json",
         "x": 170,
-        "y": 1080,
+        "y": 960,
         "wires": [
             [
                 "97e1b7a3.fcc548"
@@ -5367,7 +5389,7 @@
         "payload": "{\"color\":{\"hue\":120,\"saturation\":1,\"brightness\":0.5},\"lightMode\":\"hsb\"}",
         "payloadType": "json",
         "x": 150,
-        "y": 1040,
+        "y": 920,
         "wires": [
             [
                 "97e1b7a3.fcc548"
@@ -5392,7 +5414,7 @@
         "payload": "{\"color_rgb\":[255,0,0],\"lightMode\":\"hsb\"}",
         "payloadType": "json",
         "x": 160,
-        "y": 1120,
+        "y": 1000,
         "wires": [
             [
                 "97e1b7a3.fcc548"
@@ -5417,7 +5439,7 @@
         "payload": "{\"color_hex\":\"0000FF\",\"lightMode\":\"hsb\"}",
         "payloadType": "json",
         "x": 160,
-        "y": 1160,
+        "y": 1040,
         "wires": [
             [
                 "97e1b7a3.fcc548"
@@ -5430,8 +5452,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, turn on bedroom light.",
         "info": "",
-        "x": 200,
-        "y": 520,
+        "x": 180,
+        "y": 420,
         "wires": []
     },
     {
@@ -5440,8 +5462,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, turn off bedroom light.",
         "info": "",
-        "x": 200,
-        "y": 560,
+        "x": 180,
+        "y": 460,
         "wires": []
     },
     {
@@ -5450,8 +5472,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, dim the bedroom light.",
         "info": "",
-        "x": 200,
-        "y": 600,
+        "x": 180,
+        "y": 500,
         "wires": []
     },
     {
@@ -5460,8 +5482,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, set the bedroom light to sixty percent.",
         "info": "",
-        "x": 250,
-        "y": 640,
+        "x": 230,
+        "y": 540,
         "wires": []
     },
     {
@@ -5470,8 +5492,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, set the bedroom light to red.",
         "info": "",
-        "x": 220,
-        "y": 680,
+        "x": 200,
+        "y": 580,
         "wires": []
     },
     {
@@ -5480,8 +5502,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, set the bedroom light to daylight.",
         "info": "",
-        "x": 230,
-        "y": 720,
+        "x": 210,
+        "y": 620,
         "wires": []
     },
     {
@@ -5490,8 +5512,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, make the bedroom warm white.",
         "info": "",
-        "x": 230,
-        "y": 760,
+        "x": 210,
+        "y": 660,
         "wires": []
     },
     {
@@ -5500,8 +5522,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, make the bedroom light warmer.",
         "info": "",
-        "x": 230,
-        "y": 800,
+        "x": 210,
+        "y": 700,
         "wires": []
     },
     {
@@ -5510,8 +5532,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, set the bedroom light cooler.",
         "info": "",
-        "x": 220,
-        "y": 840,
+        "x": 200,
+        "y": 740,
         "wires": []
     },
     {
@@ -5532,7 +5554,7 @@
         "payload": "{\"powerState\":\"ON\"}",
         "payloadType": "json",
         "x": 130,
-        "y": 1720,
+        "y": 1560,
         "wires": [
             [
                 "1de955b6.491d3a"
@@ -5557,7 +5579,7 @@
         "payload": "{\"powerState\":\"OFF\"}",
         "payloadType": "json",
         "x": 130,
-        "y": 1760,
+        "y": 1600,
         "wires": [
             [
                 "1de955b6.491d3a"
@@ -5570,8 +5592,8 @@
         "z": "410304f236fca528",
         "name": "DIMMABLE LIGHT BULB",
         "info": "",
-        "x": 150,
-        "y": 1480,
+        "x": 130,
+        "y": 1340,
         "wires": []
     },
     {
@@ -5592,7 +5614,7 @@
         "payload": "{\"powerState\":\"ON\",\"brightness\":60}",
         "payloadType": "json",
         "x": 130,
-        "y": 1800,
+        "y": 1640,
         "wires": [
             [
                 "1de955b6.491d3a"
@@ -5605,8 +5627,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, turn on kitchen light.",
         "info": "",
-        "x": 190,
-        "y": 1520,
+        "x": 170,
+        "y": 1380,
         "wires": []
     },
     {
@@ -5615,8 +5637,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, turn off kitchen light.",
         "info": "",
-        "x": 190,
-        "y": 1560,
+        "x": 170,
+        "y": 1420,
         "wires": []
     },
     {
@@ -5625,8 +5647,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, dim the kitchen light.",
         "info": "",
-        "x": 190,
-        "y": 1600,
+        "x": 170,
+        "y": 1460,
         "wires": []
     },
     {
@@ -5635,8 +5657,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, set the kitchen light to sixty percent.",
         "info": "",
-        "x": 240,
-        "y": 1640,
+        "x": 220,
+        "y": 1500,
         "wires": []
     },
     {
@@ -5645,8 +5667,8 @@
         "z": "410304f236fca528",
         "name": "ENTERTAINMENT DEVICE",
         "info": "",
-        "x": 160,
-        "y": 2200,
+        "x": 140,
+        "y": 2020,
         "wires": []
     },
     {
@@ -5655,8 +5677,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, change the input to DVD on the Bedroom TV.",
         "info": "",
-        "x": 270,
-        "y": 2240,
+        "x": 250,
+        "y": 2060,
         "wires": []
     },
     {
@@ -5665,8 +5687,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, set the volume of the Bedroom TV to 50.",
         "info": "",
-        "x": 260,
-        "y": 2280,
+        "x": 240,
+        "y": 2100,
         "wires": []
     },
     {
@@ -5675,8 +5697,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, turn the volume down on the Bedroom TV by 20.",
         "info": "",
-        "x": 280,
-        "y": 2320,
+        "x": 260,
+        "y": 2140,
         "wires": []
     },
     {
@@ -5685,8 +5707,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, turn the volume down on Bedroom TV.",
         "info": "",
-        "x": 250,
-        "y": 2360,
+        "x": 230,
+        "y": 2180,
         "wires": []
     },
     {
@@ -5695,8 +5717,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, mute Bedroom TV.",
         "info": "",
-        "x": 190,
-        "y": 2400,
+        "x": 170,
+        "y": 2220,
         "wires": []
     },
     {
@@ -5705,8 +5727,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, unmute Bedroom TV.",
         "info": "",
-        "x": 200,
-        "y": 2440,
+        "x": 180,
+        "y": 2260,
         "wires": []
     },
     {
@@ -5715,8 +5737,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, change the channel to 200 on the Bedroom TV.",
         "info": "",
-        "x": 280,
-        "y": 2480,
+        "x": 260,
+        "y": 2300,
         "wires": []
     },
     {
@@ -5725,8 +5747,8 @@
         "z": "410304f236fca528",
         "name": "lexa, next channel on the Bedroom TV.",
         "info": "",
-        "x": 230,
-        "y": 2520,
+        "x": 210,
+        "y": 2340,
         "wires": []
     },
     {
@@ -5735,8 +5757,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, channel down on the Bedroom TV.",
         "info": "",
-        "x": 240,
-        "y": 2560,
+        "x": 220,
+        "y": 2380,
         "wires": []
     },
     {
@@ -5745,8 +5767,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, play | pause | stop | start over | previous | next | rewind | fast forward (on) CD player",
         "info": "",
-        "x": 390,
-        "y": 2600,
+        "x": 370,
+        "y": 2420,
         "wires": []
     },
     {
@@ -5767,7 +5789,7 @@
         "payload": "{\"powerState\":\"ON\"}",
         "payloadType": "json",
         "x": 130,
-        "y": 2960,
+        "y": 2700,
         "wires": [
             [
                 "b2e33b2041b55c34"
@@ -5792,7 +5814,7 @@
         "payload": "{\"powerState\":\"OFF\"}",
         "payloadType": "json",
         "x": 130,
-        "y": 3000,
+        "y": 2740,
         "wires": [
             [
                 "b2e33b2041b55c34"
@@ -5805,8 +5827,8 @@
         "z": "410304f236fca528",
         "name": "FAN",
         "info": "",
-        "x": 90,
-        "y": 2800,
+        "x": 70,
+        "y": 2560,
         "wires": []
     },
     {
@@ -5827,7 +5849,7 @@
         "payload": "{\"speed\":1}",
         "payloadType": "json",
         "x": 140,
-        "y": 3040,
+        "y": 2780,
         "wires": [
             [
                 "b2e33b2041b55c34"
@@ -5840,8 +5862,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, set the bedroom fan speed to 7.",
         "info": "",
-        "x": 230,
-        "y": 2840,
+        "x": 210,
+        "y": 2600,
         "wires": []
     },
     {
@@ -5850,8 +5872,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, set the fan speed on the bedroom fan to maximum.",
         "info": "",
-        "x": 290,
-        "y": 2880,
+        "x": 270,
+        "y": 2640,
         "wires": []
     },
     {
@@ -5872,7 +5894,7 @@
         "payload": "{\"speed\":5}",
         "payloadType": "json",
         "x": 140,
-        "y": 3080,
+        "y": 2820,
         "wires": [
             [
                 "b2e33b2041b55c34"
@@ -5897,7 +5919,7 @@
         "payload": "{\"speed\":10}",
         "payloadType": "json",
         "x": 140,
-        "y": 3120,
+        "y": 2860,
         "wires": [
             [
                 "b2e33b2041b55c34"
@@ -5922,7 +5944,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 130,
-        "y": 3400,
+        "y": 3120,
         "wires": [
             [
                 "ec1793b6.d60de"
@@ -5947,7 +5969,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 130,
-        "y": 3440,
+        "y": 3160,
         "wires": [
             [
                 "ec1793b6.d60de"
@@ -5960,8 +5982,8 @@
         "z": "410304f236fca528",
         "name": "LOCK",
         "info": "",
-        "x": 90,
-        "y": 3200,
+        "x": 70,
+        "y": 2940,
         "wires": []
     },
     {
@@ -5970,8 +5992,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, unlock front door",
         "info": "",
-        "x": 180,
-        "y": 3280,
+        "x": 160,
+        "y": 3020,
         "wires": []
     },
     {
@@ -5980,8 +6002,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, is the front door locked?",
         "info": "",
-        "x": 210,
-        "y": 3320,
+        "x": 190,
+        "y": 3060,
         "wires": []
     },
     {
@@ -5990,200 +6012,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, lock front door.",
         "info": "",
-        "x": 180,
-        "y": 3240,
-        "wires": []
-    },
-    {
-        "id": "5fe4b1c4.8eb04",
-        "type": "inject",
-        "z": "410304f236fca528",
-        "name": "on",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"powerState\":\"ON\"}",
-        "payloadType": "json",
-        "x": 870,
-        "y": 1960,
-        "wires": [
-            [
-                "50f53bed.7bf204"
-            ]
-        ]
-    },
-    {
-        "id": "7187b738.ca5778",
-        "type": "inject",
-        "z": "410304f236fca528",
-        "name": "off",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"powerState\":\"OFF\"}",
-        "payloadType": "json",
-        "x": 870,
-        "y": 2000,
-        "wires": [
-            [
-                "50f53bed.7bf204"
-            ]
-        ]
-    },
-    {
-        "id": "3bbc5c97.55cdd4",
-        "type": "comment",
-        "z": "410304f236fca528",
-        "name": "PLUG",
-        "info": "",
-        "x": 850,
-        "y": 1800,
-        "wires": []
-    },
-    {
-        "id": "96685bfa.aba9f8",
-        "type": "debug",
-        "z": "410304f236fca528",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1450,
-        "y": 1960,
-        "wires": []
-    },
-    {
-        "id": "b679be37.a5656",
-        "type": "comment",
-        "z": "410304f236fca528",
-        "name": "Alexa, turn on the projector.",
-        "info": "",
-        "x": 960,
-        "y": 1840,
-        "wires": []
-    },
-    {
-        "id": "67c1de90.3894e",
-        "type": "comment",
-        "z": "410304f236fca528",
-        "name": "Alexa, turn off the projector.",
-        "info": "",
-        "x": 960,
-        "y": 1880,
-        "wires": []
-    },
-    {
-        "id": "580aade76ca601d4",
-        "type": "inject",
-        "z": "410304f236fca528",
-        "name": "on",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"powerState\":\"ON\"}",
-        "payloadType": "json",
-        "x": 870,
-        "y": 2240,
-        "wires": [
-            [
-                "3abbcf1aec21ec82"
-            ]
-        ]
-    },
-    {
-        "id": "aeab5e0a9e7322b4",
-        "type": "inject",
-        "z": "410304f236fca528",
-        "name": "off",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"powerState\":\"OFF\"}",
-        "payloadType": "json",
-        "x": 870,
-        "y": 2280,
-        "wires": [
-            [
-                "3abbcf1aec21ec82"
-            ]
-        ]
-    },
-    {
-        "id": "1a90d791eec095cc",
-        "type": "comment",
-        "z": "410304f236fca528",
-        "name": "SWITCH",
-        "info": "",
-        "x": 860,
-        "y": 2080,
-        "wires": []
-    },
-    {
-        "id": "e65e77bef568f0fe",
-        "type": "debug",
-        "z": "410304f236fca528",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1450,
-        "y": 2240,
-        "wires": []
-    },
-    {
-        "id": "46ebeebf96132c1b",
-        "type": "comment",
-        "z": "410304f236fca528",
-        "name": "Alexa, turn on the coffee maker.",
-        "info": "",
-        "x": 970,
-        "y": 2120,
-        "wires": []
-    },
-    {
-        "id": "59d0cf12783cd482",
-        "type": "comment",
-        "z": "410304f236fca528",
-        "name": "Alexa, turn off the coffee maker.",
-        "info": "",
-        "x": 970,
-        "y": 2160,
+        "x": 160,
+        "y": 2980,
         "wires": []
     },
     {
@@ -6216,13 +6046,17 @@
             "e9b508a56c5f519b",
             "b3315f788bb451e2",
             "a7b436f65a8c6544",
-            "a3561bacb47d7cd9"
+            "a3561bacb47d7cd9",
+            "0707592677880a38",
+            "7f7547120484b186",
+            "af03d77100886c54"
         ],
-        "x": 655,
-        "y": 40,
+        "x": 735,
+        "y": 260,
         "wires": [
             [
-                "a387d9254ef903ca"
+                "a387d9254ef903ca",
+                "279268b43277ffdd"
             ]
         ]
     },
@@ -6235,7 +6069,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 360,
+        "y": 260,
         "wires": []
     },
     {
@@ -6247,7 +6081,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 1040,
+        "y": 920,
         "wires": []
     },
     {
@@ -6259,7 +6093,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 1760,
+        "y": 1600,
         "wires": []
     },
     {
@@ -6271,7 +6105,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 2700,
+        "y": 2480,
         "wires": []
     },
     {
@@ -6283,7 +6117,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 3040,
+        "y": 2780,
         "wires": []
     },
     {
@@ -6295,31 +6129,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 3420,
-        "wires": []
-    },
-    {
-        "id": "26a9b2ee626d9949",
-        "type": "link out",
-        "z": "410304f236fca528",
-        "name": "",
-        "links": [
-            "3ecf205d536baf21"
-        ],
-        "x": 1275,
-        "y": 2020,
-        "wires": []
-    },
-    {
-        "id": "cb185ff1d15e4089",
-        "type": "link out",
-        "z": "410304f236fca528",
-        "name": "",
-        "links": [
-            "3ecf205d536baf21"
-        ],
-        "x": 1275,
-        "y": 2300,
+        "y": 3140,
         "wires": []
     },
     {
@@ -6329,7 +6139,7 @@
         "name": "pin: 1234",
         "info": "",
         "x": 420,
-        "y": 3320,
+        "y": 3060,
         "wires": []
     },
     {
@@ -6337,8 +6147,8 @@
         "type": "comment",
         "z": "410304f236fca528",
         "name": "Skill Alexa da installare",
-        "info": "[Virtual Smart Home](https://www.amazon.it/Cornelius-Suermann-Virtual-Smart-Home/dp/B08JV9RT7H)",
-        "x": 140,
+        "info": "[Virtual Smart Home](https://www.amazon.it/Cornelius-Suermann-Virtual-Smart-Home/dp/B08JV9RT7H)\n`node-red-contrib-virtual-smart-home`",
+        "x": 820,
         "y": 40,
         "wires": []
     },
@@ -6354,7 +6164,7 @@
         "diff": false,
         "filter": false,
         "x": 450,
-        "y": 360,
+        "y": 260,
         "wires": [
             [
                 "702c599945b1e917"
@@ -6373,7 +6183,7 @@
         "diff": false,
         "filter": false,
         "x": 480,
-        "y": 1040,
+        "y": 920,
         "wires": [
             [
                 "dbab246ade3ef2f3"
@@ -6392,7 +6202,7 @@
         "diff": false,
         "filter": false,
         "x": 450,
-        "y": 1760,
+        "y": 1600,
         "wires": [
             [
                 "015ab4055991f5a6"
@@ -6411,7 +6221,7 @@
         "diff": false,
         "filter": false,
         "x": 450,
-        "y": 2700,
+        "y": 2480,
         "wires": [
             [
                 "4d26f4059b2ece09"
@@ -6430,7 +6240,7 @@
         "diff": false,
         "filter": false,
         "x": 450,
-        "y": 3040,
+        "y": 2780,
         "wires": [
             [
                 "7ad151b845101a78"
@@ -6449,50 +6259,10 @@
         "diff": false,
         "filter": false,
         "x": 450,
-        "y": 3420,
+        "y": 3140,
         "wires": [
             [
                 "da175b935d75439d"
-            ]
-        ]
-    },
-    {
-        "id": "50f53bed.7bf204",
-        "type": "vsh-virtual-device",
-        "z": "410304f236fca528",
-        "name": "Presa virtuale",
-        "topic": "plug/projector",
-        "connection": "f08c8c22d21d93de",
-        "template": "PLUG",
-        "passthrough": true,
-        "diff": false,
-        "filter": false,
-        "x": 1160,
-        "y": 1940,
-        "wires": [
-            [
-                "96685bfa.aba9f8",
-                "26a9b2ee626d9949"
-            ]
-        ]
-    },
-    {
-        "id": "3abbcf1aec21ec82",
-        "type": "vsh-virtual-device",
-        "z": "410304f236fca528",
-        "name": "Interruttore virtuale",
-        "topic": "switch/coffeemaker",
-        "connection": "f08c8c22d21d93de",
-        "template": "SWITCH",
-        "passthrough": true,
-        "diff": false,
-        "filter": false,
-        "x": 1170,
-        "y": 2220,
-        "wires": [
-            [
-                "e65e77bef568f0fe",
-                "cb185ff1d15e4089"
             ]
         ]
     },
@@ -6518,8 +6288,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 150,
-        "y": 4040,
+        "x": 190,
+        "y": 4260,
         "wires": [
             [
                 "b0fea4fe21b7ce51"
@@ -6548,8 +6318,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 140,
-        "y": 4080,
+        "x": 180,
+        "y": 4300,
         "wires": [
             [
                 "b0fea4fe21b7ce51"
@@ -6578,8 +6348,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 140,
-        "y": 4120,
+        "x": 180,
+        "y": 4340,
         "wires": [
             [
                 "b0fea4fe21b7ce51"
@@ -6592,8 +6362,8 @@
         "z": "410304f236fca528",
         "name": "TEMPERATURE SENSOR",
         "info": "",
-        "x": 150,
-        "y": 3920,
+        "x": 130,
+        "y": 4160,
         "wires": []
     },
     {
@@ -6602,8 +6372,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, what's the temperature of pizza oven?",
         "info": "",
-        "x": 250,
-        "y": 3960,
+        "x": 230,
+        "y": 4200,
         "wires": []
     },
     {
@@ -6614,8 +6384,8 @@
         "links": [
             "3ecf205d536baf21"
         ],
-        "x": 615,
-        "y": 4080,
+        "x": 655,
+        "y": 4300,
         "wires": []
     },
     {
@@ -6629,8 +6399,8 @@
         "passthrough": false,
         "diff": false,
         "filter": false,
-        "x": 420,
-        "y": 4080,
+        "x": 460,
+        "y": 4300,
         "wires": [
             [
                 "9a95c41a03cd217f"
@@ -6649,8 +6419,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 770,
-        "y": 40,
+        "x": 850,
+        "y": 220,
         "wires": []
     },
     {
@@ -6670,8 +6440,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 90,
-        "y": 3800,
+        "x": 130,
+        "y": 3300,
         "wires": [
             [
                 "9a4f6009b4c4e461"
@@ -6695,8 +6465,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 100,
-        "y": 3840,
+        "x": 140,
+        "y": 3340,
         "wires": [
             [
                 "9a4f6009b4c4e461"
@@ -6711,8 +6481,8 @@
         "links": [
             "3ecf205d536baf21"
         ],
-        "x": 755,
-        "y": 3820,
+        "x": 655,
+        "y": 3320,
         "wires": []
     },
     {
@@ -6726,8 +6496,8 @@
         "passthrough": false,
         "diff": false,
         "filter": false,
-        "x": 450,
-        "y": 3820,
+        "x": 490,
+        "y": 3320,
         "wires": [
             [
                 "e71812d690cc3802"
@@ -6740,8 +6510,8 @@
         "z": "410304f236fca528",
         "name": "MOTION SENSOR",
         "info": "",
-        "x": 130,
-        "y": 3720,
+        "x": 110,
+        "y": 3240,
         "wires": []
     },
     {
@@ -6762,7 +6532,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 130,
-        "y": 1360,
+        "y": 1220,
         "wires": [
             [
                 "b056d31ad29d95bc"
@@ -6775,8 +6545,8 @@
         "z": "410304f236fca528",
         "name": "CONTACT SENSOR",
         "info": "",
-        "x": 130,
-        "y": 1240,
+        "x": 110,
+        "y": 1120,
         "wires": []
     },
     {
@@ -6785,8 +6555,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, is kitchen window open?",
         "info": "",
-        "x": 210,
-        "y": 1280,
+        "x": 190,
+        "y": 1160,
         "wires": []
     },
     {
@@ -6807,7 +6577,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 130,
-        "y": 1400,
+        "y": 1260,
         "wires": [
             [
                 "b056d31ad29d95bc"
@@ -6823,22 +6593,22 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 1380,
+        "y": 1240,
         "wires": []
     },
     {
         "id": "b056d31ad29d95bc",
         "type": "vsh-virtual-device",
         "z": "410304f236fca528",
-        "name": "Interruttore virtuale",
+        "name": "Sensore di contatto virtuale",
         "topic": "kitchen/window",
         "connection": "f08c8c22d21d93de",
         "template": "CONTACT_SENSOR",
         "passthrough": false,
         "diff": false,
         "filter": false,
-        "x": 450,
-        "y": 1380,
+        "x": 480,
+        "y": 1240,
         "wires": [
             [
                 "b3315f788bb451e2"
@@ -6863,7 +6633,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 130,
-        "y": 2000,
+        "y": 1820,
         "wires": [
             [
                 "ce59b43560b10b7d"
@@ -6887,7 +6657,7 @@
         "drop": false,
         "outputs": 1,
         "x": 220,
-        "y": 2120,
+        "y": 1940,
         "wires": [
             [
                 "bdcec18e874742a2"
@@ -6914,7 +6684,7 @@
         "to": "",
         "reg": false,
         "x": 430,
-        "y": 2120,
+        "y": 1940,
         "wires": [
             [
                 "88ab5402263e24a3"
@@ -6938,7 +6708,7 @@
         "drop": true,
         "outputs": 1,
         "x": 200,
-        "y": 2060,
+        "y": 1880,
         "wires": [
             [
                 "88ab5402263e24a3",
@@ -6952,8 +6722,8 @@
         "z": "410304f236fca528",
         "name": "DOORBELL EVENT SOURCE",
         "info": "",
-        "x": 160,
-        "y": 1880,
+        "x": 140,
+        "y": 1720,
         "wires": []
     },
     {
@@ -6962,8 +6732,8 @@
         "z": "410304f236fca528",
         "name": "!! please read this note !!",
         "info": "# Doorbell Event Source\n\nAmazon only allows 1 doorbell event every 30 seconds.\n\nAfter 5 seconds the detectionState is set back to NOT_DETECTED. This is necessary in order to force a state change. Otherwise the state will appear as unchanged with the next doorbell event and not get submitted to Alexa.",
-        "x": 190,
-        "y": 1920,
+        "x": 170,
+        "y": 1760,
         "wires": []
     },
     {
@@ -6975,7 +6745,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 2060,
+        "y": 1880,
         "wires": []
     },
     {
@@ -6990,7 +6760,7 @@
         "diff": false,
         "filter": false,
         "x": 460,
-        "y": 2060,
+        "y": 1880,
         "wires": [
             [
                 "a7b436f65a8c6544"
@@ -7003,8 +6773,8 @@
         "z": "410304f236fca528",
         "name": "SCENE",
         "info": "",
-        "x": 90,
-        "y": 4180,
+        "x": 70,
+        "y": 3680,
         "wires": []
     },
     {
@@ -7013,8 +6783,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, turn on kitchen party.",
         "info": "",
-        "x": 200,
-        "y": 4220,
+        "x": 180,
+        "y": 3720,
         "wires": []
     },
     {
@@ -7023,8 +6793,8 @@
         "z": "410304f236fca528",
         "name": "Alexa, turn off kitchen party.",
         "info": "",
-        "x": 200,
-        "y": 4260,
+        "x": 180,
+        "y": 3760,
         "wires": []
     },
     {
@@ -7035,8 +6805,8 @@
         "links": [
             "3ecf205d536baf21"
         ],
-        "x": 615,
-        "y": 4320,
+        "x": 655,
+        "y": 3820,
         "wires": []
     },
     {
@@ -7050,8 +6820,8 @@
         "passthrough": true,
         "diff": false,
         "filter": false,
-        "x": 410,
-        "y": 4320,
+        "x": 450,
+        "y": 3820,
         "wires": [
             [
                 "a3561bacb47d7cd9"
@@ -7059,7 +6829,7 @@
         ]
     },
     {
-        "id": "bc028d41b3d9ace9",
+        "id": "dd9712860f3e90f3",
         "type": "inject",
         "z": "410304f236fca528",
         "name": "on",
@@ -7076,13 +6846,15 @@
         "payload": "{\"powerState\":\"ON\"}",
         "payloadType": "json",
         "x": 130,
-        "y": 2680,
+        "y": 3560,
         "wires": [
-            []
+            [
+                "138192f9fcf6ca57"
+            ]
         ]
     },
     {
-        "id": "14c0ad34168bea6e",
+        "id": "5bfeaab7fe900a64",
         "type": "inject",
         "z": "410304f236fca528",
         "name": "off",
@@ -7099,9 +6871,565 @@
         "payload": "{\"powerState\":\"OFF\"}",
         "payloadType": "json",
         "x": 130,
-        "y": 2720,
+        "y": 3600,
         "wires": [
-            []
+            [
+                "138192f9fcf6ca57"
+            ]
+        ]
+    },
+    {
+        "id": "a5099415836baf99",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "PLUG",
+        "info": "",
+        "x": 70,
+        "y": 3420,
+        "wires": []
+    },
+    {
+        "id": "860a46c38c62c55c",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn on the projector.",
+        "info": "",
+        "x": 180,
+        "y": 3460,
+        "wires": []
+    },
+    {
+        "id": "7da28a1a335333a7",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn off the projector.",
+        "info": "",
+        "x": 180,
+        "y": 3500,
+        "wires": []
+    },
+    {
+        "id": "083af3fb7c35eac8",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "on",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"powerState\":\"ON\"}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 4040,
+        "wires": [
+            [
+                "df1eb10abfe05c43"
+            ]
+        ]
+    },
+    {
+        "id": "6bc4b565ba8971a7",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "off",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"powerState\":\"OFF\"}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 4080,
+        "wires": [
+            [
+                "df1eb10abfe05c43"
+            ]
+        ]
+    },
+    {
+        "id": "325b9117c8bc1d73",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "SWITCH",
+        "info": "",
+        "x": 80,
+        "y": 3900,
+        "wires": []
+    },
+    {
+        "id": "bd172e986521c70c",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn on the coffee maker.",
+        "info": "",
+        "x": 190,
+        "y": 3940,
+        "wires": []
+    },
+    {
+        "id": "74521ca999f89d94",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn off the coffee maker.",
+        "info": "",
+        "x": 190,
+        "y": 3980,
+        "wires": []
+    },
+    {
+        "id": "0707592677880a38",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 655,
+        "y": 3580,
+        "wires": []
+    },
+    {
+        "id": "7f7547120484b186",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 655,
+        "y": 4060,
+        "wires": []
+    },
+    {
+        "id": "138192f9fcf6ca57",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Presa virtuale",
+        "topic": "plug/projector",
+        "connection": "f08c8c22d21d93de",
+        "template": "PLUG",
+        "passthrough": true,
+        "diff": false,
+        "filter": false,
+        "x": 440,
+        "y": 3580,
+        "wires": [
+            [
+                "0707592677880a38"
+            ]
+        ]
+    },
+    {
+        "id": "df1eb10abfe05c43",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Interruttore virtuale",
+        "topic": "switch/coffeemaker",
+        "connection": "f08c8c22d21d93de",
+        "template": "SWITCH",
+        "passthrough": true,
+        "diff": false,
+        "filter": false,
+        "x": 450,
+        "y": 4060,
+        "wires": [
+            [
+                "7f7547120484b186"
+            ]
+        ]
+    },
+    {
+        "id": "ec192310.979d5",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Termostato virtuale",
+        "topic": "bedroom/thermostat",
+        "connection": "f08c8c22d21d93de",
+        "template": "THERMOSTAT",
+        "passthrough": true,
+        "diff": false,
+        "filter": false,
+        "x": 450,
+        "y": 4760,
+        "wires": [
+            [
+                "af03d77100886c54"
+            ]
+        ]
+    },
+    {
+        "id": "521b6c26.571e64",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "current temp = 19.7 °C",
+        "props": [
+            {
+                "p": "payload.temperature",
+                "v": "19.7",
+                "vt": "num"
+            },
+            {
+                "p": "payload.scale",
+                "v": "CELSIUS",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 180,
+        "y": 4640,
+        "wires": [
+            [
+                "ec192310.979d5"
+            ]
+        ]
+    },
+    {
+        "id": "1b9ebdb3.4ce6b2",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "current temp = 22 °C",
+        "props": [
+            {
+                "p": "payload.temperature",
+                "v": "22",
+                "vt": "num"
+            },
+            {
+                "p": "payload.scale",
+                "v": "CELSIUS",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 4680,
+        "wires": [
+            [
+                "ec192310.979d5"
+            ]
+        ]
+    },
+    {
+        "id": "c19e6295.a1337",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "target temp = 20 °C",
+        "props": [
+            {
+                "p": "payload.targetTemperature",
+                "v": "20",
+                "vt": "num"
+            },
+            {
+                "p": "payload.targetScale",
+                "v": "CELSIUS",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 4720,
+        "wires": [
+            [
+                "ec192310.979d5"
+            ]
+        ]
+    },
+    {
+        "id": "362951d9.1d9e3e",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "target temp = 22.5 °C",
+        "props": [
+            {
+                "p": "payload.targetTemperature",
+                "v": "22.5",
+                "vt": "num"
+            },
+            {
+                "p": "payload.targetScale",
+                "v": "CELSIUS",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 180,
+        "y": 4760,
+        "wires": [
+            [
+                "ec192310.979d5"
+            ]
+        ]
+    },
+    {
+        "id": "56680f44.6827a",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "THERMOSTAT",
+        "info": "",
+        "x": 100,
+        "y": 4420,
+        "wires": []
+    },
+    {
+        "id": "10fa60e2.65222f",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, make it warmer in here.",
+        "info": "",
+        "x": 180,
+        "y": 4500,
+        "wires": []
+    },
+    {
+        "id": "ee97291.e7937d8",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, make it cooler in here.",
+        "info": "",
+        "x": 180,
+        "y": 4540,
+        "wires": []
+    },
+    {
+        "id": "e41e1df4.35e2f",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, set bedroom thermostat to twenty.",
+        "info": "",
+        "x": 220,
+        "y": 4460,
+        "wires": []
+    },
+    {
+        "id": "921caef2.454cf",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, what's the temperature of bedroom thermostat?",
+        "info": "",
+        "x": 260,
+        "y": 4580,
+        "wires": []
+    },
+    {
+        "id": "a4dd21a6.1a75e",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "mode = AUTO",
+        "props": [
+            {
+                "p": "payload.thermostatMode",
+                "v": "AUTO",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 4800,
+        "wires": [
+            [
+                "ec192310.979d5"
+            ]
+        ]
+    },
+    {
+        "id": "39ff2a1f.437cd6",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "mode = HEAT",
+        "props": [
+            {
+                "p": "payload.thermostatMode",
+                "v": "HEAT",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 4840,
+        "wires": [
+            [
+                "ec192310.979d5"
+            ]
+        ]
+    },
+    {
+        "id": "fe487ec6.d62f4",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "mode = COOL",
+        "props": [
+            {
+                "p": "payload.thermostatMode",
+                "v": "COOL",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 4880,
+        "wires": [
+            [
+                "ec192310.979d5"
+            ]
+        ]
+    },
+    {
+        "id": "d14af22e.2a3f3",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "mode = ECO",
+        "props": [
+            {
+                "p": "payload.thermostatMode",
+                "v": "ECO",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 4920,
+        "wires": [
+            [
+                "ec192310.979d5"
+            ]
+        ]
+    },
+    {
+        "id": "5cc18f22.5aad3",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "mode = OFF",
+        "props": [
+            {
+                "p": "payload.thermostatMode",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 4960,
+        "wires": [
+            [
+                "ec192310.979d5"
+            ]
+        ]
+    },
+    {
+        "id": "af03d77100886c54",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 655,
+        "y": 4760,
+        "wires": []
+    },
+    {
+        "id": "daade54949fa530b",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Most often used commands",
+        "info": " - Alexa, switch on / off DEVICE-NAME\n - Alexa, set DEVICE-NAME to X percent\n - Alexa, set DEVICE-NAME to Warm white / Soft white / Daylight white / Cool white / Red / Crimson / Salmon / Orange / Gold / Yellow / Green / Turquoise / Cyan / Sky blue / Blue / Purple / Magenta / Pink / Lavendar\n - Alexa, open / close DEVICE-NAME",
+        "x": 840,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "8809c1f735494e86",
+        "type": "telegrambot-notify",
+        "z": "410304f236fca528",
+        "name": "",
+        "bot": "ee20ae5266a5e32c",
+        "chatId": "1269409529",
+        "message": "",
+        "parseMode": "",
+        "x": 900,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "279268b43277ffdd",
+        "type": "function",
+        "z": "410304f236fca528",
+        "name": "payloadify",
+        "func": "return {payload:msg};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 260,
+        "wires": [
+            [
+                "218eb635ccd54b43"
+            ]
+        ]
+    },
+    {
+        "id": "218eb635ccd54b43",
+        "type": "yaml",
+        "z": "410304f236fca528",
+        "property": "payload",
+        "name": "",
+        "x": 850,
+        "y": 320,
+        "wires": [
+            [
+                "8809c1f735494e86"
+            ]
         ]
     }
 ]
