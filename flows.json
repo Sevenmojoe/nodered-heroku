@@ -44,6 +44,14 @@
         "env": []
     },
     {
+        "id": "410304f236fca528",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "2924702c.b33a7",
         "type": "subflow",
         "name": "ui-table handler",
@@ -252,7 +260,9 @@
             "144cbd9489eb0a3a"
         ],
         "x": 54,
-        "y": 339
+        "y": 339,
+        "w": 412,
+        "h": 242
     },
     {
         "id": "179da511.9a22fb",
@@ -271,9 +281,9 @@
             "79211ed51f80c95c"
         ],
         "env": [],
-        "x": 424,
+        "x": 434,
         "y": 399,
-        "w": 202,
+        "w": 192,
         "h": 162
     },
     {
@@ -290,7 +300,9 @@
             "0c979bf8879c11e2"
         ],
         "x": 54,
-        "y": 379
+        "y": 379,
+        "w": 572,
+        "h": 82
     },
     {
         "id": "7e6baf98.69239",
@@ -681,6 +693,16 @@
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "f08c8c22d21d93de",
+        "type": "vsh-connection",
+        "name": "cali.laura@hotmail.it",
+        "port": "8883",
+        "accessTokenExpiry": "1638421246190",
+        "debug": false,
+        "backendUrl": "https://kfd5m4a21f.execute-api.eu-west-1.amazonaws.com/dev",
+        "lwaClientId": "amzn1.application-oa2-client.3f1bb07133854b078261ad43f2484c18"
     },
     {
         "id": "5eb0bd6b.74b794",
@@ -1924,9 +1946,9 @@
         "type": "comment",
         "z": "3827b8c0.6c5468",
         "g": "179da511.9a22fb",
-        "name": "Cron-job",
+        "name": "(alt) Cron-job",
         "info": " - Log in to [Cron-job](https://console.cron-job.org/)\n - Create custom cron-based job\n - Headers and HTTP methods selectable",
-        "x": 520,
+        "x": 530,
         "y": 480,
         "wires": []
     },
@@ -1971,9 +1993,9 @@
         "type": "comment",
         "z": "3827b8c0.6c5468",
         "g": "179da511.9a22fb",
-        "name": "Kaffeine",
-        "info": " - Ping set in [Kaffeine](https://kaffeine.herokuapp.com/)\n - Every 30 minutes from 6.00 to 23.59\n - Heroku free dyno limit: 550 hours/mounth",
-        "x": 520,
+        "name": "(alt) Kaffeine",
+        "info": " - Made to keep Heroku alive is [Kaffeine](https://kaffeine.herokuapp.com/)\n - Every 30 minutes from 6.00 to 23.59\n - Heroku free dyno limit: 550 hours/mounth",
+        "x": 530,
         "y": 520,
         "wires": []
     },
@@ -5091,6 +5113,2010 @@
         "wires": [
             [
                 "ced80261c7808b0f"
+            ]
+        ]
+    },
+    {
+        "id": "e62e0cd.b427bf",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "measured temp = 220.5 °C",
+        "props": [
+            {
+                "p": "payload.temperature",
+                "v": "220.5",
+                "vt": "num"
+            },
+            {
+                "p": "payload.scale",
+                "v": "CELSIUS",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 380,
+        "wires": [
+            [
+                "d04827e9.44afc8"
+            ]
+        ]
+    },
+    {
+        "id": "2e4d92c8.68fe8e",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "measured temp = 430 °F",
+        "props": [
+            {
+                "p": "payload.temperature",
+                "v": "430",
+                "vt": "num"
+            },
+            {
+                "p": "payload.scale",
+                "v": "FAHRENHEIT",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 420,
+        "wires": [
+            [
+                "d04827e9.44afc8"
+            ]
+        ]
+    },
+    {
+        "id": "1c169029.57791",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "measured temp = 495 K",
+        "props": [
+            {
+                "p": "payload.temperature",
+                "v": "495",
+                "vt": "num"
+            },
+            {
+                "p": "payload.scale",
+                "v": "KELVIN",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 460,
+        "wires": [
+            [
+                "d04827e9.44afc8"
+            ]
+        ]
+    },
+    {
+        "id": "abb1247e.0195d8",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "TEMPERATURE SENSOR",
+        "info": "",
+        "x": 150,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3a04b9d9.3b7cc6",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, what's the temperature of pizza oven?",
+        "info": "",
+        "x": 250,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d3ccd3e3.2545a",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "BLINDS",
+        "info": "",
+        "x": 110,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "829de8c8.3d3b58",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, lower the living room blinds.",
+        "info": "",
+        "x": 240,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "7fe0262.08f8ad8",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, raise the living room blinds.",
+        "info": "",
+        "x": 240,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "855fba00.f2c468",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, set the living room blinds to fifty percent.",
+        "info": "",
+        "x": 280,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "4daf3216.a0c4fc",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "open",
+        "props": [
+            {
+                "p": "payload.percentage",
+                "v": "100",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 720,
+        "wires": [
+            [
+                "c1e70414.f5a688"
+            ]
+        ]
+    },
+    {
+        "id": "4f53ae41.663d3",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "50%",
+        "props": [
+            {
+                "p": "payload.percentage",
+                "v": "50",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 800,
+        "wires": [
+            [
+                "c1e70414.f5a688"
+            ]
+        ]
+    },
+    {
+        "id": "57a354ab.67efcc",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "close",
+        "props": [
+            {
+                "p": "payload.percentage",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 760,
+        "wires": [
+            [
+                "c1e70414.f5a688"
+            ]
+        ]
+    },
+    {
+        "id": "c9e0153d.a8fd58",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "open",
+        "props": [
+            {
+                "p": "payload.detectionState",
+                "v": "DETECTED",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "a67f98de.750138"
+            ]
+        ]
+    },
+    {
+        "id": "afda55c5.7e04a8",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "CONTACT SENSOR",
+        "info": "",
+        "x": 110,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "5cb3c47d.48280c",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, is kitchen window open?",
+        "info": "",
+        "x": 190,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "51f1a442.3442ac",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "closed",
+        "props": [
+            {
+                "p": "payload.detectionState",
+                "v": "NOT_DETECTED",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 200,
+        "wires": [
+            [
+                "a67f98de.750138"
+            ]
+        ]
+    },
+    {
+        "id": "4def6751.3afbc8",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "on",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"powerState\":\"ON\"}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 1480,
+        "wires": [
+            [
+                "97e1b7a3.fcc548"
+            ]
+        ]
+    },
+    {
+        "id": "bc4a064.f3316f8",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "off",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"powerState\":\"OFF\"}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 1520,
+        "wires": [
+            [
+                "97e1b7a3.fcc548"
+            ]
+        ]
+    },
+    {
+        "id": "bd0aba42.a2bca8",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "COLOR CHANGING LIGHT BULB",
+        "info": "",
+        "x": 300,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "aabe1100.ff556",
+        "type": "debug",
+        "z": "410304f236fca528",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "55818fcf.efc5f",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "60%",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"powerState\":\"ON\",\"brightness\":60}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 1560,
+        "wires": [
+            [
+                "97e1b7a3.fcc548"
+            ]
+        ]
+    },
+    {
+        "id": "e3cb895d.cabc98",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "warm white (temp)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"colorTemperatureInKelvin\":2200,\"lightMode\":\"temp\"}",
+        "payloadType": "json",
+        "x": 250,
+        "y": 1640,
+        "wires": [
+            [
+                "97e1b7a3.fcc548"
+            ]
+        ]
+    },
+    {
+        "id": "ea2fa8b8.e1bab8",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "green (hsb)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"color\":{\"hue\":120,\"saturation\":1,\"brightness\":0.5},\"lightMode\":\"hsb\"}",
+        "payloadType": "json",
+        "x": 220,
+        "y": 1600,
+        "wires": [
+            [
+                "97e1b7a3.fcc548"
+            ]
+        ]
+    },
+    {
+        "id": "9b146471.549368",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "red (color_rgb)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"color_rgb\":[255,0,0],\"lightMode\":\"hsb\"}",
+        "payloadType": "json",
+        "x": 230,
+        "y": 1680,
+        "wires": [
+            [
+                "97e1b7a3.fcc548"
+            ]
+        ]
+    },
+    {
+        "id": "c11714ec.e74448",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "blue (color_hex)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"color_hex\":\"0000FF\",\"lightMode\":\"hsb\"}",
+        "payloadType": "json",
+        "x": 240,
+        "y": 1720,
+        "wires": [
+            [
+                "97e1b7a3.fcc548"
+            ]
+        ]
+    },
+    {
+        "id": "eda8f456.41fad8",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn on bedroom light.",
+        "info": "",
+        "x": 320,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "db82fc64.39b6b",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn off bedroom light.",
+        "info": "",
+        "x": 320,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "92f29229.bc38",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, dim the bedroom light.",
+        "info": "",
+        "x": 320,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "e9f0ea95.4d9648",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, set the bedroom light to sixty percent.",
+        "info": "",
+        "x": 370,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "c1bbaee4.de85b",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, set the bedroom light to red.",
+        "info": "",
+        "x": 340,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "46c8d8f0.9ef2f8",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, set the bedroom light to daylight.",
+        "info": "",
+        "x": 350,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "1415572d.5ec6e9",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, make the bedroom warm white.",
+        "info": "",
+        "x": 350,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "41f81ae7.c07124",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, make the bedroom light warmer.",
+        "info": "",
+        "x": 350,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "6fed6e72.b742c",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, set the bedroom light cooler.",
+        "info": "",
+        "x": 340,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "1deb9367.51a3fd",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "on",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"powerState\":\"ON\"}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 2000,
+        "wires": [
+            [
+                "1de955b6.491d3a"
+            ]
+        ]
+    },
+    {
+        "id": "dab12600.fd0d08",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "off",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"powerState\":\"OFF\"}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 2040,
+        "wires": [
+            [
+                "1de955b6.491d3a"
+            ]
+        ]
+    },
+    {
+        "id": "6375e148.f86cc",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "DIMMABLE LIGHT BULB",
+        "info": "",
+        "x": 190,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "c402af75.7847",
+        "type": "debug",
+        "z": "410304f236fca528",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "2bb6a27f.f9fd7e",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "60%",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"powerState\":\"ON\",\"brightness\":60}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 2080,
+        "wires": [
+            [
+                "1de955b6.491d3a"
+            ]
+        ]
+    },
+    {
+        "id": "a2e1af48.ab3c2",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn on kitchen light.",
+        "info": "",
+        "x": 230,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "394a1805.f60018",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn off kitchen light.",
+        "info": "",
+        "x": 240,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "71e3b7d5.1eb6c8",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, dim the kitchen light.",
+        "info": "",
+        "x": 240,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "f54cb37b.d5251",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, set the kitchen light to sixty percent.",
+        "info": "",
+        "x": 280,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "b2a692fbe991fd60",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "pressed",
+        "props": [
+            {
+                "p": "payload.detectionState",
+                "v": "DETECTED",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1050,
+        "y": 180,
+        "wires": [
+            [
+                "775b0f81df4d42d8"
+            ]
+        ]
+    },
+    {
+        "id": "d7eefaf90edec65a",
+        "type": "delay",
+        "z": "410304f236fca528",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 1200,
+        "y": 240,
+        "wires": [
+            [
+                "9da133b539382733"
+            ]
+        ]
+    },
+    {
+        "id": "9da133b539382733",
+        "type": "change",
+        "z": "410304f236fca528",
+        "name": "not pressed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.detectionState",
+                "pt": "msg",
+                "to": "NOT_DETECTED",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1370,
+        "y": 240,
+        "wires": [
+            [
+                "79c1ad30211a3311"
+            ]
+        ]
+    },
+    {
+        "id": "775b0f81df4d42d8",
+        "type": "delay",
+        "z": "410304f236fca528",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "30",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "outputs": 1,
+        "x": 1220,
+        "y": 180,
+        "wires": [
+            [
+                "79c1ad30211a3311",
+                "d7eefaf90edec65a"
+            ]
+        ]
+    },
+    {
+        "id": "9bfb80fb29976a2e",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "DOORBELL EVENT SOURCE",
+        "info": "",
+        "x": 1120,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "522f687e2ca1c410",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "!! please read this note !!",
+        "info": "# Doorbell Event Source\n\nAmazon only allows 1 doorbell event every 30 seconds.\n\nAfter 5 seconds the detectionState is set back to NOT_DETECTED. This is necessary in order to force a state change. Otherwise the state will appear as unchanged with the next doorbell event and not get submitted to Alexa.",
+        "x": 1150,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "205c2064f6bc2e7d",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "ENTERTAINMENT DEVICE",
+        "info": "",
+        "x": 1130,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "cb91dc481eb02c41",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, change the input to DVD on the Bedroom TV.",
+        "info": "",
+        "x": 1250,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "52ef5750df7dbc96",
+        "type": "debug",
+        "z": "410304f236fca528",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1510,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "34689bf01efdb75d",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, set the volume of the Bedroom TV to 50.",
+        "info": "",
+        "x": 1240,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "6db83152cced56a7",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn the volume down on the Bedroom TV by 20.",
+        "info": "",
+        "x": 1260,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "c270c93dbb39fdb8",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn the volume down on Bedroom TV.",
+        "info": "",
+        "x": 1230,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "8aadd59c4541d390",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, mute Bedroom TV.",
+        "info": "",
+        "x": 1170,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "6b40012c7549af22",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, unmute Bedroom TV.",
+        "info": "",
+        "x": 1180,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "bd408dd01f87d59f",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, change the channel to 200 on the Bedroom TV.",
+        "info": "",
+        "x": 1260,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "8f7121ab3e17fefe",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "lexa, next channel on the Bedroom TV.",
+        "info": "",
+        "x": 1210,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "4fea124e8568555d",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, channel down on the Bedroom TV.",
+        "info": "",
+        "x": 1220,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "c1f8820ecf526fd0",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, play | pause | stop | start over | previous | next | rewind | fast forward (on) CD player",
+        "info": "",
+        "x": 1370,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "b1c247e41218bd50",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "on",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"powerState\":\"ON\"}",
+        "payloadType": "json",
+        "x": 1110,
+        "y": 1040,
+        "wires": [
+            [
+                "b2e33b2041b55c34"
+            ]
+        ]
+    },
+    {
+        "id": "676aaf2c491f76e3",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "off",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"powerState\":\"OFF\"}",
+        "payloadType": "json",
+        "x": 1110,
+        "y": 1080,
+        "wires": [
+            [
+                "b2e33b2041b55c34"
+            ]
+        ]
+    },
+    {
+        "id": "9c51a43d4fa30534",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "FAN",
+        "info": "",
+        "x": 1090,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "a89fad28358a740d",
+        "type": "debug",
+        "z": "410304f236fca528",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "77a6065fae512759",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "speed: 1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"speed\":1}",
+        "payloadType": "json",
+        "x": 1120,
+        "y": 1120,
+        "wires": [
+            [
+                "b2e33b2041b55c34"
+            ]
+        ]
+    },
+    {
+        "id": "55e42e59b40e17b7",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, set the bedroom fan speed to 7.",
+        "info": "",
+        "x": 1230,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "c314103bb2ba0ac6",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, set the fan speed on the bedroom fan to maximum.",
+        "info": "",
+        "x": 1290,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "c0fd1cd00fd65108",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "speed: 5",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"speed\":5}",
+        "payloadType": "json",
+        "x": 1120,
+        "y": 1160,
+        "wires": [
+            [
+                "b2e33b2041b55c34"
+            ]
+        ]
+    },
+    {
+        "id": "4bcf9f82848d209d",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "speed: 10",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"speed\":10}",
+        "payloadType": "json",
+        "x": 1120,
+        "y": 1200,
+        "wires": [
+            [
+                "b2e33b2041b55c34"
+            ]
+        ]
+    },
+    {
+        "id": "8b79139d.cd20e",
+        "type": "debug",
+        "z": "410304f236fca528",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1490,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "816c1b4f.db38f8",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "lock",
+        "props": [
+            {
+                "p": "payload.lockState",
+                "v": "LOCKED",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1050,
+        "y": 1460,
+        "wires": [
+            [
+                "ec1793b6.d60de"
+            ]
+        ]
+    },
+    {
+        "id": "b70b1efd.0052a",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "unlock",
+        "props": [
+            {
+                "p": "payload.lockState",
+                "v": "UNLOCKED",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1050,
+        "y": 1500,
+        "wires": [
+            [
+                "ec1793b6.d60de"
+            ]
+        ]
+    },
+    {
+        "id": "e33f8d18.93878",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "LOCK",
+        "info": "",
+        "x": 1050,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "bd37a85e.33a5d8",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, unlock front door",
+        "info": "",
+        "x": 1140,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "923be998.d58bf8",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, is the front door locked?",
+        "info": "",
+        "x": 1170,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "f9d8bfad.affad",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, lock front door.",
+        "info": "",
+        "x": 1140,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "2ba98c46497fee7b",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "motion",
+        "props": [
+            {
+                "p": "payload.detectionState",
+                "v": "DETECTED",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 920,
+        "wires": [
+            [
+                "f959dbb6dd08ac90"
+            ]
+        ]
+    },
+    {
+        "id": "bedb73e6c685ba52",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "no motion",
+        "props": [
+            {
+                "p": "payload.detectionState",
+                "v": "NOT_DETECTED",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 100,
+        "y": 960,
+        "wires": [
+            [
+                "f959dbb6dd08ac90"
+            ]
+        ]
+    },
+    {
+        "id": "5fe4b1c4.8eb04",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "on",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"powerState\":\"ON\"}",
+        "payloadType": "json",
+        "x": 1110,
+        "y": 1740,
+        "wires": [
+            [
+                "50f53bed.7bf204"
+            ]
+        ]
+    },
+    {
+        "id": "7187b738.ca5778",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "off",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"powerState\":\"OFF\"}",
+        "payloadType": "json",
+        "x": 1110,
+        "y": 1780,
+        "wires": [
+            [
+                "50f53bed.7bf204"
+            ]
+        ]
+    },
+    {
+        "id": "3bbc5c97.55cdd4",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "PLUG",
+        "info": "",
+        "x": 1090,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "96685bfa.aba9f8",
+        "type": "debug",
+        "z": "410304f236fca528",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "b679be37.a5656",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn on the projector.",
+        "info": "",
+        "x": 1200,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "67c1de90.3894e",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn off the projector.",
+        "info": "",
+        "x": 1200,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "80b7c3c.dd4364",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "SCENE",
+        "info": "",
+        "x": 550,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f09a40da.e58f6",
+        "type": "debug",
+        "z": "410304f236fca528",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "9bc6a99f.d2a648",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn on kitchen party.",
+        "info": "",
+        "x": 660,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "5c89af58.821f9",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn off kitchen party.",
+        "info": "",
+        "x": 660,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "580aade76ca601d4",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "on",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"powerState\":\"ON\"}",
+        "payloadType": "json",
+        "x": 1070,
+        "y": 2020,
+        "wires": [
+            [
+                "3abbcf1aec21ec82"
+            ]
+        ]
+    },
+    {
+        "id": "aeab5e0a9e7322b4",
+        "type": "inject",
+        "z": "410304f236fca528",
+        "name": "off",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"powerState\":\"OFF\"}",
+        "payloadType": "json",
+        "x": 1070,
+        "y": 2060,
+        "wires": [
+            [
+                "3abbcf1aec21ec82"
+            ]
+        ]
+    },
+    {
+        "id": "1a90d791eec095cc",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "SWITCH",
+        "info": "",
+        "x": 1060,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "e65e77bef568f0fe",
+        "type": "debug",
+        "z": "410304f236fca528",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1650,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "46ebeebf96132c1b",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn on the coffee maker.",
+        "info": "",
+        "x": 1170,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "59d0cf12783cd482",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa, turn off the coffee maker.",
+        "info": "",
+        "x": 1170,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "3ecf205d536baf21",
+        "type": "link in",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "f965d21c10a78908",
+            "a1d8645ba1871941",
+            "09de541b28f850d8",
+            "702c599945b1e917",
+            "7a61337bfd93b0a5",
+            "dbab246ade3ef2f3",
+            "015ab4055991f5a6",
+            "0ecec1b470f657d7",
+            "4d26f4059b2ece09",
+            "7ad151b845101a78",
+            "da175b935d75439d",
+            "26a9b2ee626d9949",
+            "cb185ff1d15e4089",
+            "9659f641b8cc1aa3",
+            "fd714bb5afd18ac1",
+            "f0c0444bc941445e",
+            "a06da02ebcea509c",
+            "efaef72d65320196",
+            "8a49b471ebbad5de"
+        ],
+        "x": 1495,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f965d21c10a78908",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 395,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a1d8645ba1871941",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 735,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "09de541b28f850d8",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 535,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "702c599945b1e917",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 415,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "7a61337bfd93b0a5",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 495,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "dbab246ade3ef2f3",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 655,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "015ab4055991f5a6",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 575,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "0ecec1b470f657d7",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 1695,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "4d26f4059b2ece09",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 1295,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "7ad151b845101a78",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 1515,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "da175b935d75439d",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 1435,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "26a9b2ee626d9949",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 1515,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "cb185ff1d15e4089",
+        "type": "link out",
+        "z": "410304f236fca528",
+        "name": "",
+        "links": [
+            "3ecf205d536baf21"
+        ],
+        "x": 1475,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "a16b263d930c857f",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "pin: 1234",
+        "info": "",
+        "x": 1380,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "39dbd0ac83e15e68",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Skill Alexa da installare",
+        "info": "[Virtual Smart Home](https://www.amazon.it/Cornelius-Suermann-Virtual-Smart-Home/dp/B08JV9RT7H)",
+        "x": 550,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "d04827e9.44afc8",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Termometro virtuale",
+        "topic": "pizza/temp",
+        "connection": "f08c8c22d21d93de",
+        "template": "TEMPERATURE_SENSOR",
+        "passthrough": false,
+        "diff": false,
+        "filter": false,
+        "x": 400,
+        "y": 420,
+        "wires": [
+            [
+                "09de541b28f850d8"
+            ]
+        ]
+    },
+    {
+        "id": "c1e70414.f5a688",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Tapparelle virtuali",
+        "topic": "living/blinds",
+        "connection": "f08c8c22d21d93de",
+        "template": "BLINDS",
+        "passthrough": true,
+        "diff": false,
+        "filter": false,
+        "x": 290,
+        "y": 760,
+        "wires": [
+            [
+                "702c599945b1e917"
+            ]
+        ]
+    },
+    {
+        "id": "a67f98de.750138",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Contatto virtuale",
+        "topic": "kitchen/window",
+        "connection": "f08c8c22d21d93de",
+        "template": "CONTACT_SENSOR",
+        "passthrough": false,
+        "diff": false,
+        "filter": false,
+        "x": 260,
+        "y": 180,
+        "wires": [
+            [
+                "f965d21c10a78908"
+            ]
+        ]
+    },
+    {
+        "id": "97e1b7a3.fcc548",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Lampadina colorata virtuale",
+        "topic": "bedroom/light",
+        "connection": "f08c8c22d21d93de",
+        "template": "COLOR_CHANGING_LIGHT_BULB",
+        "passthrough": true,
+        "diff": false,
+        "filter": false,
+        "x": 540,
+        "y": 1460,
+        "wires": [
+            [
+                "aabe1100.ff556",
+                "dbab246ade3ef2f3"
+            ]
+        ]
+    },
+    {
+        "id": "1de955b6.491d3a",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Luce regolabile virtuale",
+        "topic": "kitchen/light",
+        "connection": "f08c8c22d21d93de",
+        "template": "DIMMABLE_LIGHT_BULB",
+        "passthrough": true,
+        "diff": false,
+        "filter": false,
+        "x": 470,
+        "y": 1980,
+        "wires": [
+            [
+                "c402af75.7847",
+                "015ab4055991f5a6"
+            ]
+        ]
+    },
+    {
+        "id": "79c1ad30211a3311",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Campanello virtuale",
+        "topic": "doorbell",
+        "connection": "f08c8c22d21d93de",
+        "template": "DOORBELL_EVENT_SOURCE",
+        "passthrough": false,
+        "diff": false,
+        "filter": false,
+        "x": 1560,
+        "y": 160,
+        "wires": [
+            [
+                "0ecec1b470f657d7"
+            ]
+        ]
+    },
+    {
+        "id": "58ca09efa8d77b6e",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Dispositivo di intrattenimento virtuale",
+        "topic": "bedroom/tv",
+        "connection": "f08c8c22d21d93de",
+        "template": "ENTERTAINMENT_DEVICE",
+        "passthrough": false,
+        "diff": false,
+        "filter": false,
+        "x": 1230,
+        "y": 760,
+        "wires": [
+            [
+                "52ef5750df7dbc96",
+                "4d26f4059b2ece09"
+            ]
+        ]
+    },
+    {
+        "id": "b2e33b2041b55c34",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Ventilatore virtuale",
+        "topic": "bedroom/fan",
+        "connection": "f08c8c22d21d93de",
+        "template": "FAN",
+        "passthrough": true,
+        "diff": false,
+        "filter": false,
+        "x": 1410,
+        "y": 1020,
+        "wires": [
+            [
+                "a89fad28358a740d",
+                "7ad151b845101a78"
+            ]
+        ]
+    },
+    {
+        "id": "ec1793b6.d60de",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Porta virtuale",
+        "topic": "house/door",
+        "connection": "f08c8c22d21d93de",
+        "template": "LOCK",
+        "passthrough": true,
+        "diff": false,
+        "filter": false,
+        "x": 1330,
+        "y": 1440,
+        "wires": [
+            [
+                "8b79139d.cd20e",
+                "da175b935d75439d"
+            ]
+        ]
+    },
+    {
+        "id": "f959dbb6dd08ac90",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Sensore di movimento virtuale",
+        "topic": "frontDoor/motion",
+        "connection": "f08c8c22d21d93de",
+        "template": "MOTION_SENSOR",
+        "passthrough": false,
+        "diff": false,
+        "filter": false,
+        "x": 330,
+        "y": 940,
+        "wires": [
+            [
+                "7a61337bfd93b0a5"
+            ]
+        ]
+    },
+    {
+        "id": "50f53bed.7bf204",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Presa virtuale",
+        "topic": "plug/projector",
+        "connection": "f08c8c22d21d93de",
+        "template": "PLUG",
+        "passthrough": true,
+        "diff": false,
+        "filter": false,
+        "x": 1400,
+        "y": 1720,
+        "wires": [
+            [
+                "96685bfa.aba9f8",
+                "26a9b2ee626d9949"
+            ]
+        ]
+    },
+    {
+        "id": "8003b75d.414958",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Scenario virtuale",
+        "topic": "scene/kitchenparty",
+        "connection": "f08c8c22d21d93de",
+        "template": "SCENE",
+        "passthrough": true,
+        "diff": false,
+        "filter": false,
+        "x": 570,
+        "y": 220,
+        "wires": [
+            [
+                "f09a40da.e58f6",
+                "a1d8645ba1871941"
+            ]
+        ]
+    },
+    {
+        "id": "3abbcf1aec21ec82",
+        "type": "vsh-virtual-device",
+        "z": "410304f236fca528",
+        "name": "Interruttore virtuale",
+        "topic": "switch/coffeemaker",
+        "connection": "f08c8c22d21d93de",
+        "template": "SWITCH",
+        "passthrough": true,
+        "diff": false,
+        "filter": false,
+        "x": 1370,
+        "y": 2000,
+        "wires": [
+            [
+                "e65e77bef568f0fe",
+                "cb185ff1d15e4089"
             ]
         ]
     }
