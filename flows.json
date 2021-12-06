@@ -259,7 +259,9 @@
             "144cbd9489eb0a3a"
         ],
         "x": 54,
-        "y": 339
+        "y": 339,
+        "w": 412,
+        "h": 242
     },
     {
         "id": "179da511.9a22fb",
@@ -296,7 +298,9 @@
             "0c979bf8879c11e2"
         ],
         "x": 54,
-        "y": 379
+        "y": 379,
+        "w": 572,
+        "h": 82
     },
     {
         "id": "7e6baf98.69239",
@@ -693,36 +697,10 @@
         "type": "vsh-connection",
         "name": "cali.laura@hotmail.it",
         "port": "8883",
-        "accessTokenExpiry": "1638421246190",
+        "accessTokenExpiry": "1638759226571",
         "debug": false,
         "backendUrl": "https://kfd5m4a21f.execute-api.eu-west-1.amazonaws.com/dev",
         "lwaClientId": "amzn1.application-oa2-client.3f1bb07133854b078261ad43f2484c18"
-    },
-    {
-        "id": "5e864bdfaa089210",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "ws://${HOST}/ws/mqtt",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "sessionExpiry": ""
     },
     {
         "id": "5eb0bd6b.74b794",
@@ -6419,7 +6397,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 850,
+        "x": 870,
         "y": 220,
         "wires": []
     },
@@ -7073,7 +7051,7 @@
         "id": "521b6c26.571e64",
         "type": "inject",
         "z": "410304f236fca528",
-        "name": "current temp = 19.7 °C",
+        "name": "current temp = 19.7 ýC",
         "props": [
             {
                 "p": "payload.temperature",
@@ -7103,7 +7081,7 @@
         "id": "1b9ebdb3.4ce6b2",
         "type": "inject",
         "z": "410304f236fca528",
-        "name": "current temp = 22 °C",
+        "name": "current temp = 22 ýC",
         "props": [
             {
                 "p": "payload.temperature",
@@ -7133,7 +7111,7 @@
         "id": "c19e6295.a1337",
         "type": "inject",
         "z": "410304f236fca528",
-        "name": "target temp = 20 °C",
+        "name": "target temp = 20 ýC",
         "props": [
             {
                 "p": "payload.targetTemperature",
@@ -7163,7 +7141,7 @@
         "id": "362951d9.1d9e3e",
         "type": "inject",
         "z": "410304f236fca528",
-        "name": "target temp = 22.5 °C",
+        "name": "target temp = 22.5 ýC",
         "props": [
             {
                 "p": "payload.targetTemperature",
@@ -7387,19 +7365,6 @@
         "wires": []
     },
     {
-        "id": "8809c1f735494e86",
-        "type": "telegrambot-notify",
-        "z": "410304f236fca528",
-        "name": "",
-        "bot": "ee20ae5266a5e32c",
-        "chatId": "1269409529",
-        "message": "",
-        "parseMode": "",
-        "x": 900,
-        "y": 380,
-        "wires": []
-    },
-    {
         "id": "279268b43277ffdd",
         "type": "function",
         "z": "410304f236fca528",
@@ -7410,11 +7375,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
-        "y": 260,
+        "x": 680,
+        "y": 340,
         "wires": [
             [
-                "218eb635ccd54b43"
+                "4564358c6490249a"
             ]
         ]
     },
@@ -7424,12 +7389,52 @@
         "z": "410304f236fca528",
         "property": "payload",
         "name": "",
-        "x": 850,
-        "y": 320,
+        "x": 670,
+        "y": 460,
         "wires": [
             [
                 "8809c1f735494e86"
             ]
         ]
+    },
+    {
+        "id": "4564358c6490249a",
+        "type": "change",
+        "z": "410304f236fca528",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 340,
+        "wires": [
+            [
+                "218eb635ccd54b43"
+            ]
+        ]
+    },
+    {
+        "id": "8809c1f735494e86",
+        "type": "telegrambot-notify",
+        "z": "410304f236fca528",
+        "name": "Virtual device channel",
+        "bot": "ee20ae5266a5e32c",
+        "chatId": "-1001597945059",
+        "message": "",
+        "parseMode": "",
+        "x": 900,
+        "y": 460,
+        "wires": []
     }
 ]
