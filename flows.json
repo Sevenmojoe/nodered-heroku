@@ -6026,7 +6026,7 @@
         "wires": [
             [
                 "a387d9254ef903ca",
-                "279268b43277ffdd"
+                "e125d7cda43125a1"
             ]
         ]
     },
@@ -6390,7 +6390,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 890,
-        "y": 160,
+        "y": 260,
         "wires": []
     },
     {
@@ -7367,11 +7367,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 900,
-        "y": 260,
+        "x": 540,
+        "y": 460,
         "wires": [
             [
-                "e125d7cda43125a1"
+                "218eb635ccd54b43"
             ]
         ]
     },
@@ -7381,7 +7381,7 @@
         "z": "410304f236fca528",
         "property": "payload",
         "name": "",
-        "x": 650,
+        "x": 670,
         "y": 460,
         "wires": [
             [
@@ -7393,12 +7393,12 @@
         "id": "8809c1f735494e86",
         "type": "telegrambot-notify",
         "z": "410304f236fca528",
-        "name": "Virtual device channel",
+        "name": "notify Alexa V. D. channel",
         "bot": "ee20ae5266a5e32c",
         "chatId": "-1001597945059",
         "message": "",
         "parseMode": "",
-        "x": 860,
+        "x": 850,
         "y": 460,
         "wires": []
     },
@@ -7423,7 +7423,22 @@
         "y": 360,
         "wires": [
             [
-                "218eb635ccd54b43"
+                "279268b43277ffdd"
+            ]
+        ]
+    },
+    {
+        "id": "6cda3b8b316bbf23",
+        "type": "catch",
+        "z": "410304f236fca528",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 540,
+        "y": 560,
+        "wires": [
+            [
+                "279268b43277ffdd"
             ]
         ]
     }
