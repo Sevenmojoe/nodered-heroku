@@ -1,3 +1,21 @@
 {
-    "$": "090e55aedf1fa3d67e432e52a2210169APiT5fPdsYbmJGNMaTMq8GC2yaepi59BISKDYdoWM6sZ9hv8Kgocsrosfp62PQnLS0zG8tmTxtFwVD/swRtWnX8p8X7R1KjtrdXW62a40E4/4PlJwt+hZXLGkA+Yu/f/n3ftTqobFnuCm38SXl5Q10iopSQlPc8XWFKVNryZkQgezQ800rcI7Hghf30XiuZ2ajOmHEx3im18IKSkOdYXy3noqXOwcWODHOrefvfF5bZzcThB5tclVPC9GWVBmsqBX0xiHsbrSm4zROBLlb4+WZ06xduJoESpYb8X1iWn4hYhll9vLXSWrS2srcuAH4rqkbBxLutoFHk2wWoJjRCFwMT46jULqMPRJavYLxWQZvc/pk7K2cnixsUjpyLG6Ls4u3RL0nXzkK2pEu583XKsa/9C0wJoCaFnE4Xclt/por4fS+cP0qA9QvrXbcyHeRS3DLKV+cquVQaEB1Zn7NRVPn6dk+SA6UziKPmKh9ahnZzEL/so7OBAHpq94w=="
+    "a8d2d040.73334": {},
+    "01b856875e0d074d": {},
+    "0c550dcd627c0c5f": {
+        "password": "${NETATMO_BEARER}"
+    },
+    "ee20ae5266a5e32c": {
+        "token": "${BOT_TOKEN}"
+    },
+    "9c09e087.a48e7": {},
+    "f08c8c22d21d93de": {
+        "refreshToken": "${REFRESH_TOKEN}",
+        "accessToken": "${ACCESS_TOKEN}",
+        "email": "${EMAIL}",
+        "cert": "${CERT}",
+        "thingId": "${THING_ID}",
+        "caCert": "${CA_CERT}",
+        "server": "${SERVER}",
+        "privateKey": "${PRIVATE_KEY}"
+    }
 }
