@@ -237,7 +237,9 @@
             "e3d1253d21cb8d14"
         ],
         "x": 14,
-        "y": 399
+        "y": 399,
+        "w": 392,
+        "h": 162
     },
     {
         "id": "8ae85c804dc630f2",
@@ -276,7 +278,9 @@
             "79211ed51f80c95c"
         ],
         "x": 434,
-        "y": 399
+        "y": 399,
+        "w": 192,
+        "h": 162
     },
     {
         "id": "930933373b4d5491",
@@ -1163,7 +1167,7 @@
         "type": "comment",
         "z": "3827b8c0.6c5468",
         "name": "Telegram",
-        "info": "Heroku bot token:\n2097247350:AAHvGZR34e34Y0MjKtvFRFLs1qcysirD2rA\nChat ID:\n1269409529",
+        "info": "Heroku bot token:\n2097247350:AAEtDqTY526PqidDoOlmcwXdkReEZLjmmug\n\nChat ID:\n1269409529\n---\nTrashed\n2097247350:AAHvGZR34e34Y0MjKtvFRFLs1qcysirD2rA\n\n",
         "x": 720,
         "y": 520,
         "wires": []
