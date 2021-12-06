@@ -756,7 +756,7 @@
                 "t": "set",
                 "p": "headers.Authorization",
                 "pt": "msg",
-                "to": "GITHUB_TOKEN",
+                "to": "AUTHORIZATION_HEADER",
                 "tot": "env"
             }
         ],
@@ -813,7 +813,7 @@
                 "t": "set",
                 "p": "headers.Authorization",
                 "pt": "msg",
-                "to": "GITHUB_TOKEN",
+                "to": "AUTHORIZATION_HEADER",
                 "tot": "env"
             }
         ],
@@ -968,7 +968,7 @@
         "id": "bc604bc3fb7cfdf7",
         "type": "inject",
         "z": "3c1975f87cd0cabf",
-        "name": "",
+        "name": "check env var",
         "props": [
             {
                 "p": "payload"
@@ -983,9 +983,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "${GITHUB_TOKEN}",
+        "payload": "${AUTHORIZATION_HEADER}",
         "payloadType": "str",
-        "x": 850,
+        "x": 870,
         "y": 40,
         "wires": [
             [
@@ -1941,9 +1941,9 @@
         "z": "3827b8c0.6c5468",
         "g": "179da511.9a22fb",
         "name": "(alt) Cron-job",
-        "info": " - Log in to [Cron-job](https://console.cron-job.org/)\n - Create custom cron-based job\n - Headers and HTTP methods selectable",
+        "info": " - [Cron-job](https://console.cron-job.org/) is a general-purpose alternative\n - Create custom cron-based job\n - Headers and HTTP methods selectable",
         "x": 530,
-        "y": 480,
+        "y": 520,
         "wires": []
     },
     {
@@ -1977,7 +1977,7 @@
         "z": "3827b8c0.6c5468",
         "g": "179da511.9a22fb",
         "name": "App Scripts",
-        "info": " - Script can be set in [Google App Scripts](https://script.google.com/home/)\n - Custom code in Javascript\n - Run every 15 min, time check in code",
+        "info": " - Script set in [Google App Scripts](https://script.google.com/home/)\n - Login with hybuild.project@gmail.com\n - Time check in code to bypass 0.00-6.00",
         "x": 530,
         "y": 440,
         "wires": []
@@ -1988,9 +1988,9 @@
         "z": "3827b8c0.6c5468",
         "g": "179da511.9a22fb",
         "name": "(alt) Kaffeine",
-        "info": " - Made to keep Heroku alive is [Kaffeine](https://kaffeine.herokuapp.com/)\n - Every 30 minutes from 6.00 to 23.59\n - Heroku free dyno limit: 550 hours/mounth",
+        "info": " - [Kaffeine](https://kaffeine.herokuapp.com/) keeps alive Heroku dynos\n - Every 30 minutes from 6.00 to 23.59\n - Heroku free dyno limit: 550 hours/mounth",
         "x": 530,
-        "y": 520,
+        "y": 480,
         "wires": []
     },
     {
@@ -2011,16 +2011,6 @@
                 "fb011e12fcbb8a4a"
             ]
         ]
-    },
-    {
-        "id": "540b5c89b38bf591",
-        "type": "comment",
-        "z": "3827b8c0.6c5468",
-        "name": "Hidden flows",
-        "info": "To show all flows (including the hidden ones)\ntype: `CTRL + Maiusc + F`.\n",
-        "x": 890,
-        "y": 520,
-        "wires": []
     },
     {
         "id": "1714967f.e691ea",
