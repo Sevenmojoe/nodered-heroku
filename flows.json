@@ -689,7 +689,7 @@
         "type": "vsh-connection",
         "name": "cali.laura@hotmail.it",
         "port": "8883",
-        "accessTokenExpiry": "1638759226571",
+        "accessTokenExpiry": "1638771465051",
         "debug": false,
         "backendUrl": "https://kfd5m4a21f.execute-api.eu-west-1.amazonaws.com/dev",
         "lwaClientId": "amzn1.application-oa2-client.3f1bb07133854b078261ad43f2484c18"
@@ -6389,8 +6389,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 870,
-        "y": 220,
+        "x": 890,
+        "y": 160,
         "wires": []
     },
     {
@@ -7367,11 +7367,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
-        "y": 340,
+        "x": 900,
+        "y": 260,
         "wires": [
             [
-                "218eb635ccd54b43"
+                "e125d7cda43125a1"
             ]
         ]
     },
@@ -7381,8 +7381,8 @@
         "z": "410304f236fca528",
         "property": "payload",
         "name": "",
-        "x": 850,
-        "y": 340,
+        "x": 650,
+        "y": 460,
         "wires": [
             [
                 "8809c1f735494e86"
@@ -7398,8 +7398,33 @@
         "chatId": "-1001597945059",
         "message": "",
         "parseMode": "",
-        "x": 900,
+        "x": 860,
         "y": 460,
         "wires": []
+    },
+    {
+        "id": "e125d7cda43125a1",
+        "type": "change",
+        "z": "410304f236fca528",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload.rawDirective.directive.header.correlationToken",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 360,
+        "wires": [
+            [
+                "218eb635ccd54b43"
+            ]
+        ]
     }
 ]
