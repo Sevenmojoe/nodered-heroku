@@ -20,7 +20,7 @@ var when = require('when');
 
 process.env.HOSTNAME = require('os').hostname();
 //process.env.BOT_TOKEN = "2097247350:AAHvGZR34e34Y0MjKtvFRFLs1qcysirD2rA";
-//process.env.NETATMO_BEARER = "60ad3104ead4d8526a0e9510|6945bd0e5d72adac51100b344cd5d58e";
+//... useless... use Config Vars in Heroku Dashboard | Settings, instead!
 
 /**
  * This is the default settings file provided by Node-RED.
@@ -78,8 +78,8 @@ var settings = module.exports = {
      * lost.
      */
     //credentialSecret: "a-secret-key",
-    //// Disabled Credential Secret
-    //credentialSecret: false,
+    // Disabled Credential Secret
+    credentialSecret: false,
 
     /** By default, the flow JSON will be formatted over multiple lines making
      * it easier to compare changes when using version control.
