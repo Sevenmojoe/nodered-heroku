@@ -5642,7 +5642,7 @@
         "name": "ENTERTAINMENT DEVICE",
         "info": "",
         "x": 140,
-        "y": 2020,
+        "y": 2000,
         "wires": []
     },
     {
@@ -5652,7 +5652,7 @@
         "name": "Alexa, change the input to DVD on the Bedroom TV.",
         "info": "",
         "x": 250,
-        "y": 2060,
+        "y": 2040,
         "wires": []
     },
     {
@@ -5662,7 +5662,7 @@
         "name": "Alexa, set the volume of the Bedroom TV to 50.",
         "info": "",
         "x": 240,
-        "y": 2100,
+        "y": 2080,
         "wires": []
     },
     {
@@ -5672,7 +5672,7 @@
         "name": "Alexa, turn the volume down on the Bedroom TV by 20.",
         "info": "",
         "x": 260,
-        "y": 2140,
+        "y": 2120,
         "wires": []
     },
     {
@@ -5682,7 +5682,7 @@
         "name": "Alexa, turn the volume down on Bedroom TV.",
         "info": "",
         "x": 230,
-        "y": 2180,
+        "y": 2160,
         "wires": []
     },
     {
@@ -5692,7 +5692,7 @@
         "name": "Alexa, mute Bedroom TV.",
         "info": "",
         "x": 170,
-        "y": 2220,
+        "y": 2200,
         "wires": []
     },
     {
@@ -5702,7 +5702,7 @@
         "name": "Alexa, unmute Bedroom TV.",
         "info": "",
         "x": 180,
-        "y": 2260,
+        "y": 2240,
         "wires": []
     },
     {
@@ -5712,7 +5712,7 @@
         "name": "Alexa, change the channel to 200 on the Bedroom TV.",
         "info": "",
         "x": 260,
-        "y": 2300,
+        "y": 2280,
         "wires": []
     },
     {
@@ -5722,7 +5722,7 @@
         "name": "lexa, next channel on the Bedroom TV.",
         "info": "",
         "x": 210,
-        "y": 2340,
+        "y": 2320,
         "wires": []
     },
     {
@@ -5732,7 +5732,7 @@
         "name": "Alexa, channel down on the Bedroom TV.",
         "info": "",
         "x": 220,
-        "y": 2380,
+        "y": 2360,
         "wires": []
     },
     {
@@ -5742,7 +5742,7 @@
         "name": "Alexa, play | pause | stop | start over | previous | next | rewind | fast forward (on) CD player",
         "info": "",
         "x": 370,
-        "y": 2420,
+        "y": 2400,
         "wires": []
     },
     {
@@ -5763,7 +5763,7 @@
         "payload": "{\"powerState\":\"ON\"}",
         "payloadType": "json",
         "x": 130,
-        "y": 2700,
+        "y": 2680,
         "wires": [
             [
                 "b2e33b2041b55c34"
@@ -5788,7 +5788,7 @@
         "payload": "{\"powerState\":\"OFF\"}",
         "payloadType": "json",
         "x": 130,
-        "y": 2740,
+        "y": 2720,
         "wires": [
             [
                 "b2e33b2041b55c34"
@@ -5802,7 +5802,7 @@
         "name": "FAN",
         "info": "",
         "x": 70,
-        "y": 2560,
+        "y": 2540,
         "wires": []
     },
     {
@@ -5823,7 +5823,7 @@
         "payload": "{\"speed\":1}",
         "payloadType": "json",
         "x": 140,
-        "y": 2780,
+        "y": 2760,
         "wires": [
             [
                 "b2e33b2041b55c34"
@@ -5837,7 +5837,7 @@
         "name": "Alexa, set the bedroom fan speed to 7.",
         "info": "",
         "x": 210,
-        "y": 2600,
+        "y": 2580,
         "wires": []
     },
     {
@@ -5847,7 +5847,7 @@
         "name": "Alexa, set the fan speed on the bedroom fan to maximum.",
         "info": "",
         "x": 270,
-        "y": 2640,
+        "y": 2620,
         "wires": []
     },
     {
@@ -5868,7 +5868,7 @@
         "payload": "{\"speed\":5}",
         "payloadType": "json",
         "x": 140,
-        "y": 2820,
+        "y": 2800,
         "wires": [
             [
                 "b2e33b2041b55c34"
@@ -5893,7 +5893,7 @@
         "payload": "{\"speed\":10}",
         "payloadType": "json",
         "x": 140,
-        "y": 2860,
+        "y": 2840,
         "wires": [
             [
                 "b2e33b2041b55c34"
@@ -5918,7 +5918,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 130,
-        "y": 3120,
+        "y": 3100,
         "wires": [
             [
                 "ec1793b6.d60de"
@@ -5943,7 +5943,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 130,
-        "y": 3160,
+        "y": 3140,
         "wires": [
             [
                 "ec1793b6.d60de"
@@ -5957,7 +5957,7 @@
         "name": "LOCK",
         "info": "",
         "x": 70,
-        "y": 2940,
+        "y": 2920,
         "wires": []
     },
     {
@@ -5967,7 +5967,7 @@
         "name": "Alexa, unlock front door",
         "info": "",
         "x": 160,
-        "y": 3020,
+        "y": 3000,
         "wires": []
     },
     {
@@ -5977,7 +5977,7 @@
         "name": "Alexa, is the front door locked?",
         "info": "",
         "x": 190,
-        "y": 3060,
+        "y": 3040,
         "wires": []
     },
     {
@@ -5987,7 +5987,7 @@
         "name": "Alexa, lock front door.",
         "info": "",
         "x": 160,
-        "y": 2980,
+        "y": 2960,
         "wires": []
     },
     {
@@ -6079,7 +6079,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 2480,
+        "y": 2460,
         "wires": []
     },
     {
@@ -6091,7 +6091,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 2780,
+        "y": 2760,
         "wires": []
     },
     {
@@ -6103,7 +6103,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 3140,
+        "y": 3120,
         "wires": []
     },
     {
@@ -6113,7 +6113,7 @@
         "name": "pin: 1234",
         "info": "",
         "x": 420,
-        "y": 3060,
+        "y": 3040,
         "wires": []
     },
     {
@@ -6195,7 +6195,7 @@
         "diff": false,
         "filter": false,
         "x": 450,
-        "y": 2480,
+        "y": 2460,
         "wires": [
             [
                 "4d26f4059b2ece09"
@@ -6214,7 +6214,7 @@
         "diff": false,
         "filter": false,
         "x": 450,
-        "y": 2780,
+        "y": 2760,
         "wires": [
             [
                 "7ad151b845101a78"
@@ -6233,7 +6233,7 @@
         "diff": false,
         "filter": false,
         "x": 450,
-        "y": 3140,
+        "y": 3120,
         "wires": [
             [
                 "da175b935d75439d"
@@ -6263,7 +6263,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 190,
-        "y": 4260,
+        "y": 4240,
         "wires": [
             [
                 "b0fea4fe21b7ce51"
@@ -6293,7 +6293,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 180,
-        "y": 4300,
+        "y": 4280,
         "wires": [
             [
                 "b0fea4fe21b7ce51"
@@ -6323,7 +6323,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 180,
-        "y": 4340,
+        "y": 4320,
         "wires": [
             [
                 "b0fea4fe21b7ce51"
@@ -6337,7 +6337,7 @@
         "name": "TEMPERATURE SENSOR",
         "info": "",
         "x": 130,
-        "y": 4160,
+        "y": 4140,
         "wires": []
     },
     {
@@ -6347,7 +6347,7 @@
         "name": "Alexa, what's the temperature of pizza oven?",
         "info": "",
         "x": 230,
-        "y": 4200,
+        "y": 4180,
         "wires": []
     },
     {
@@ -6359,7 +6359,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 4300,
+        "y": 4280,
         "wires": []
     },
     {
@@ -6374,7 +6374,7 @@
         "diff": false,
         "filter": false,
         "x": 460,
-        "y": 4300,
+        "y": 4280,
         "wires": [
             [
                 "9a95c41a03cd217f"
@@ -6415,7 +6415,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 130,
-        "y": 3300,
+        "y": 3280,
         "wires": [
             [
                 "9a4f6009b4c4e461"
@@ -6440,7 +6440,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 140,
-        "y": 3340,
+        "y": 3320,
         "wires": [
             [
                 "9a4f6009b4c4e461"
@@ -6456,7 +6456,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 3320,
+        "y": 3300,
         "wires": []
     },
     {
@@ -6471,7 +6471,7 @@
         "diff": false,
         "filter": false,
         "x": 490,
-        "y": 3320,
+        "y": 3300,
         "wires": [
             [
                 "e71812d690cc3802"
@@ -6485,7 +6485,7 @@
         "name": "MOTION SENSOR",
         "info": "",
         "x": 110,
-        "y": 3240,
+        "y": 3220,
         "wires": []
     },
     {
@@ -6630,8 +6630,8 @@
         "randomUnits": "seconds",
         "drop": false,
         "outputs": 1,
-        "x": 220,
-        "y": 1940,
+        "x": 420,
+        "y": 1820,
         "wires": [
             [
                 "bdcec18e874742a2"
@@ -6657,8 +6657,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 430,
-        "y": 1940,
+        "x": 570,
+        "y": 1820,
         "wires": [
             [
                 "88ab5402263e24a3"
@@ -6681,8 +6681,8 @@
         "randomUnits": "seconds",
         "drop": true,
         "outputs": 1,
-        "x": 200,
-        "y": 1880,
+        "x": 160,
+        "y": 1920,
         "wires": [
             [
                 "88ab5402263e24a3",
@@ -6719,7 +6719,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 1880,
+        "y": 1920,
         "wires": []
     },
     {
@@ -6734,7 +6734,7 @@
         "diff": false,
         "filter": false,
         "x": 460,
-        "y": 1880,
+        "y": 1920,
         "wires": [
             [
                 "a7b436f65a8c6544"
@@ -6748,7 +6748,7 @@
         "name": "SCENE",
         "info": "",
         "x": 70,
-        "y": 3680,
+        "y": 3660,
         "wires": []
     },
     {
@@ -6758,7 +6758,7 @@
         "name": "Alexa, turn on kitchen party.",
         "info": "",
         "x": 180,
-        "y": 3720,
+        "y": 3700,
         "wires": []
     },
     {
@@ -6768,7 +6768,7 @@
         "name": "Alexa, turn off kitchen party.",
         "info": "",
         "x": 180,
-        "y": 3760,
+        "y": 3740,
         "wires": []
     },
     {
@@ -6780,7 +6780,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 3820,
+        "y": 3800,
         "wires": []
     },
     {
@@ -6795,7 +6795,7 @@
         "diff": false,
         "filter": false,
         "x": 450,
-        "y": 3820,
+        "y": 3800,
         "wires": [
             [
                 "a3561bacb47d7cd9"
@@ -6820,7 +6820,7 @@
         "payload": "{\"powerState\":\"ON\"}",
         "payloadType": "json",
         "x": 130,
-        "y": 3560,
+        "y": 3540,
         "wires": [
             [
                 "138192f9fcf6ca57"
@@ -6845,7 +6845,7 @@
         "payload": "{\"powerState\":\"OFF\"}",
         "payloadType": "json",
         "x": 130,
-        "y": 3600,
+        "y": 3580,
         "wires": [
             [
                 "138192f9fcf6ca57"
@@ -6859,7 +6859,7 @@
         "name": "PLUG",
         "info": "",
         "x": 70,
-        "y": 3420,
+        "y": 3400,
         "wires": []
     },
     {
@@ -6869,7 +6869,7 @@
         "name": "Alexa, turn on the projector.",
         "info": "",
         "x": 180,
-        "y": 3460,
+        "y": 3440,
         "wires": []
     },
     {
@@ -6879,7 +6879,7 @@
         "name": "Alexa, turn off the projector.",
         "info": "",
         "x": 180,
-        "y": 3500,
+        "y": 3480,
         "wires": []
     },
     {
@@ -6900,7 +6900,7 @@
         "payload": "{\"powerState\":\"ON\"}",
         "payloadType": "json",
         "x": 130,
-        "y": 4040,
+        "y": 4020,
         "wires": [
             [
                 "df1eb10abfe05c43"
@@ -6925,7 +6925,7 @@
         "payload": "{\"powerState\":\"OFF\"}",
         "payloadType": "json",
         "x": 130,
-        "y": 4080,
+        "y": 4060,
         "wires": [
             [
                 "df1eb10abfe05c43"
@@ -6939,7 +6939,7 @@
         "name": "SWITCH",
         "info": "",
         "x": 80,
-        "y": 3900,
+        "y": 3880,
         "wires": []
     },
     {
@@ -6949,7 +6949,7 @@
         "name": "Alexa, turn on the coffee maker.",
         "info": "",
         "x": 190,
-        "y": 3940,
+        "y": 3920,
         "wires": []
     },
     {
@@ -6959,7 +6959,7 @@
         "name": "Alexa, turn off the coffee maker.",
         "info": "",
         "x": 190,
-        "y": 3980,
+        "y": 3960,
         "wires": []
     },
     {
@@ -6971,7 +6971,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 3580,
+        "y": 3560,
         "wires": []
     },
     {
@@ -6983,7 +6983,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 4060,
+        "y": 4040,
         "wires": []
     },
     {
@@ -6998,7 +6998,7 @@
         "diff": false,
         "filter": false,
         "x": 440,
-        "y": 3580,
+        "y": 3560,
         "wires": [
             [
                 "0707592677880a38"
@@ -7017,7 +7017,7 @@
         "diff": false,
         "filter": false,
         "x": 450,
-        "y": 4060,
+        "y": 4040,
         "wires": [
             [
                 "7f7547120484b186"
@@ -7036,7 +7036,7 @@
         "diff": false,
         "filter": false,
         "x": 450,
-        "y": 4760,
+        "y": 4740,
         "wires": [
             [
                 "af03d77100886c54"
@@ -7047,7 +7047,7 @@
         "id": "521b6c26.571e64",
         "type": "inject",
         "z": "410304f236fca528",
-        "name": "current temp = 19.7 ýC",
+        "name": "current temp = 19.7 C",
         "props": [
             {
                 "p": "payload.temperature",
@@ -7066,7 +7066,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 180,
-        "y": 4640,
+        "y": 4620,
         "wires": [
             [
                 "ec192310.979d5"
@@ -7077,7 +7077,7 @@
         "id": "1b9ebdb3.4ce6b2",
         "type": "inject",
         "z": "410304f236fca528",
-        "name": "current temp = 22 ýC",
+        "name": "current temp = 22 C",
         "props": [
             {
                 "p": "payload.temperature",
@@ -7096,7 +7096,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 170,
-        "y": 4680,
+        "y": 4660,
         "wires": [
             [
                 "ec192310.979d5"
@@ -7107,7 +7107,7 @@
         "id": "c19e6295.a1337",
         "type": "inject",
         "z": "410304f236fca528",
-        "name": "target temp = 20 ýC",
+        "name": "target temp = 20 C",
         "props": [
             {
                 "p": "payload.targetTemperature",
@@ -7126,7 +7126,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 170,
-        "y": 4720,
+        "y": 4700,
         "wires": [
             [
                 "ec192310.979d5"
@@ -7137,7 +7137,7 @@
         "id": "362951d9.1d9e3e",
         "type": "inject",
         "z": "410304f236fca528",
-        "name": "target temp = 22.5 ýC",
+        "name": "target temp = 22.5 C",
         "props": [
             {
                 "p": "payload.targetTemperature",
@@ -7155,8 +7155,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 180,
-        "y": 4760,
+        "x": 170,
+        "y": 4740,
         "wires": [
             [
                 "ec192310.979d5"
@@ -7170,7 +7170,7 @@
         "name": "THERMOSTAT",
         "info": "",
         "x": 100,
-        "y": 4420,
+        "y": 4400,
         "wires": []
     },
     {
@@ -7180,7 +7180,7 @@
         "name": "Alexa, make it warmer in here.",
         "info": "",
         "x": 180,
-        "y": 4500,
+        "y": 4480,
         "wires": []
     },
     {
@@ -7190,7 +7190,7 @@
         "name": "Alexa, make it cooler in here.",
         "info": "",
         "x": 180,
-        "y": 4540,
+        "y": 4520,
         "wires": []
     },
     {
@@ -7200,7 +7200,7 @@
         "name": "Alexa, set bedroom thermostat to twenty.",
         "info": "",
         "x": 220,
-        "y": 4460,
+        "y": 4440,
         "wires": []
     },
     {
@@ -7210,7 +7210,7 @@
         "name": "Alexa, what's the temperature of bedroom thermostat?",
         "info": "",
         "x": 260,
-        "y": 4580,
+        "y": 4560,
         "wires": []
     },
     {
@@ -7231,7 +7231,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 150,
-        "y": 4800,
+        "y": 4780,
         "wires": [
             [
                 "ec192310.979d5"
@@ -7256,7 +7256,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 150,
-        "y": 4840,
+        "y": 4820,
         "wires": [
             [
                 "ec192310.979d5"
@@ -7281,7 +7281,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 150,
-        "y": 4880,
+        "y": 4860,
         "wires": [
             [
                 "ec192310.979d5"
@@ -7306,7 +7306,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 150,
-        "y": 4920,
+        "y": 4900,
         "wires": [
             [
                 "ec192310.979d5"
@@ -7331,7 +7331,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 150,
-        "y": 4960,
+        "y": 4940,
         "wires": [
             [
                 "ec192310.979d5"
@@ -7347,7 +7347,7 @@
             "3ecf205d536baf21"
         ],
         "x": 655,
-        "y": 4760,
+        "y": 4740,
         "wires": []
     },
     {
