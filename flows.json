@@ -237,9 +237,7 @@
             "e3d1253d21cb8d14"
         ],
         "x": 14,
-        "y": 399,
-        "w": 392,
-        "h": 162
+        "y": 399
     },
     {
         "id": "8ae85c804dc630f2",
@@ -278,9 +276,7 @@
             "79211ed51f80c95c"
         ],
         "x": 434,
-        "y": 399,
-        "w": 192,
-        "h": 162
+        "y": 399
     },
     {
         "id": "930933373b4d5491",
@@ -6110,9 +6106,9 @@
         "id": "39dbd0ac83e15e68",
         "type": "comment",
         "z": "410304f236fca528",
-        "name": "Skill Alexa da installare",
+        "name": "ALEXA SKILL",
         "info": "[Virtual Smart Home](https://www.amazon.it/Cornelius-Suermann-Virtual-Smart-Home/dp/B08JV9RT7H)\n`node-red-contrib-virtual-smart-home`",
-        "x": 820,
+        "x": 750,
         "y": 40,
         "wires": []
     },
@@ -6139,14 +6135,14 @@
         "id": "97e1b7a3.fcc548",
         "type": "vsh-virtual-device",
         "z": "410304f236fca528",
-        "name": "Lampadina colorata virtuale",
+        "name": "Luce colorata virtuale",
         "topic": "bedroom/light",
         "connection": "f08c8c22d21d93de",
         "template": "COLOR_CHANGING_LIGHT_BULB",
         "passthrough": true,
         "diff": false,
         "filter": false,
-        "x": 480,
+        "x": 460,
         "y": 920,
         "wires": [
             [
@@ -7361,8 +7357,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
-        "y": 460,
+        "x": 780,
+        "y": 420,
         "wires": [
             [
                 "218eb635ccd54b43"
@@ -7375,8 +7371,8 @@
         "z": "410304f236fca528",
         "property": "payload",
         "name": "",
-        "x": 670,
-        "y": 460,
+        "x": 910,
+        "y": 420,
         "wires": [
             [
                 "8809c1f735494e86"
@@ -7387,20 +7383,20 @@
         "id": "8809c1f735494e86",
         "type": "telegrambot-notify",
         "z": "410304f236fca528",
-        "name": "notify Alexa V. D. channel",
+        "name": "notify Virtual Device channel",
         "bot": "ee20ae5266a5e32c",
         "chatId": "-1001597945059",
         "message": "",
         "parseMode": "",
-        "x": 850,
-        "y": 460,
+        "x": 840,
+        "y": 500,
         "wires": []
     },
     {
         "id": "e125d7cda43125a1",
         "type": "change",
         "z": "410304f236fca528",
-        "name": "",
+        "name": "clean",
         "rules": [
             {
                 "t": "delete",
@@ -7413,8 +7409,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 720,
-        "y": 360,
+        "x": 910,
+        "y": 340,
         "wires": [
             [
                 "279268b43277ffdd"
@@ -7428,12 +7424,32 @@
         "name": "",
         "scope": null,
         "uncaught": false,
-        "x": 540,
-        "y": 560,
+        "x": 780,
+        "y": 340,
         "wires": [
             [
                 "279268b43277ffdd"
             ]
         ]
+    },
+    {
+        "id": "5972c8e1b71fd130",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "flows_cred.json (Config Vars)",
+        "info": "{\n    \"a8d2d040.73334\": {},\n    \"01b856875e0d074d\": {},\n    \"0c550dcd627c0c5f\": {\n        \"password\": \"${NETATMO_BEARER}\"\n    },\n    \"ee20ae5266a5e32c\": {\n        \"token\": \"${BOT_TOKEN}\"\n    },\n    \"9c09e087.a48e7\": {},\n    \"f08c8c22d21d93de\": {\n        \"refreshToken\": \"${REFRESH_TOKEN}\",\n        \"accessToken\": \"${ACCESS_TOKEN}\",\n        \"email\": \"${EMAIL}\",\n        \"cert\": \"${CERT}\",\n        \"thingId\": \"${THING_ID}\",\n        \"caCert\": \"${CA_CERT}\",\n        \"server\": \"${SERVER}\",\n        \"privateKey\": \"${PRIVATE_KEY}\"\n    }\n}",
+        "x": 840,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2aec0fabb2893c33",
+        "type": "comment",
+        "z": "410304f236fca528",
+        "name": "Alexa V. D. Telegram Chat ID",
+        "info": "Alexa Virtual Device Channel\nChat ID: -1001597945059",
+        "x": 840,
+        "y": 160,
+        "wires": []
     }
 ]
