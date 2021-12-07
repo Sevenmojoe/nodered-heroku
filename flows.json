@@ -52,6 +52,14 @@
         "env": []
     },
     {
+        "id": "e316d93c3900f83e",
+        "type": "tab",
+        "label": "Testbed",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "2924702c.b33a7",
         "type": "subflow",
         "name": "ui-table handler",
@@ -693,6 +701,34 @@
         "debug": false,
         "backendUrl": "https://kfd5m4a21f.execute-api.eu-west-1.amazonaws.com/dev",
         "lwaClientId": "amzn1.application-oa2-client.3f1bb07133854b078261ad43f2484c18"
+    },
+    {
+        "id": "9ee91c1b.c2b67",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "b37faec6.3798a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "2bb8dfa0.48854",
+        "type": "mongodb",
+        "hostname": "cluster0.ii09c.mongodb.net",
+        "topology": "dnscluster",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "test",
+        "name": ""
+    },
+    {
+        "id": "b37faec6.3798a",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "5eb0bd6b.74b794",
@@ -7451,5 +7487,513 @@
         "x": 840,
         "y": 160,
         "wires": []
+    },
+    {
+        "id": "17cb2f52.423991",
+        "type": "ui_chart",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "group": "9ee91c1b.c2b67",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "{{description}}",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 830,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c2e7cc75.6965d",
+        "type": "http in",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "url": "/test",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "50c166b41b67fa20"
+            ]
+        ]
+    },
+    {
+        "id": "1d83579f.d52208",
+        "type": "http response",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "fde09fe0.fefc8",
+        "type": "http request",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "{{{link}}}/test",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 390,
+        "y": 100,
+        "wires": [
+            [
+                "a3bb45e07d541dfe",
+                "f56ee37cf9f38fda"
+            ]
+        ]
+    },
+    {
+        "id": "c984e3d4a95aa1c0",
+        "type": "inject",
+        "z": "e316d93c3900f83e",
+        "name": "SITE INFO",
+        "props": [
+            {
+                "p": "link",
+                "v": "https://nodered-on-cloud.herokuapp.com/",
+                "vt": "str"
+            },
+            {
+                "p": "description",
+                "v": "Heroku",
+                "vt": "str"
+            },
+            {
+                "p": "timestamp",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "fde09fe0.fefc8",
+                "02abcb30c3447b74"
+            ]
+        ]
+    },
+    {
+        "id": "a24fa4f1f96c0631",
+        "type": "comment",
+        "z": "e316d93c3900f83e",
+        "name": "PLEASE MODIFY THIS",
+        "info": "",
+        "x": 160,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "50c166b41b67fa20",
+        "type": "template",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n\t\"node_version\": \"node --version\",\n\t\"npm_version\": \"npm --version\",\n\t\"os_arch\": \"node -e \\\"console.log(require('os').arch())\\\"\",\n\t\"os_n_cpus\": \"node -e \\\"console.log(require('os').cpus().length)\\\"\",\n\t\"os_cpus\": \"node -e \\\"console.log(require('os').cpus())\\\"\",\n\t\"os_endianness\": \"node -e \\\"console.log(require('os').endianness())\\\"\",\n\t\"os_freemem\": \"node -e \\\"console.log(require('os').freemem()/1024/1024/1024)\\\"\",\n\t\"os_homedir\": \"node -e \\\"console.log(require('os').homedir())\\\"\",\n\t\"os_hostname\": \"node -e \\\"console.log(require('os').hostname())\\\"\",\n\t\"os_networkInterfaces\": \"node -e \\\"console.log(require('os').networkInterfaces())\\\"\",\n\t\"os_platform\": \"node -e \\\"console.log(require('os').platform())\\\"\",\n\t\"os_release\": \"node -e \\\"console.log(require('os').release())\\\"\",\n\t\"os_totalmem\": \"node -e \\\"console.log(require('os').totalmem()/1024/1024/1024)\\\"\",\n\t\"os_uptime\": \"node -e \\\"console.log(require('os').uptime()/60/60)\\\"\",\n\t\"os_userInfo\": \"node -e \\\"console.log(require('os').userInfo())\\\"\",\n\t\"os_type\": \"node -e \\\"console.log(require('os').type())\\\"\",\n\t\"os_version\": \"node -e \\\"console.log(require('os').version())\\\"\"\n}",
+        "output": "json",
+        "x": 380,
+        "y": 340,
+        "wires": [
+            [
+                "3dd936804f7b8ce2"
+            ]
+        ]
+    },
+    {
+        "id": "c1cb9d6016bd5e8c",
+        "type": "exec",
+        "z": "e316d93c3900f83e",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 170,
+        "y": 420,
+        "wires": [
+            [
+                "503a7824fb95bd02"
+            ],
+            [
+                "503a7824fb95bd02"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3dd936804f7b8ce2",
+        "type": "split",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "topic",
+        "x": 590,
+        "y": 340,
+        "wires": [
+            [
+                "c1cb9d6016bd5e8c"
+            ]
+        ]
+    },
+    {
+        "id": "88c9495256dba3ba",
+        "type": "join",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "mode": "auto",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": "false",
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "x": 590,
+        "y": 420,
+        "wires": [
+            [
+                "92df760d20447d50",
+                "494351090de0e777",
+                "1d83579f.d52208"
+            ]
+        ]
+    },
+    {
+        "id": "92df760d20447d50",
+        "type": "debug",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 850,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "503a7824fb95bd02",
+        "type": "function",
+        "z": "e316d93c3900f83e",
+        "name": "clear /n",
+        "func": "msg.payload = msg.payload.replace(/\\n/g, \"\").replace(/ +/g, \" \")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 420,
+        "wires": [
+            [
+                "88c9495256dba3ba"
+            ]
+        ]
+    },
+    {
+        "id": "1b91140f1409886b",
+        "type": "mongodb out",
+        "z": "e316d93c3900f83e",
+        "mongodb": "2bb8dfa0.48854",
+        "name": "",
+        "collection": "docker",
+        "payonly": true,
+        "upsert": true,
+        "multi": false,
+        "operation": "update",
+        "x": 780,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "494351090de0e777",
+        "type": "change",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "query",
+                "pt": "msg",
+                "to": "{\"description\": description}",
+                "tot": "jsonata"
+            },
+            {
+                "t": "move",
+                "p": "description",
+                "pt": "msg",
+                "to": "payload.description",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "link",
+                "pt": "msg",
+                "to": "payload.link",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "timestamp",
+                "pt": "msg",
+                "to": "payload.timestamp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 500,
+        "wires": [
+            [
+                "1b91140f1409886b"
+            ]
+        ]
+    },
+    {
+        "id": "a3bb45e07d541dfe",
+        "type": "change",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$fromMillis(timestamp, \"[D01]/[M01]/[Y0001] [H01]:[m01]:[s01] \", \"+0100\") & statusCode",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 180,
+        "wires": [
+            [
+                "ef29bce1145f629b"
+            ]
+        ]
+    },
+    {
+        "id": "ef29bce1145f629b",
+        "type": "file",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "filename": "activations.log",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 620,
+        "y": 180,
+        "wires": [
+            [
+                "115b349acad1eb7e"
+            ]
+        ]
+    },
+    {
+        "id": "115b349acad1eb7e",
+        "type": "file in",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "filename": "activations.log",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 620,
+        "y": 260,
+        "wires": [
+            [
+                "7f592676c0af9592",
+                "2ca9228b.45383e"
+            ]
+        ]
+    },
+    {
+        "id": "d8f2df128fe99f5a",
+        "type": "inject",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 400,
+        "y": 260,
+        "wires": [
+            [
+                "115b349acad1eb7e"
+            ]
+        ]
+    },
+    {
+        "id": "7f592676c0af9592",
+        "type": "debug",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "2ca9228b.45383e",
+        "type": "ui_template",
+        "z": "e316d93c3900f83e",
+        "group": "9ee91c1b.c2b67",
+        "name": "Activation log",
+        "order": 2,
+        "width": 6,
+        "height": 6,
+        "format": "<textarea rows=\"21\" cols=\"7\">\n{{msg.payload}}\n</textarea>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 850,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "02abcb30c3447b74",
+        "type": "delay",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "day",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "50c166b41b67fa20"
+            ]
+        ]
+    },
+    {
+        "id": "f56ee37cf9f38fda",
+        "type": "change",
+        "z": "e316d93c3900f83e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "statusCode",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 100,
+        "wires": [
+            [
+                "17cb2f52.423991"
+            ]
+        ]
     }
 ]
