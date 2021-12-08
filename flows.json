@@ -7995,5 +7995,40 @@
                 "17cb2f52.423991"
             ]
         ]
+    },
+    {
+        "id": "c5db0cf39a840ea0",
+        "type": "inject",
+        "z": "e316d93c3900f83e",
+        "name": "SITE INFO",
+        "props": [
+            {
+                "p": "link",
+                "v": "https://nodered-on-cloud.herokuapp.com/",
+                "vt": "str"
+            },
+            {
+                "p": "description",
+                "v": "Heroku",
+                "vt": "str"
+            },
+            {
+                "p": "timestamp",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "50c166b41b67fa20"
+            ]
+        ]
     }
 ]
