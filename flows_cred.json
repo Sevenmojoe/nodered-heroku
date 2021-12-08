@@ -19,7 +19,7 @@
         "privateKey": "${PRIVATE_KEY}"
     },
     "2bb8dfa0.48854": {
-        "user": "alerox",
-        "password": "123"
+        "user": "${ATLAS_USERNAME}",
+        "password": "${ATLAS_PASSWORD}"
     }
 }
