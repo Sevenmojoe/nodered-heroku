@@ -17,5 +17,9 @@
         "caCert": "${CA_CERT}",
         "server": "${SERVER}",
         "privateKey": "${PRIVATE_KEY}"
+    },
+    "2bb8dfa0.48854": {
+        "user": "alerox",
+        "password": "123"
     }
 }
