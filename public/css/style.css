@@ -13,7 +13,7 @@ a {
     text-decoration: underline;
     color: #555;
 }
-a.button {
+a.button1 {
     text-decoration: none;
     display: inline-block;
     padding: 30px 40px;
@@ -21,8 +21,19 @@ a.button {
     background: #aa6767;
     color: #eee;
 }
-a.button:hover {
+a.button1:hover {
     background: #7F4545;
+}
+a.button2 {
+    text-decoration: none;
+    display: inline-block;
+    padding: 30px 40px;
+    border-radius: 5px;
+    background: #67aaaa;
+    color: #eee;
+}
+a.button2:hover {
+    background: #457F7F;
 }
 .row3, .row4, .row5 {
     background: #fff;

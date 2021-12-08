@@ -1,0 +1,25 @@
+{
+    "a8d2d040.73334": {},
+    "01b856875e0d074d": {},
+    "0c550dcd627c0c5f": {
+        "password": "${NETATMO_BEARER}"
+    },
+    "ee20ae5266a5e32c": {
+        "token": "${BOT_TOKEN}"
+    },
+    "9c09e087.a48e7": {},
+    "f08c8c22d21d93de": {
+        "refreshToken": "${REFRESH_TOKEN}",
+        "accessToken": "${ACCESS_TOKEN}",
+        "email": "${EMAIL}",
+        "cert": "${CERT}",
+        "thingId": "${THING_ID}",
+        "caCert": "${CA_CERT}",
+        "server": "${SERVER}",
+        "privateKey": "${PRIVATE_KEY}"
+    },
+    "2bb8dfa0.48854": {
+        "user": "${ATLAS_USERNAME}",
+        "password": "${ATLAS_PASSWORD}"
+    }
+}

@@ -1,18 +1,28 @@
 {
   "name": "Node-RED",
   "description": "A visual tool for wiring the Internet of Things, for Heroku deployment.",
-  "keywords": [ "Node-RED", "IoT", "Internet of Things", "node.js", "Node", "NodeRED", "Nodejs", "Blynk", "Blynk Cloud" ],
+  "keywords": [
+    "Node-RED",
+    "IoT",
+    "Internet of Things",
+    "Node.js",
+    "Node",
+    "NodeRED",
+    "Nodejs",
+    "Heroku",
+    "Cloud"
+  ],
   "website": "http://nodered.org/",
-  "repository": "https://github.com/Sevenmojoe/nodered-heroku.git",
+  "repository": "https://github.com/hybuild-project/nodered-heroku.git",
   "logo": "http://nodered.org/node-red.png",
   "success_url": "/editor",
   "env": {
-  "NODE_RED_a_USERNAME": {
-      "description": "Set Username for Flow Editor.",
+    "NODE_RED_USERNAME": {
+      "description": "Set Username for Node-RED UI editor.",
       "value": ""
     },
-  "NODE_RED_b_PASSWORD": {
-      "description": "Set Password for Flow Editor.",
+    "NODE_RED_PASSWORD": {
+      "description": "Set Password for Node-RED UI editor.",
       "value": ""
     }
   }

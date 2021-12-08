@@ -1,0 +1,445 @@
+[
+    {
+        "id": "3c1975f87cd0cabf",
+        "type": "tab",
+        "label": "Save all changes",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9c09e087.a48e7",
+        "type": "http request",
+        "z": "3c1975f87cd0cabf",
+        "name": "PUT",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.github.com/repos/hybuild-project/nodered-heroku/contents/{{filename}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 590,
+        "y": 280,
+        "wires": [
+            [
+                "b481381501d2b414"
+            ]
+        ]
+    },
+    {
+        "id": "1dc8605f.7ac4e",
+        "type": "change",
+        "z": "3c1975f87cd0cabf",
+        "name": "set headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\"User-Agent\":\"Node-RED\"}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.Authorization",
+                "pt": "msg",
+                "to": "GITHUB_TOKEN",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 870,
+        "y": 220,
+        "wires": [
+            [
+                "9c09e087.a48e7"
+            ]
+        ]
+    },
+    {
+        "id": "ba9ea225.c2fbe",
+        "type": "http request",
+        "z": "3c1975f87cd0cabf",
+        "name": "GET",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.github.com/repos/hybuild-project/nodered-heroku/contents/{{filename}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 590,
+        "y": 100,
+        "wires": [
+            [
+                "c153c93bfd0eede3",
+                "e585584fd416aab4"
+            ]
+        ]
+    },
+    {
+        "id": "ae8ddf10.868fd",
+        "type": "change",
+        "z": "3c1975f87cd0cabf",
+        "name": "set msg.headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers.User-Agent",
+                "pt": "msg",
+                "to": "Node-RED",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.Authorization",
+                "pt": "msg",
+                "to": "GITHUB_TOKEN",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 40,
+        "wires": [
+            [
+                "ba9ea225.c2fbe"
+            ]
+        ]
+    },
+    {
+        "id": "819e400b.96d61",
+        "type": "comment",
+        "z": "3c1975f87cd0cabf",
+        "name": "GitHub Token",
+        "info": "Set GITHUB_TOKEN in [Heroku Config Vars](https://dashboard.heroku.com/apps/nodered-on-cloud/settings).\nSee [Personal access tokens](https://github.com/settings/tokens) page (repo).",
+        "x": 110,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "b481381501d2b414",
+        "type": "debug",
+        "z": "3c1975f87cd0cabf",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f4f0342516f4afea",
+        "type": "file in",
+        "z": "3c1975f87cd0cabf",
+        "name": "",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 880,
+        "y": 160,
+        "wires": [
+            [
+                "6a2bc486f2838313"
+            ]
+        ]
+    },
+    {
+        "id": "c153c93bfd0eede3",
+        "type": "debug",
+        "z": "3c1975f87cd0cabf",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e585584fd416aab4",
+        "type": "change",
+        "z": "3c1975f87cd0cabf",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.sha",
+                "pt": "msg",
+                "to": "temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 160,
+        "wires": [
+            [
+                "f4f0342516f4afea"
+            ]
+        ]
+    },
+    {
+        "id": "6a2bc486f2838313",
+        "type": "change",
+        "z": "3c1975f87cd0cabf",
+        "name": "set msg.payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"content\": $base64encode(payload)}",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload.sha",
+                "pt": "msg",
+                "to": "temp",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.message",
+                "pt": "msg",
+                "to": "Commit from nodered-on-cloud",
+                "tot": "str"
+            },
+            {
+                "t": "delete",
+                "p": "temp",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 220,
+        "wires": [
+            [
+                "1dc8605f.7ac4e"
+            ]
+        ]
+    },
+    {
+        "id": "bc604bc3fb7cfdf7",
+        "type": "inject",
+        "z": "3c1975f87cd0cabf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "${GITHUB_TOKEN}",
+        "payloadType": "str",
+        "x": 850,
+        "y": 40,
+        "wires": [
+            [
+                "c153c93bfd0eede3"
+            ]
+        ]
+    },
+    {
+        "id": "f92e1e8dffe158f7",
+        "type": "change",
+        "z": "3c1975f87cd0cabf",
+        "name": "flows.json",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "flows.json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 40,
+        "wires": [
+            [
+                "ae8ddf10.868fd"
+            ]
+        ]
+    },
+    {
+        "id": "98b5b9035834b822",
+        "type": "change",
+        "z": "3c1975f87cd0cabf",
+        "name": "flows_cred.json",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "flows_cred.json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "ae8ddf10.868fd"
+            ]
+        ]
+    },
+    {
+        "id": "7a7584df89bbce4a",
+        "type": "inject",
+        "z": "3c1975f87cd0cabf",
+        "name": "SAVE",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "f92e1e8dffe158f7",
+                "98b5b9035834b822",
+                "71c40b7254660299"
+            ]
+        ]
+    },
+    {
+        "id": "354462253c0f942f",
+        "type": "inject",
+        "z": "3c1975f87cd0cabf",
+        "name": "push to GitHub",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 340,
+        "y": 80,
+        "wires": [
+            [
+                "f92e1e8dffe158f7"
+            ]
+        ]
+    },
+    {
+        "id": "a549d342fd99909d",
+        "type": "inject",
+        "z": "3c1975f87cd0cabf",
+        "name": "push to GitHub",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 340,
+        "y": 180,
+        "wires": [
+            [
+                "98b5b9035834b822"
+            ]
+        ]
+    },
+    {
+        "id": "2d16cee553d899ee",
+        "type": "inject",
+        "z": "3c1975f87cd0cabf",
+        "name": "push to GitHub",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 340,
+        "y": 280,
+        "wires": [
+            [
+                "71c40b7254660299"
+            ]
+        ]
+    },
+    {
+        "id": "71c40b7254660299",
+        "type": "change",
+        "z": "3c1975f87cd0cabf",
+        "name": "package.json",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "package.json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 240,
+        "wires": [
+            [
+                "ae8ddf10.868fd"
+            ]
+        ]
+    }
+]
