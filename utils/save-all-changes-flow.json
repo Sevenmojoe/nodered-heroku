@@ -2,7 +2,7 @@
     {
         "id": "3c1975f87cd0cabf",
         "type": "tab",
-        "label": "Save all changes",
+        "label": "Save all changes ",
         "disabled": false,
         "info": "",
         "env": []
@@ -15,7 +15,7 @@
         "method": "PUT",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "https://api.github.com/repos/hybuild-project/nodered-heroku/contents/{{filename}}",
+        "url": "https://api.github.com/repos/{{gitUsername}}/{{gitRepo}}/contents/{{filename}}",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -25,7 +25,7 @@
         "y": 280,
         "wires": [
             [
-                "b481381501d2b414"
+                "666e944b12fe9cb2"
             ]
         ]
     },
@@ -39,15 +39,15 @@
                 "t": "set",
                 "p": "headers",
                 "pt": "msg",
-                "to": "{\"User-Agent\":\"Node-RED\"}",
+                "to": "{\"User-Agent\":\"PostmanRuntime/7.29.0\"}",
                 "tot": "json"
             },
             {
                 "t": "set",
                 "p": "headers.Authorization",
                 "pt": "msg",
-                "to": "GITHUB_TOKEN",
-                "tot": "env"
+                "to": "Authorization",
+                "tot": "msg"
             }
         ],
         "action": "",
@@ -71,7 +71,7 @@
         "method": "GET",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "https://api.github.com/repos/hybuild-project/nodered-heroku/contents/{{filename}}",
+        "url": "https://api.github.com/repos/{{gitUsername}}/{{gitRepo}}/contents/{{filename}}",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -81,8 +81,8 @@
         "y": 100,
         "wires": [
             [
-                "c153c93bfd0eede3",
-                "e585584fd416aab4"
+                "e585584fd416aab4",
+                "666e944b12fe9cb2"
             ]
         ]
     },
@@ -90,20 +90,34 @@
         "id": "ae8ddf10.868fd",
         "type": "change",
         "z": "3c1975f87cd0cabf",
-        "name": "set msg.headers",
+        "name": "set msg vars",
         "rules": [
             {
                 "t": "set",
                 "p": "headers.User-Agent",
                 "pt": "msg",
-                "to": "Node-RED",
+                "to": "PostmanRuntime/7.29.0",
                 "tot": "str"
             },
             {
                 "t": "set",
                 "p": "headers.Authorization",
                 "pt": "msg",
-                "to": "GITHUB_TOKEN",
+                "to": "Authorization",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "gitRepo",
+                "pt": "msg",
+                "to": "GITHUB_REPO",
+                "tot": "env"
+            },
+            {
+                "t": "set",
+                "p": "gitUsername",
+                "pt": "msg",
+                "to": "GITHUB_USERNAME",
                 "tot": "env"
             }
         ],
@@ -112,7 +126,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
+        "x": 600,
         "y": 40,
         "wires": [
             [
@@ -127,22 +141,6 @@
         "name": "GitHub Token",
         "info": "Set GITHUB_TOKEN in [Heroku Config Vars](https://dashboard.heroku.com/apps/nodered-on-cloud/settings).\nSee [Personal access tokens](https://github.com/settings/tokens) page (repo).",
         "x": 110,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "b481381501d2b414",
-        "type": "debug",
-        "z": "3c1975f87cd0cabf",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 870,
         "y": 280,
         "wires": []
     },
@@ -164,22 +162,6 @@
                 "6a2bc486f2838313"
             ]
         ]
-    },
-    {
-        "id": "c153c93bfd0eede3",
-        "type": "debug",
-        "z": "3c1975f87cd0cabf",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 870,
-        "y": 100,
-        "wires": []
     },
     {
         "id": "e585584fd416aab4",
@@ -255,35 +237,6 @@
         ]
     },
     {
-        "id": "bc604bc3fb7cfdf7",
-        "type": "inject",
-        "z": "3c1975f87cd0cabf",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "${GITHUB_TOKEN}",
-        "payloadType": "str",
-        "x": 850,
-        "y": 40,
-        "wires": [
-            [
-                "c153c93bfd0eede3"
-            ]
-        ]
-    },
-    {
         "id": "f92e1e8dffe158f7",
         "type": "change",
         "z": "3c1975f87cd0cabf",
@@ -352,66 +305,7 @@
         "y": 40,
         "wires": [
             [
-                "f92e1e8dffe158f7",
-                "98b5b9035834b822",
-                "71c40b7254660299"
-            ]
-        ]
-    },
-    {
-        "id": "354462253c0f942f",
-        "type": "inject",
-        "z": "3c1975f87cd0cabf",
-        "name": "push to GitHub",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 340,
-        "y": 80,
-        "wires": [
-            [
-                "f92e1e8dffe158f7"
-            ]
-        ]
-    },
-    {
-        "id": "a549d342fd99909d",
-        "type": "inject",
-        "z": "3c1975f87cd0cabf",
-        "name": "push to GitHub",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 340,
-        "y": 180,
-        "wires": [
-            [
-                "98b5b9035834b822"
-            ]
-        ]
-    },
-    {
-        "id": "2d16cee553d899ee",
-        "type": "inject",
-        "z": "3c1975f87cd0cabf",
-        "name": "push to GitHub",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 340,
-        "y": 280,
-        "wires": [
-            [
-                "71c40b7254660299"
+                "88f6fe95e0373dfa"
             ]
         ]
     },
@@ -439,6 +333,73 @@
         "wires": [
             [
                 "ae8ddf10.868fd"
+            ]
+        ]
+    },
+    {
+        "id": "666e944b12fe9cb2",
+        "type": "debug",
+        "z": "3c1975f87cd0cabf",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "81154a985f4a1efe",
+        "type": "inject",
+        "z": "3c1975f87cd0cabf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 460,
+        "y": 360,
+        "wires": [
+            [
+                "ae8ddf10.868fd"
+            ]
+        ]
+    },
+    {
+        "id": "88f6fe95e0373dfa",
+        "type": "function",
+        "z": "3c1975f87cd0cabf",
+        "name": "Authorization",
+        "func": "msg.Authorization = 'Basic ' + Buffer.from(env.get('GITHUB_USERNAME') + \":\" + env.get('GITHUB_TOKEN')).toString('base64');\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 110,
+        "y": 100,
+        "wires": [
+            [
+                "f92e1e8dffe158f7",
+                "98b5b9035834b822",
+                "71c40b7254660299"
             ]
         ]
     }
