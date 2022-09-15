@@ -11,7 +11,7 @@ A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https:/
 To overcome this, after having deployed the new flows, export All flows as *flows.json* file, and push it to the GitHub repo linked to Heroku. Do the same with *flows_cred.json* and *package.json* for credentials and nodes installed in Palette. Detail on step 5.
 
 ## 1. Deploying Node-RED to Heroku 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/hybuild-project/nodered-heroku)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/yurevsal/nodered-heroku)
 
 ## 2. Set up GitHub repo and Heroku app
 * Fork this GitHub repo.
