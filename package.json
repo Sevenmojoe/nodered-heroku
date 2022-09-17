@@ -37,7 +37,7 @@
         "node-red-contrib-actionflows":"latest",
         "node-red-contrib-mongodb4":"latest",
         "node-red-contrib-mongoql":"latest",
-        "node-red-node-watson":"latest",
+        "node-red-node-watson":"0.10.3",
         "redis": "3.0.2",
         "when": "3.7.8"
     }
