@@ -1,0 +1,58 @@
+{
+  "name": "node-red-node-watson",
+  "version": "0.10.3",
+  "description": "A collection of Node-RED nodes for IBM Watson services",
+  "dependencies": {
+    "cfenv": "~1.2.4",
+    "file-type": "^12.4.2",
+    "request": "~2.88.2",
+    "temp": "^0.9.4",
+    "qs": "^6.10.3",
+    "ibm-watson": "^6.2.2",
+    "is-docx": "^0.0.3",
+    "stream-to-array": "^2.3.0",
+    "ws": "^8.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/watson-developer-cloud/node-red-node-watson"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "node-red",
+    "ibm-cloud",
+    "watson"
+  ],
+  "contributors": [
+    {
+      "name": "Soheel Chughtai",
+      "email": "soheel_chughtai@uk.ibm.com"
+    }
+  ],
+  "node-red": {
+    "nodes": {
+      "watson-conversation-v1": "services/assistant/v1.js",
+      "watson-conversation-workspace-manager-v1": "services/assistant/v1-workspace-manager.js",
+      "watson-assistant-v2": "services/assistant/v2.js",
+      "watson-discovery-v1": "services/discovery/v1.js",
+      "watson-discovery-v1-document-loader": "services/discovery/v1-document-loader.js",
+      "watson-discovery-v1-query-builder": "services/discovery/v1-query-builder.js",
+      "watson-discovery-v2-project-manager": "services/discovery/v2-project-manager.js",
+      "watson-language-translator-v3": "services/language_translator/v3.js",
+      "watson-doc-translator-v3": "services/language_translator/v3-doc.js",
+      "watson-language-translator-identify-v3": "services/language_translator_identify/v3.js",
+      "watson-language-translator-util-v3": "services/language_translator_util/v3.js",
+      "watson-natural-language-classifier-v1": "services/natural_language_classifier/v1.js",
+      "watson-natural-language-understanding-v1": "services/natural_language_understanding/v1.js",
+      "watson-natural-language-understanding-model-manager-v1": "services/natural_language_understanding/v1-model-manager.js",
+      "watson-speech-to-text-v1": "services/speech_to_text/v1.js",
+      "watson-speech-to-text-corpus-builder-v1": "services/speech_to_text/v1-corpus-builder.js",
+      "watson-text-to-speech-v1": "services/text_to_speech/v1.js",
+      "watson-text-to-speech-corpus-builder-v1": "services/text_to_speech/v1-corpus-builder.js",
+      "watson-tone-analyzer-v3": "services/tone_analyzer/v3.js"
+    }
+  },
+  "engines": {
+    "node": ">=12.20.0"
+  }
+}

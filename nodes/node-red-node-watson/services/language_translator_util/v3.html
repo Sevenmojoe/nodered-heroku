@@ -1,0 +1,93 @@
+<!--
+  Copyright 2013,2022 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/x-red" data-template-name="watson-translator-util">
+    <div id="credentials-check" class="form-row">
+        <div class="form-tips">
+            <i class="fa fa-question-circle"></i><b> Please wait: </b> Checking for bound service credentials...
+        </div>
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name (LTU)</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row credentials" style="display: none;">
+        <label for="node-input-apikey"><i class="fa fa-key"></i> API Key</label>
+        <input type="password" id="node-input-apikey" placeholder="API Key"></input>
+    </div>
+
+    <div class="form-row credentials">
+        <label for="node-input-cwm-service-endpoint"><i class="fa fa-tag"></i> Service Endpoint</label>
+        <input type="text" id="node-input-service-endpoint" placeholder="https://gateway.watsonplatform.net/language-translator/api">
+    </div>
+
+</script>
+
+<script type="text/x-red" data-help-name="watson-translator-util">
+    <p>The Language Translator Utility service enables you to set using dasboard utility functions
+    the language translation to be used by the Language Translator Node.</p>
+    <p></p>
+    <p><b>Translator Mode Utility</b>.</p>
+    <p>The regular Watson Translator credentials should be set through the UI.</p>
+    <p>No input is needed for the node. The node fetches the information automatically.</p>
+    <p></p>
+    <p>When this node is used with the 'language translator' node, in the 'language translator' node the scope of variables should be set to global.</p>
+    <p></p>
+    <p>The node will return the following arrays:</p>
+    <p>Message model_id (e.g.: en-fr-conversational)<code>msg.model_id</code>.</p>
+    <p>Message Domains (e.g.: Conversational)<code>msg.domain</code>.</p>
+    <p>Message Source Language (e.g.: English)<code>msg.source</code>.</p>
+    <p>Message Target Language (e.g.: French)<code>msg.target</code>.</p>
+    <p>For more information about the Language Translator service, read the <a href="https://console.bluemix.net/docs/services/language-translator/index.html">documentation</a>.</p>
+</script>
+
+
+<script type="text/javascript">
+    (function() {
+        RED.nodes.registerType('watson-translator-util', {
+            category: 'IBM Watson',
+            defaults: {
+                name: {value: ""},
+                'service-endpoint' :{value: ''}
+            },
+            credentials: {
+              apikey: {type: 'password'}
+            },
+            color: "rgb(84,149,230)",
+            inputs: 1,
+            outputs: 1,
+            icon: "languageid.png",
+            paletteLabel: "language translator util",
+            label: function() {
+                return this.name || "language translator util";
+            },
+            labelStyle: function() {
+                return this.name ? "node_label_italic" : "";
+            },
+            oneditprepare: function() {
+                $.getJSON('watson-translator-util/vcap/')
+                  .done(function (service) {
+                    $('.credentials').toggle(!service);
+                  })
+                  .fail(function () {
+                    $('.credentials').show();
+                  }).always(function () {
+                    $('#credentials-check').hide();
+                  })
+            }
+        });
+    })();
+</script>
