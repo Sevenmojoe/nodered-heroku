@@ -60,7 +60,7 @@
         "timeout": "",
         "optout-learning": false,
         "persist-session-id": false,
-        "x": 590,
+        "x": 810,
         "y": 240,
         "wires": [
             [
@@ -80,7 +80,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
+        "x": 1020,
         "y": 240,
         "wires": [
             [
@@ -98,7 +98,7 @@
         "headers": {
             "Acess-Control-Allow-Origin": ""
         },
-        "x": 940,
+        "x": 1280,
         "y": 240,
         "wires": []
     },
@@ -130,8 +130,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 300,
+        "x": 520,
+        "y": 180,
         "wires": []
     },
     {
@@ -146,8 +146,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
-        "y": 180,
+        "x": 820,
+        "y": 160,
         "wires": []
     },
     {
@@ -162,8 +162,166 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 980,
+        "x": 1240,
         "y": 320,
+        "wires": []
+    },
+    {
+        "id": "e7d032773cddced1",
+        "type": "http in",
+        "z": "ca783321cabc5e3a",
+        "name": "",
+        "url": "/postaudio",
+        "method": "post",
+        "upload": true,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 360,
+        "wires": [
+            [
+                "111d20946d286098",
+                "593d64ee761e8891"
+            ]
+        ]
+    },
+    {
+        "id": "111d20946d286098",
+        "type": "function",
+        "z": "ca783321cabc5e3a",
+        "name": "function 2",
+        "func": "msg.headers={\n    \"Content-Type\": \"audio/wav\"\n}\nmsg.params = {\n    \"session_id\": msg.payload.sessionId !== 'undefined' ? msg.payload.sessionId : \"\"\n};\n\nmsg.payload = msg.req.files[0].buffer\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 360,
+        "wires": [
+            [
+                "e8496396c236481b",
+                "ec5dde3ce148cb7f"
+            ]
+        ]
+    },
+    {
+        "id": "cba6738855938418",
+        "type": "watson-speech-to-text",
+        "z": "ca783321cabc5e3a",
+        "name": "",
+        "alternatives": 1,
+        "speakerlabels": true,
+        "smartformatting": false,
+        "lang": "pt-BR",
+        "langhidden": "pt-BR",
+        "langcustom": "NoCustomisationSetting",
+        "langcustomhidden": "",
+        "custom-weight": "0.5",
+        "band": "Telephony",
+        "bandhidden": "",
+        "keywords": "",
+        "keywords-threshold": "0.5",
+        "word-confidence": false,
+        "password": "",
+        "apikey": "iBgDf6L8nCx5No0yFax3WoEuqPKPNiBWZUL0vb_v1VC7",
+        "payload-response": true,
+        "streaming-mode": false,
+        "streaming-mute": true,
+        "auto-connect": false,
+        "discard-listening": false,
+        "disable-precheck": false,
+        "service-endpoint": "https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/3e0bd166-e537-4e4b-92c9-04610e97cc60",
+        "x": 720,
+        "y": 360,
+        "wires": [
+            [
+                "b16bf8e7029e2ba1",
+                "2c637dce94014583"
+            ]
+        ]
+    },
+    {
+        "id": "e8496396c236481b",
+        "type": "ffmpeg-conversion",
+        "z": "ca783321cabc5e3a",
+        "name": "",
+        "format": "wav",
+        "audiochannels": "mono",
+        "audiofrequency": "8000",
+        "audiobitrate": "64k",
+        "audiocodec": "pcm_u8",
+        "x": 470,
+        "y": 360,
+        "wires": [
+            [
+                "1ce7dd57fbbd37d7",
+                "cba6738855938418"
+            ]
+        ]
+    },
+    {
+        "id": "1ce7dd57fbbd37d7",
+        "type": "debug",
+        "z": "ca783321cabc5e3a",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b16bf8e7029e2ba1",
+        "type": "debug",
+        "z": "ca783321cabc5e3a",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ec5dde3ce148cb7f",
+        "type": "debug",
+        "z": "ca783321cabc5e3a",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "593d64ee761e8891",
+        "type": "debug",
+        "z": "ca783321cabc5e3a",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 500,
         "wires": []
     }
 ]

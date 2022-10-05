@@ -21,6 +21,7 @@
         "node-red-contrib-actionflows": "latest",
         "node-red-contrib-aedes": "latest",
         "node-red-contrib-cron-plus": "latest",
+        "node-red-contrib-media-utils": "^0.0.8",
         "node-red-contrib-mongodb4": "latest",
         "node-red-contrib-mongoql": "latest",
         "node-red-contrib-postgresql": "latest",
